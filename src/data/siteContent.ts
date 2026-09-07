@@ -2,13 +2,12 @@ export const siteData = {
   brand: {
     name: "國際健康養生會",
     englishName: "International Association for Health and Yangsheng",
-    logoUrl: "/images/logo.gif",
+    logoUrl: "/images/logo.svg",
     establishedYear: "2009 年 12 月",
     nature: "康健及養生非牟利社團",
     slogan: "預防勝於治療",
   },
   contact: {
-    // 暫時使用你提供的資料，正式上線前請再確認
     address: "香港跑馬地雲地利道 20 號",
     addressEn: "20 Ventris Road, Happy Valley, Hong Kong",
     phone: "+852 2893 1938",
@@ -19,14 +18,14 @@ export const siteData = {
     email: "info@yangsheng.hk",
   },
   images: {
-    logo: "/images/logo.gif",
-    hero1: "/images/photo01.jpg",
-    hero2: "/images/photo02.jpg",
-    pho: "/images/pho.jpg",
-    adv1: "/images/adv1.jpg",
-    adv2: "/images/adv2.jpg",
-    adv3: "/images/adv3.jpg",
-    image: "/images/image.jpg",
+    logo: "/images/logo.svg",
+    hero1: "https://yangsheng.hk/images/photo01.jpg",
+    hero2: "https://yangsheng.hk/images/photo02.jpg",
+    pho: "https://yangsheng.hk/images/photo01.jpg",
+    adv1: "https://yangsheng.hk/images/photo01.jpg",
+    adv2: "https://yangsheng.hk/images/photo02.jpg",
+    adv3: "https://yangsheng.hk/images/photo02.jpg",
+    image: "https://yangsheng.hk/images/photo01.jpg",
   },
   about: {
     title: "緣起與宗旨",
@@ -45,7 +44,7 @@ export const siteData = {
       instructor: "袁麗萍教授",
       description:
         "配合香港大學科研數據驗證，著重氣血調理、強身健體，有效舒緩慢性疲勞綜合症。",
-      imageUrl: "/images/adv1.jpg",
+      imageUrl: "https://yangsheng.hk/images/photo01.jpg",
     },
     {
       id: "brain",
@@ -53,7 +52,7 @@ export const siteData = {
       instructor: "袁麗萍教授",
       description:
         "結合氣功的身心運動，旨在提升大腦功能、增強記憶力、集中力及心神平靜。",
-      imageUrl: "/images/adv2.jpg",
+      imageUrl: "https://yangsheng.hk/images/photo02.jpg",
     },
   ],
   navigation: [
