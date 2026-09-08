@@ -1,8 +1,10 @@
+const R2 = "https://pub-5442f85cdccf43b0aed63eadbd58fc4f.r2.dev";
+
 export const siteData = {
   brand: {
     name: "國際健康養生會",
     englishName: "International Association for Health and Yangsheng",
-    logoUrl: "/images/logo.svg",
+    logoUrl: `${R2}/images/logo.gif`,
     establishedYear: "2009 年 12 月",
     nature: "康健及養生非牟利社團",
     slogan: "預防勝於治療",
@@ -18,14 +20,14 @@ export const siteData = {
     email: "info@yangsheng.hk",
   },
   images: {
-    logo: "/images/logo.svg",
-    hero1: "https://yangsheng.hk/images/photo01.jpg",
-    hero2: "https://yangsheng.hk/images/photo02.jpg",
-    pho: "https://yangsheng.hk/images/photo01.jpg",
-    adv1: "https://yangsheng.hk/images/photo01.jpg",
-    adv2: "https://yangsheng.hk/images/photo02.jpg",
-    adv3: "https://yangsheng.hk/images/photo02.jpg",
-    image: "https://yangsheng.hk/images/photo01.jpg",
+    logo: `${R2}/images/logo.gif`,
+    hero1: `${R2}/images/photo01.jpg`,
+    hero2: `${R2}/images/photo02.jpg`,
+    pho: `${R2}/images/pho.jpg`,
+    adv1: `${R2}/images/adv1.jpg`,
+    adv2: `${R2}/images/adv2.jpg`,
+    adv3: `${R2}/images/adv3.jpg`,
+    image: `${R2}/images/image.jpg`,
   },
   about: {
     title: "緣起與宗旨",
@@ -44,7 +46,7 @@ export const siteData = {
       instructor: "袁麗萍教授",
       description:
         "配合香港大學科研數據驗證，著重氣血調理、強身健體，有效舒緩慢性疲勞綜合症。",
-      imageUrl: "https://yangsheng.hk/images/photo01.jpg",
+      imageUrl: `${R2}/images/photo01.jpg`,
     },
     {
       id: "brain",
@@ -52,7 +54,7 @@ export const siteData = {
       instructor: "袁麗萍教授",
       description:
         "結合氣功的身心運動，旨在提升大腦功能、增強記憶力、集中力及心神平靜。",
-      imageUrl: "https://yangsheng.hk/images/photo02.jpg",
+      imageUrl: `${R2}/images/photo02.jpg`,
     },
   ],
   navigation: [
