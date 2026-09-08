@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { siteData } from "@/data/siteContent";
+import FloatingSocial from "@/components/layout/FloatingSocial";
 
 export const metadata: Metadata = {
   title: {
@@ -34,7 +35,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="zh-HK">
-      <body className="min-h-screen antialiased">{children}</body>
+      <body className="min-h-screen antialiased">
+        {children}
+        <FloatingSocial />
+      </body>
     </html>
   );
 }
