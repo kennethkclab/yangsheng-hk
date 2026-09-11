@@ -7,12 +7,12 @@ import Image from "next/image";
 
 export default function HomePage() {
   const previewPhotos = [
-    media.r2 + "/images/news/23.jpg",
-    media.r2 + "/images/news/20.jpg",
-    media.r2 + "/images/news/24.jpg",
-    media.r2 + "/images/gallery/7.jpg",
-    media.r2 + "/images/gallery/5.jpg",
     media.r2 + "/images/gallery/8.jpg",
+    media.r2 + "/images/gallery/10.jpg",
+    media.r2 + "/images/gallery/7.jpg",
+    media.r2 + "/images/gallery/6.jpg",
+    media.r2 + "/images/gallery/4.jpg",
+    media.r2 + "/images/news/24.jpg",
   ];
 
   return (
