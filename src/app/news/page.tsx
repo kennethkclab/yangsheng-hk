@@ -20,16 +20,22 @@ export default function NewsPage() {
             <p className="mt-3 text-brand-100">課程招生、活動紀錄與會務公告</p>
           </div>
         </section>
-        <section className="mx-auto max-w-6xl px-4 py-14">
-          <div className="grid gap-8 md:grid-cols-3">
+        <section className="mx-auto max-w-4xl px-4 py-14">
+          <div className="space-y-10">
             {media.news.map((item) => (
               <article key={item.id} className="overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-sm">
-                <div className="relative aspect-[4/3]">
-                  <Image src={item.image} alt={item.title} fill className="object-cover" sizes="(max-width:768px) 100vw, 33vw" />
-                </div>
-                <div className="p-5">
+                <a href={item.image} target="_blank" rel="noopener noreferrer" className="block bg-stone-100">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    width={1200}
+                    height={900}
+                    className="h-auto w-full object-contain"
+                  />
+                </a>
+                <div className="p-6">
                   <p className="mb-2 text-xs text-stone-500">{item.date}</p>
-                  <h2 className="mb-2 text-lg font-semibold text-stone-900">{item.title}</h2>
+                  <h2 className="mb-2 text-xl font-semibold text-stone-900">{item.title}</h2>
                   <p className="text-sm leading-relaxed text-stone-600">{item.summary}</p>
                 </div>
               </article>
