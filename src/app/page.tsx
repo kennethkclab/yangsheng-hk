@@ -1,10 +1,20 @@
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { siteData } from "@/data/siteContent";
+import { media } from "@/data/media";
 import Link from "next/link";
 import Image from "next/image";
 
 export default function HomePage() {
+  const previewPhotos = [
+    media.r2 + "/images/news/23.jpg",
+    media.r2 + "/images/news/20.jpg",
+    media.r2 + "/images/news/24.jpg",
+    media.r2 + "/images/gallery/7.jpg",
+    media.r2 + "/images/gallery/5.jpg",
+    media.r2 + "/images/gallery/8.jpg",
+  ];
+
   return (
     <>
       <Header />
@@ -90,13 +100,13 @@ export default function HomePage() {
                   key={course.id}
                   className="group overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-sm transition hover:shadow-md"
                 >
-                  <div className="relative aspect-[16/9]">
+                  <div className="bg-stone-100">
                     <Image
                       src={course.imageUrl}
                       alt={course.title}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 768px) 100vw, 50vw"
+                      width={1200}
+                      height={800}
+                      className="h-auto w-full object-contain"
                     />
                   </div>
                   <div className="p-6">
@@ -110,6 +120,24 @@ export default function HomePage() {
                     </Link>
                   </div>
                 </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-stone-50 py-16">
+          <div className="mx-auto max-w-6xl px-4">
+            <div className="mb-8 flex items-end justify-between gap-4">
+              <h2 className="text-2xl font-bold text-stone-900 md:text-3xl">活動相片</h2>
+              <Link href="/gallery" className="shrink-0 text-sm font-medium text-brand-700 hover:underline">
+                查看相簿 →
+              </Link>
+            </div>
+            <div className="grid grid-cols-2 gap-3 md:grid-cols-3">
+              {previewPhotos.map((src) => (
+                <div key={src} className="overflow-hidden rounded-xl bg-stone-200">
+                  <Image src={src} alt="活動相片" width={800} height={600} className="h-auto w-full object-contain" />
+                </div>
               ))}
             </div>
           </div>
