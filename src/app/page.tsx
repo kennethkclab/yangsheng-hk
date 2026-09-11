@@ -135,8 +135,8 @@ export default function HomePage() {
             </div>
             <div className="grid grid-cols-2 gap-3 md:grid-cols-3">
               {previewPhotos.map((src) => (
-                <div key={src} className="overflow-hidden rounded-xl bg-stone-200">
-                  <Image src={src} alt="活動相片" width={800} height={600} className="h-auto w-full object-contain" />
+                <div key={src} className="relative aspect-[4/3] overflow-hidden rounded-xl bg-stone-200">
+                  <Image src={src} alt="活動相片" fill className="object-cover" sizes="(max-width: 768px) 50vw, 33vw" />
                 </div>
               ))}
             </div>
