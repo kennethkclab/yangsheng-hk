@@ -15,7 +15,8 @@ export default function Header() {
   const items = nav[locale];
   const copy = t[locale];
   const homeHref = isEn ? "/en" : "/";
-  const otherHref = localizedPath(pathname, isEn ? "zh" : "en");
+  const zhHref = localizedPath(pathname, "zh");
+  const enHref = localizedPath(pathname, "en");
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
@@ -23,6 +24,25 @@ export default function Header() {
       document.body.style.overflow = "";
     };
   }, [open]);
+
+  const switcher = (
+    <div className="inline-flex overflow-hidden rounded-full border border-stone-300 bg-white text-xs font-semibold">
+      <Link
+        href={zhHref}
+        className={`px-2.5 py-1.5 ${!isEn ? "bg-brand-700 text-white" : "text-stone-600 hover:bg-stone-100"}`}
+        aria-current={!isEn ? "page" : undefined}
+      >
+        中文
+      </Link>
+      <Link
+        href={enHref}
+        className={`px-2.5 py-1.5 ${isEn ? "bg-brand-700 text-white" : "text-stone-600 hover:bg-stone-100"}`}
+        aria-current={isEn ? "page" : undefined}
+      >
+        EN
+      </Link>
+    </div>
+  );
 
   return (
     <>
@@ -39,7 +59,7 @@ export default function Header() {
             />
           </Link>
 
-          <nav className="hidden items-center gap-3 text-[13px] text-stone-700 lg:flex">
+          <nav className="hidden items-center gap-3 text-[13px] text-stone-700 xl:flex">
             {items.map((item) => (
               <Link key={item.href} href={item.href} className="whitespace-nowrap hover:text-brand-700 transition-colors">
                 {item.label}
@@ -47,16 +67,11 @@ export default function Header() {
             ))}
           </nav>
 
-          <div className="flex items-center gap-1">
-            <Link
-              href={otherHref}
-              className="rounded-full border border-stone-200 px-2.5 py-1 text-xs font-medium text-stone-700 hover:bg-stone-100"
-            >
-              {isEn ? "中文" : "EN"}
-            </Link>
+          <div className="flex shrink-0 items-center gap-2">
+            {switcher}
             <button
               type="button"
-              className="inline-flex h-10 w-10 items-center justify-center rounded-lg text-stone-700 hover:bg-stone-100 lg:hidden"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-lg text-stone-700 hover:bg-stone-100 xl:hidden"
               onClick={() => setOpen(true)}
               aria-label={copy.openMenu}
               aria-expanded={open}
@@ -70,7 +85,7 @@ export default function Header() {
       </header>
 
       <div
-        className={`fixed inset-0 z-[60] bg-black/55 transition-opacity duration-300 lg:hidden ${
+        className={`fixed inset-0 z-[60] bg-black/55 transition-opacity duration-300 xl:hidden ${
           open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
         onClick={() => setOpen(false)}
@@ -78,7 +93,7 @@ export default function Header() {
       />
 
       <aside
-        className={`fixed inset-y-0 left-0 z-[70] flex h-dvh w-[60vw] max-w-xs flex-col bg-white shadow-2xl transition-transform duration-300 ease-out lg:hidden ${
+        className={`fixed inset-y-0 left-0 z-[70] flex h-dvh w-[60vw] max-w-xs flex-col bg-white shadow-2xl transition-transform duration-300 ease-out xl:hidden ${
           open ? "translate-x-0" : "-translate-x-full"
         }`}
         aria-hidden={!open}
@@ -96,6 +111,7 @@ export default function Header() {
             </svg>
           </button>
         </div>
+        <div className="border-b border-stone-100 bg-white px-4 py-3">{switcher}</div>
         <nav className="flex-1 overflow-y-auto bg-white px-3 py-4 space-y-1">
           {items.map((item) => (
             <Link
@@ -107,13 +123,6 @@ export default function Header() {
               {item.label}
             </Link>
           ))}
-          <Link
-            href={otherHref}
-            onClick={() => setOpen(false)}
-            className="mt-3 block rounded-xl px-4 py-3 text-base font-medium text-brand-800 hover:bg-brand-50"
-          >
-            {isEn ? "中文版本" : "English version"}
-          </Link>
         </nav>
       </aside>
     </>
