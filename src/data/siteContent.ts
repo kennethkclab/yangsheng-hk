@@ -69,7 +69,7 @@ export const siteData = {
   ],
   navigation: [
     { label: "主頁", href: "/" },
-    { label: "養生會簡介", href: "/about" },
+    { label: "國際健康養生會簡介", href: "/about" },
     { label: "醫道-岑信棠醫生", href: "/Dr-ShamShunTong" },
     { label: "最新資訊", href: "/news" },
     { label: "養生活動", href: "/events" },

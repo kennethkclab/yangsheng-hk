@@ -4,7 +4,7 @@ import { siteData } from "@/data/siteContent";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "養生會簡介",
+  title: "國際健康養生會簡介",
   description: "了解國際健康養生會的緣起、宗旨與理念。",
 };
 
@@ -19,7 +19,7 @@ export default function AboutPage() {
               {siteData.brand.nature}
             </p>
             <h1 className="mb-4 text-3xl font-bold text-stone-900 md:text-4xl">
-              養生會簡介
+              國際健康養生會簡介
             </h1>
             <p className="text-lg text-stone-600">
               {siteData.brand.slogan}
