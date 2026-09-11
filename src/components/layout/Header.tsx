@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { siteData } from "@/data/siteContent";
 
@@ -17,19 +18,16 @@ export default function Header() {
   return (
     <>
       <header className="sticky top-0 z-50 border-b border-stone-200 bg-white">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-2.5">
           <Link href="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
-            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-100 text-brand-800 font-bold text-lg">
-              健
-            </div>
-            <div className="hidden min-[400px]:block">
-              <p className="text-base font-semibold text-brand-800 leading-tight">
-                {siteData.brand.name}
-              </p>
-              <p className="text-[11px] text-stone-500 leading-tight">
-                {siteData.brand.englishName}
-              </p>
-            </div>
+            <Image
+              src={siteData.images.logo}
+              alt={siteData.brand.name}
+              width={280}
+              height={72}
+              className="h-12 w-auto md:h-14"
+              priority
+            />
           </Link>
 
           <nav className="hidden items-center gap-5 text-sm text-stone-700 md:flex">
@@ -69,7 +67,7 @@ export default function Header() {
         aria-hidden={!open}
       >
         <div className="flex items-center justify-between border-b border-stone-100 bg-white px-4 py-4">
-          <p className="text-sm font-semibold text-brand-800">選單</p>
+          <Image src={siteData.images.logo} alt={siteData.brand.name} width={180} height={48} className="h-10 w-auto" />
           <button
             type="button"
             className="inline-flex h-9 w-9 items-center justify-center rounded-lg text-stone-600 hover:bg-stone-100"
