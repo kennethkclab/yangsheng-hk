@@ -98,8 +98,7 @@ export default function Header() {
         }`}
         aria-hidden={!open}
       >
-        <div className="flex items-center justify-between border-b border-stone-100 bg-white px-4 py-4">
-          <p className="text-sm font-semibold text-brand-800">{copy.menu}</p>
+        <div className="flex items-center justify-end border-b border-stone-100 bg-white px-3 py-3">
           <button
             type="button"
             className="inline-flex h-9 w-9 items-center justify-center rounded-lg text-stone-600 hover:bg-stone-100"
@@ -111,7 +110,6 @@ export default function Header() {
             </svg>
           </button>
         </div>
-        <div className="border-b border-stone-100 bg-white px-4 py-3">{switcher}</div>
         <nav className="flex-1 overflow-y-auto bg-white px-3 py-4 space-y-1">
           {items.map((item) => (
             <Link
