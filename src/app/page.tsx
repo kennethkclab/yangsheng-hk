@@ -62,6 +62,22 @@ export default function HomePage() {
           </div>
         </section>
 
+        <section className="bg-white py-10 md:py-14">
+          <div className="mx-auto max-w-5xl px-4">
+            <div className="overflow-hidden rounded-2xl bg-black shadow-lg">
+              <div className="relative aspect-video">
+                <iframe
+                  className="absolute inset-0 h-full w-full"
+                  src="https://www.youtube-nocookie.com/embed/mfk2BhJGTSU"
+                  title="國際健康養生會影片"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="mx-auto max-w-6xl px-4 py-16">
           <div className="mb-8 flex items-end justify-between gap-4">
             <h2 className="text-2xl font-bold text-stone-900 md:text-3xl">
