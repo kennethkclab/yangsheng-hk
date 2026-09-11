@@ -4,7 +4,7 @@ export const siteData = {
   brand: {
     name: "國際健康養生會",
     englishName: "International Association for Health and Yangsheng",
-    logoUrl: `${R2}/images/logo.gif`,
+    logoUrl: `${R2}/images/logo.png`,
     establishedYear: "2009 年 12 月",
     nature: "康健及養生非牟利社團",
     slogan: "預防勝於治療",
@@ -30,7 +30,7 @@ export const siteData = {
     { id: "xiaohongshu", label: "小紅書", href: "https://www.xiaohongshu.com" },
   ],
   images: {
-    logo: `${R2}/images/logo.gif`,
+    logo: `${R2}/images/logo.png`,
     hero1: `${R2}/images/photo01.jpg`,
     hero2: `${R2}/images/photo02.jpg`,
     pho: `${R2}/images/pho.jpg`,
