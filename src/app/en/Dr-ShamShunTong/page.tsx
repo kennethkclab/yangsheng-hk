@@ -1,5 +1,6 @@
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import PageHero from "@/components/layout/PageHero";
 import { yidao } from "@/data/yidao";
 import { t } from "@/i18n/dict";
 import Image from "next/image";
@@ -13,14 +14,14 @@ export default function EnglishDoctorPage() {
     <>
       <Header />
       <main className="min-h-screen bg-stone-50">
+        <PageHero title={copy.yidaoHeading} subtitle={copy.yidaoName} />
         <section className="border-b border-stone-200 bg-white">
           <div className="mx-auto flex max-w-5xl flex-col items-start gap-6 px-4 py-12 md:flex-row md:items-center">
             <div className="relative h-36 w-36 shrink-0 overflow-hidden rounded-full border border-stone-200 bg-stone-100">
               <Image src={yidao.portrait} alt={copy.yidaoName} fill className="object-cover object-top" />
             </div>
             <div>
-              <p className="text-sm font-medium tracking-widest text-brand-700">{copy.yidaoHeading}</p>
-              <h1 className="mt-1 text-3xl font-bold text-stone-900 md:text-4xl">{copy.yidaoName}</h1>
+              <h2 className="text-3xl font-bold text-stone-900">{copy.yidaoName}</h2>
               <p className="mt-4 max-w-2xl text-lg leading-relaxed text-stone-600">{copy.yidaoBio}</p>
               <p className="mt-3 text-sm text-stone-500">{copy.yidaoSource}</p>
             </div>

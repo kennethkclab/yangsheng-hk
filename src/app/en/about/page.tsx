@@ -1,5 +1,6 @@
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import PageHero from "@/components/layout/PageHero";
 import { siteData } from "@/data/siteContent";
 import { t } from "@/i18n/dict";
 import type { Metadata } from "next";
@@ -12,13 +13,7 @@ export default function EnglishAboutPage() {
     <>
       <Header />
       <main className="min-h-screen bg-stone-50">
-        <section className="bg-gradient-to-br from-brand-50 to-stone-100 py-16">
-          <div className="mx-auto max-w-4xl px-4 text-center">
-            <p className="mb-3 text-sm font-medium tracking-widest text-brand-700">{copy.nature}</p>
-            <h1 className="mb-4 text-3xl font-bold text-stone-900 md:text-4xl">{copy.aboutTitle}</h1>
-            <p className="text-lg text-stone-600">{copy.slogan}</p>
-          </div>
-        </section>
+        <PageHero title={copy.aboutTitle} subtitle={copy.slogan} align="center" />
         <section className="mx-auto max-w-4xl px-4 py-16">
           <h2 className="mb-6 text-2xl font-bold text-stone-900">{copy.originTitle}</h2>
           <p className="mb-10 text-lg leading-relaxed text-stone-600">{copy.originText}</p>
