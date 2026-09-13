@@ -1,13 +1,23 @@
 export type Locale = "zh" | "en";
 
-export const nav = {
+export type NavChild = { label: string; href: string };
+export type NavItem = { label: string; href: string; children?: readonly NavChild[] };
+
+export const nav: Record<Locale, readonly NavItem[]> = {
   zh: [
     { label: "主頁", href: "/" },
     { label: "國際健康養生會簡介", href: "/about" },
-    { label: "醫道-岑信棠醫生", href: "/Dr-ShamShunTong" },
+    {
+      label: "媒體及報道",
+      href: "/columns",
+      children: [
+        { label: "醫道-岑信棠醫生", href: "/Dr-ShamShunTong" },
+        { label: "活動相簿", href: "/gallery" },
+        { label: "健康專欄", href: "/columns" },
+      ],
+    },
     { label: "最新資訊", href: "/news" },
     { label: "養生活動", href: "/events" },
-    { label: "活動相簿", href: "/gallery" },
     { label: "養生常識", href: "/knowledge" },
     { label: "科研結果", href: "/research" },
     { label: "聯絡我們", href: "/contact" },
@@ -15,15 +25,22 @@ export const nav = {
   en: [
     { label: "Home", href: "/en" },
     { label: "About the Association", href: "/en/about" },
-    { label: "Dr Sham Shun Tong", href: "/en/Dr-ShamShunTong" },
+    {
+      label: "Media & Reports",
+      href: "/en/columns",
+      children: [
+        { label: "Dr Sham Shun Tong", href: "/en/Dr-ShamShunTong" },
+        { label: "Gallery", href: "/en/gallery" },
+        { label: "Health Columns", href: "/en/columns" },
+      ],
+    },
     { label: "News", href: "/en/news" },
     { label: "Activities", href: "/en/events" },
-    { label: "Gallery", href: "/en/gallery" },
     { label: "Wellness Knowledge", href: "/en/knowledge" },
     { label: "Research", href: "/en/research" },
     { label: "Contact", href: "/en/contact" },
   ],
-} as const;
+};
 
 export const t = {
   zh: {
@@ -67,6 +84,8 @@ export const t = {
       "香港大學醫學院臨床腫瘤學系榮譽教授，腫瘤專科醫生，國際健康養生會主席，行醫40多年，親眼見證科技進步，癌症由不治之症，至大部分都有得醫。",
     yidaoSource: "資料來源：東周刊",
     yidaoColumns: "健康生活專欄",
+    columnsTitle: "健康專欄",
+    columnsLead: "岑信棠醫生與養生會的健康資訊與報道",
     knowledgeLead: "預防勝於治療，從日常習慣開始",
     knowledgeP1: "道家內功著重氣血調理、呼吸與意念。持續練習有助緩解慢性疲勞、改善睡眠與集中力。",
     knowledgeP2: "慧心健腦御智功結合身心運動，適合希望提升記憶力與心神平靜的人士。",
@@ -121,6 +140,8 @@ export const t = {
       "Honorary Professor in Clinical Oncology at the University of Hong Kong Faculty of Medicine, specialist in oncology, and Chairman of the International Association for Health and Yangsheng. After more than 40 years in practice, he has seen cancer move from an often untreatable disease to one that can be treated in most cases.",
     yidaoSource: "Source: East Week",
     yidaoColumns: "Health columns",
+    columnsTitle: "Health Columns",
+    columnsLead: "Health articles and reports from Dr Sham and the Association",
     knowledgeLead: "Prevention begins with daily habits",
     knowledgeP1:
       "Daoist Neigong focuses on qi and blood, breathing and intention. Regular practice may ease chronic fatigue and support sleep and concentration.",
