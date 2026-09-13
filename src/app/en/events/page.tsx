@@ -18,13 +18,19 @@ export default function EnglishEventsPage() {
             <p className="mt-3 text-brand-100">{t.en.eventsLead}</p>
           </div>
         </section>
-        <section className="mx-auto grid max-w-6xl gap-6 px-4 py-14 md:grid-cols-3">
-          {media.events.map((item) => (
-            <article key={item.id} className="overflow-hidden rounded-2xl border border-stone-200 bg-white">
-              <Image src={item.image} alt={item.title} width={1200} height={900} className="h-auto w-full object-contain" />
-              <div className="p-5"><h2 className="text-lg font-semibold">{item.title}</h2></div>
-            </article>
-          ))}
+        <section className="mx-auto max-w-6xl px-4 py-14">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {media.events.map((item) => (
+              <article key={item.id} className="overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-sm">
+                <div className="relative aspect-[4/3] bg-stone-100">
+                  <Image src={item.image} alt={item.titleEn} fill className="object-cover" sizes="(max-width: 1024px) 50vw, 33vw" />
+                </div>
+                <div className="p-5">
+                  <h2 className="text-lg font-semibold text-stone-900">{item.titleEn}</h2>
+                </div>
+              </article>
+            ))}
+          </div>
         </section>
       </main>
       <Footer />

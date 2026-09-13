@@ -32,19 +32,22 @@ export const media = {
   ],
   events: [
     {
-      id: "event-1",
-      title: "養生會活動",
-      image: `${R2}/images/events/1_s.jpg`,
+      id: "event-class",
+      title: "養生練功團",
+      titleEn: "Practice gathering",
+      image: `${R2}/images/gallery/7_1.jpg`,
     },
     {
-      id: "event-2",
-      title: "社區推廣",
-      image: `${R2}/images/events/2_s.jpg`,
+      id: "event-outdoor",
+      title: "戶外功法練習",
+      titleEn: "Outdoor practice",
+      image: `${R2}/images/gallery/6_2.jpg`,
     },
     {
-      id: "event-4",
-      title: "公益與聚會",
-      image: `${R2}/images/events/4_s.jpg`,
+      id: "event-community",
+      title: "社區聚會",
+      titleEn: "Community gathering",
+      image: `${R2}/images/gallery/8_1.jpg`,
     },
   ],
   galleryAlbums: [
