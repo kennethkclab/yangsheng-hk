@@ -46,8 +46,6 @@ export default function EnglishHomePage() {
           </div>
         </section>
 
-        <YouTubeCarousel locale="en" />
-
         <section className="mx-auto max-w-6xl px-4 py-16">
           <h2 className="mb-6 text-2xl font-bold text-stone-900 md:text-3xl">{copy.originTitle}</h2>
           <p className="mb-10 max-w-3xl text-lg leading-relaxed text-stone-600">{copy.originText}</p>
@@ -80,6 +78,8 @@ export default function EnglishHomePage() {
             </div>
           </div>
         </section>
+
+        <YouTubeCarousel locale="en" />
 
         <section className="bg-stone-50 py-16">
           <div className="mx-auto max-w-6xl px-4">

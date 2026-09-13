@@ -38,8 +38,6 @@ export default function HomePage() {
           </div>
         </section>
 
-        <YouTubeCarousel locale="zh" />
-
         <section className="mx-auto max-w-6xl px-4 py-16">
           <div className="mb-8 flex items-end justify-between gap-4">
             <h2 className="text-2xl font-bold text-stone-900 md:text-3xl">{siteData.about.title}</h2>
@@ -79,6 +77,8 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        <YouTubeCarousel locale="zh" />
 
         <section className="bg-stone-50 py-16">
           <div className="mx-auto max-w-6xl px-4">
