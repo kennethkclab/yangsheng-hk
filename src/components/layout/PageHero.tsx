@@ -18,10 +18,7 @@ export default function PageHero({ title, subtitle, align = "left" }: Props) {
       <div className={`relative mx-auto max-w-6xl px-4 py-16 md:py-20 ${align === "center" ? "text-center" : ""}`}>
         <h1 className="text-3xl font-bold tracking-wide text-white drop-shadow-md md:text-4xl">{title}</h1>
         {subtitle ? (
-          <p className="mt-3 max-w-2xl text-base text-white/90 drop-shadow md:text-lg ${align === "center" ? "mx-auto" : ""}".replace(
-            " ${align === \"center\" ? \"mx-auto\" : \"\"}",
-            align === "center" ? " mx-auto" : ""
-          )}>
+          <p className={`mt-3 max-w-2xl text-base text-white/90 drop-shadow md:text-lg ${align === "center" ? "mx-auto" : ""}`}>
             {subtitle}
           </p>
         ) : null}
