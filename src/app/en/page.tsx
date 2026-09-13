@@ -46,6 +46,22 @@ export default function EnglishHomePage() {
           </div>
         </section>
 
+        <section className="bg-white py-10 md:py-14">
+          <div className="mx-auto max-w-5xl px-4">
+            <div className="overflow-hidden rounded-2xl border border-stone-200 bg-stone-900 shadow-sm">
+              <div className="relative aspect-video">
+                <iframe
+                  className="absolute inset-0 h-full w-full"
+                  src="https://www.youtube-nocookie.com/embed/mfk2BhJGTSU"
+                  title="Association video"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="mx-auto max-w-6xl px-4 py-16">
           <h2 className="mb-6 text-2xl font-bold text-stone-900 md:text-3xl">{copy.originTitle}</h2>
           <p className="mb-10 max-w-3xl text-lg leading-relaxed text-stone-600">{copy.originText}</p>
