@@ -10,7 +10,7 @@ export default function Footer() {
   const isEn = pathname === "/en" || pathname.startsWith("/en/");
   const locale = isEn ? "en" : "zh";
   const copy = t[locale];
-  const items = nav[locale];
+  const items = nav[locale].flatMap((item) => (item.children ? item.children : [item]));
 
   return (
     <footer className="border-t border-stone-200 bg-stone-100">
@@ -37,9 +37,10 @@ export default function Footer() {
               <li>{copy.phone}: {siteData.contact.phoneDisplay}</li>
               <li>{copy.address}</li>
               <li>
-                <a href={siteData.contact.whatsappUrl} target="_blank" rel="noopener noreferrer" className="text-brand-700 hover:underline">
-                  {copy.whatsapp}
-                </a>
+                <a href={siteData.contact.whatsappUrl} target="_blank" rel="noopener noreferrer" className="text-brand-700 hover:underline">{copy.whatsapp}</a>
+              </li>
+              <li>
+                <a href="https://youtube.com/@yangshenghk" target="_blank" rel="noopener noreferrer" className="text-brand-700 hover:underline">YouTube @yangshenghk</a>
               </li>
             </ul>
           </div>

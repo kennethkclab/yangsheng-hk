@@ -1,5 +1,6 @@
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import YouTubeCarousel from "@/components/home/YouTubeCarousel";
 import { siteData } from "@/data/siteContent";
 import { media } from "@/data/media";
 import { coursesEn, t } from "@/i18n/dict";
@@ -36,7 +37,7 @@ export default function EnglishHomePage() {
             <div className="max-w-2xl">
               <p className="mb-4 inline-block rounded-full bg-white/15 px-4 py-1.5 text-sm font-medium tracking-wide text-brand-50 backdrop-blur">{copy.nature}</p>
               <h1 className="mb-5 text-4xl font-bold leading-tight text-white md:text-5xl">{copy.slogan}</h1>
-              <p className="mb-8 text-lg text-brand-50/90 leading-relaxed">{copy.heroLead}</p>
+              <p className="mb-8 text-lg leading-relaxed text-brand-50/90">{copy.heroLead}</p>
               <div className="flex flex-wrap gap-3">
                 <Link href="/en/about" className="rounded-full bg-white px-7 py-3 text-sm font-semibold text-brand-800 shadow-lg hover:bg-brand-50">{copy.learnMore}</Link>
                 <a href={siteData.contact.whatsappUrl} target="_blank" rel="noopener noreferrer" className="rounded-full border-2 border-white/40 px-7 py-3 text-sm font-semibold text-white hover:bg-white/10">{copy.whatsapp}</a>
@@ -45,15 +46,7 @@ export default function EnglishHomePage() {
           </div>
         </section>
 
-        <section className="bg-white py-10 md:py-14">
-          <div className="mx-auto max-w-5xl px-4">
-            <div className="overflow-hidden rounded-2xl bg-black shadow-lg">
-              <div className="relative aspect-video">
-                <iframe className="absolute inset-0 h-full w-full" src="https://www.youtube-nocookie.com/embed/mfk2BhJGTSU" title={copy.videoTitle} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen />
-              </div>
-            </div>
-          </div>
-        </section>
+        <YouTubeCarousel locale="en" />
 
         <section className="mx-auto max-w-6xl px-4 py-16">
           <h2 className="mb-6 text-2xl font-bold text-stone-900 md:text-3xl">{copy.originTitle}</h2>
@@ -80,7 +73,7 @@ export default function EnglishHomePage() {
                   <div className="p-6">
                     <h3 className="mb-1 text-xl font-semibold text-stone-900">{course.title}</h3>
                     <p className="mb-3 text-sm text-brand-700">{copy.instructor}: {course.instructor}</p>
-                    <p className="text-stone-600 leading-relaxed">{course.description}</p>
+                    <p className="leading-relaxed text-stone-600">{course.description}</p>
                   </div>
                 </article>
               ))}
@@ -101,15 +94,6 @@ export default function EnglishHomePage() {
                 </div>
               ))}
             </div>
-          </div>
-        </section>
-
-        <section className="bg-brand-800 py-16 text-white">
-          <div className="mx-auto max-w-6xl px-4 text-center">
-            <h2 className="mb-3 text-2xl font-bold">{copy.contactTitle}</h2>
-            <p className="mb-1 text-brand-100">{copy.phone}: {siteData.contact.phoneDisplay}</p>
-            <p className="mb-8 text-brand-100">{copy.address}</p>
-            <a href={siteData.contact.whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-block rounded-full bg-white px-8 py-3.5 font-semibold text-brand-800">{copy.whatsappNow}</a>
           </div>
         </section>
       </main>
