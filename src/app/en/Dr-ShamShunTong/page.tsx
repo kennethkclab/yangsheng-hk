@@ -31,7 +31,7 @@ export default function EnglishDoctorPage() {
           <h2 className="mb-8 text-2xl font-bold text-stone-900">{copy.yidaoColumns}</h2>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {yidao.articles.map((item) => (
-              <a key={`${item.title}-${item.date}`} href={yidao.sourcePage} target="_blank" rel="noopener noreferrer" className="overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-sm">
+              <a key={`${item.title}-${item.date}`} href={item.url} target="_blank" rel="noopener noreferrer" className="overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-sm">
                 <div className="relative aspect-[16/10] bg-stone-100">
                   <Image src={yidao.cover} alt={item.title} fill className="object-contain p-2" />
                 </div>
