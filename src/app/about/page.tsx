@@ -2,12 +2,24 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import PageHero from "@/components/layout/PageHero";
 import { siteData } from "@/data/siteContent";
+import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "國際健康養生會簡介",
   description: "了解國際健康養生會的緣起、宗旨與理念。",
 };
+
+const awardPhotos = [
+  {
+    src: "https://pub-5442f85cdccf43b0aed63eadbd58fc4f.r2.dev/images/about/award-sham.jpg",
+    alt: "岑信棠醫生獲頒《資本平台》CEO x Entrepreneur of the Year 2025",
+  },
+  {
+    src: "https://pub-5442f85cdccf43b0aed63eadbd58fc4f.r2.dev/images/about/award-yuen.jpg",
+    alt: "國際健康養生會獲頒《資本平台》CEO x Entrepreneur of the Year 2025",
+  },
+];
 
 export default function AboutPage() {
   return (
@@ -18,6 +30,16 @@ export default function AboutPage() {
         <section className="mx-auto max-w-4xl px-4 py-16">
           <h2 className="mb-6 text-2xl font-bold text-stone-900">{siteData.about.title}</h2>
           <p className="mb-10 text-lg leading-relaxed text-stone-600">{siteData.about.originText}</p>
+
+          <h3 className="mb-6 text-xl font-semibold text-stone-900">《資本平台》CEO x Entrepreneur of the Year 2025</h3>
+          <div className="mb-12 grid gap-4 md:grid-cols-2">
+            {awardPhotos.map((photo) => (
+              <div key={photo.src} className="overflow-hidden rounded-2xl border border-stone-200 bg-stone-100">
+                <Image src={photo.src} alt={photo.alt} width={1600} height={1067} className="h-auto w-full object-contain" />
+              </div>
+            ))}
+          </div>
+
           <h3 className="mb-6 text-xl font-semibold text-stone-900">我們的宗旨</h3>
           <div className="grid gap-5 sm:grid-cols-3">
             {siteData.about.missionList.map((item, i) => (

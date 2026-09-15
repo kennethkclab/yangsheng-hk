@@ -3,9 +3,21 @@ import Footer from "@/components/layout/Footer";
 import PageHero from "@/components/layout/PageHero";
 import { siteData } from "@/data/siteContent";
 import { t } from "@/i18n/dict";
+import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = { title: "About the Association" };
+
+const awardPhotos = [
+  {
+    src: "https://pub-5442f85cdccf43b0aed63eadbd58fc4f.r2.dev/images/about/award-sham.jpg",
+    alt: "Capital CEO x Entrepreneur of the Year 2025",
+  },
+  {
+    src: "https://pub-5442f85cdccf43b0aed63eadbd58fc4f.r2.dev/images/about/award-yuen.jpg",
+    alt: "Capital CEO x Entrepreneur of the Year 2025",
+  },
+];
 
 export default function EnglishAboutPage() {
   const copy = t.en;
@@ -17,6 +29,14 @@ export default function EnglishAboutPage() {
         <section className="mx-auto max-w-4xl px-4 py-16">
           <h2 className="mb-6 text-2xl font-bold text-stone-900">{copy.originTitle}</h2>
           <p className="mb-10 text-lg leading-relaxed text-stone-600">{copy.originText}</p>
+          <h3 className="mb-6 text-xl font-semibold text-stone-900">Capital CEO x Entrepreneur of the Year 2025</h3>
+          <div className="mb-12 grid gap-4 md:grid-cols-2">
+            {awardPhotos.map((photo) => (
+              <div key={photo.src} className="overflow-hidden rounded-2xl border border-stone-200 bg-stone-100">
+                <Image src={photo.src} alt={photo.alt} width={1600} height={1067} className="h-auto w-full object-contain" />
+              </div>
+            ))}
+          </div>
           <h3 className="mb-6 text-xl font-semibold text-stone-900">{copy.ourMission}</h3>
           <div className="grid gap-5 sm:grid-cols-3">
             {copy.missions.map((item, i) => (
