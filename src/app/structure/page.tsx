@@ -50,9 +50,9 @@ export default function StructurePage() {
           </article>
 
           <article className="mb-5 rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
-            <p className="text-sm font-medium text-brand-700">資深臨床腫瘤科醫生 / 科研發展</p>
+            <p className="text-sm font-medium text-brand-700">主席</p>
             <h2 className="mt-1 text-2xl font-bold text-stone-900">岑信棠醫生</h2>
-            <p className="mt-3 leading-relaxed text-stone-600">香港大學醫學院臨床腫瘤學系榮譽教授，協助推動養生會科研與「生活方式醫學」。</p>
+            <p className="mt-3 leading-relaxed text-stone-600">香港大學醫學院臨床腫瘤學系榮譽教授、腫瘤專科醫生，國際健康養生會主席，推動科研與「生活方式醫學」。</p>
             <Link href="/Dr-ShamShunTong" className="mt-4 inline-block text-brand-700 hover:underline">了解更多 →</Link>
           </article>
 

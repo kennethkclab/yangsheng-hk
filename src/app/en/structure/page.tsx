@@ -47,9 +47,9 @@ export default function EnglishStructurePage() {
           </article>
 
           <article className="mb-5 rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
-            <p className="text-sm font-medium text-brand-700">Senior clinical oncologist / research development</p>
+            <p className="text-sm font-medium text-brand-700">Chairperson</p>
             <h2 className="mt-1 text-2xl font-bold text-stone-900">Dr Sham Shun Tong</h2>
-            <p className="mt-3 leading-relaxed text-stone-600">Honorary Professor in Clinical Oncology at HKU. Supports the Association’s research and lifestyle medicine work.</p>
+            <p className="mt-3 leading-relaxed text-stone-600">Honorary Professor in Clinical Oncology at HKU, specialist in oncology, and chairperson of the Association. He supports research and lifestyle medicine.</p>
             <Link href="/en/Dr-ShamShunTong" className="mt-4 inline-block text-brand-700 hover:underline">Learn more →</Link>
           </article>
 
