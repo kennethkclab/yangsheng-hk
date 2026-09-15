@@ -1,0 +1,93 @@
+const R2 = "https://pub-5442f85cdccf43b0aed63eadbd58fc4f.r2.dev";
+
+export const yuenGallery = {
+  title: "袁麗萍教授圖片集",
+  titleEn: "Professor Yuen Lai Ping Photo Collection",
+  source: "https://yangshengdao.hk/%e8%a2%81%e9%ba%97%e8%90%8d%e6%95%99%e6%8e%88%e5%9c%96%e7%89%87%e9%9b%86/",
+  items: [
+    {
+      id: "01",
+      caption: "左起：香港地產大亨李兆基先生、中國道教協會會長任法融道長及袁教授於九寨溝採靈氣",
+      captionEn: "Lee Shau-kee, Taoist master Ren Farong and Professor Yuen in Jiuzhaigou",
+      desktop: `${R2}/images/yuen/desktop/01.webp`,
+      mobile: `${R2}/images/yuen/mobile/01.webp`,
+    },
+    {
+      id: "02",
+      caption: "袁教授與中國政協副主席梁振英先生合照",
+      captionEn: "Professor Yuen with C. Y. Leung",
+      desktop: `${R2}/images/yuen/desktop/02.webp`,
+      mobile: `${R2}/images/yuen/mobile/02.webp`,
+    },
+    {
+      id: "03",
+      caption: "「風之後」李麗珊與袁教授第二屆五行平衡功學生謝師宴合影",
+      captionEn: "Lee Lai Shan with Professor Yuen and students",
+      desktop: `${R2}/images/yuen/desktop/03.webp`,
+      mobile: `${R2}/images/yuen/mobile/03.webp`,
+    },
+    {
+      id: "04",
+      caption: "左起：曾鈺成、廖部長、高永文醫生、范徐麗泰女士及袁教授於國際中醫中藥總會第17屆會長理監事就職典禮合照",
+      captionEn: "Inauguration of the International General Chinese Herbalists and Medicine Professionals Association",
+      desktop: `${R2}/images/yuen/desktop/04.webp`,
+      mobile: `${R2}/images/yuen/mobile/04.webp`,
+    },
+    {
+      id: "05",
+      caption: "前衛生局長陳馮富珍女士與袁教授合照",
+      captionEn: "Professor Yuen with Margaret Chan",
+      desktop: `${R2}/images/yuen/desktop/05.webp`,
+      mobile: `${R2}/images/yuen/mobile/05.webp`,
+    },
+    {
+      id: "06",
+      caption: "袁教授活動紀錄",
+      captionEn: "Activity record",
+      desktop: `${R2}/images/yuen/desktop/06.webp`,
+      mobile: `${R2}/images/yuen/mobile/06.webp`,
+    },
+    {
+      id: "07",
+      caption: "袁教授活動紀錄",
+      captionEn: "Activity record",
+      desktop: `${R2}/images/yuen/desktop/07.webp`,
+      mobile: `${R2}/images/yuen/mobile/07.webp`,
+    },
+    {
+      id: "08",
+      caption: "左：李建國先生全國人大常委會副委員長兼秘書長",
+      captionEn: "With Li Jianguo",
+      desktop: `${R2}/images/yuen/desktop/08.webp`,
+      mobile: `${R2}/images/yuen/mobile/08.webp`,
+    },
+    {
+      id: "09",
+      caption: "袁教授活動紀錄",
+      captionEn: "Activity record",
+      desktop: `${R2}/images/yuen/desktop/09.webp`,
+      mobile: `${R2}/images/yuen/mobile/09.webp`,
+    },
+    {
+      id: "10",
+      caption: "袁教授於圓玄學院教導學員練習五行平衡功",
+      captionEn: "Teaching Wuxing Pingheng Gong at Yuen Yuen Institute",
+      desktop: `${R2}/images/yuen/desktop/10.webp`,
+      mobile: `${R2}/images/yuen/mobile/10.webp`,
+    },
+    {
+      id: "11",
+      caption: "袁教授出席延慶山區義診活動",
+      captionEn: "Free clinic in Yanqing",
+      desktop: `${R2}/images/yuen/desktop/11.webp`,
+      mobile: `${R2}/images/yuen/mobile/11.webp`,
+    },
+    {
+      id: "12",
+      caption: "冬季氣功露營班於鯉魚門渡假村",
+      captionEn: "Winter qigong camp at Lei Yue Mun",
+      desktop: `${R2}/images/yuen/desktop/12.webp`,
+      mobile: `${R2}/images/yuen/mobile/12.webp`,
+    },
+  ],
+} as const;
