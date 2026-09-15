@@ -12,7 +12,7 @@ export const media = {
       title: "最新活動與課程資訊",
       titleEn: "Latest activity and class update",
       date: "",
-      href: "https://www.facebook.com/share/p/1CzAvMdDQU/?mibextid=wwXIfr",
+      href: "https://www.facebook.com/share/p/19aA5DVRKx/",
       summary: "請到 Facebook 架架閱讀完整帖文。",
       summaryEn: "Open the full post on Facebook.",
     },
