@@ -23,7 +23,7 @@ export default function AboutPage() {
             {siteData.about.missionList.map((item, i) => (
               <div key={i} className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
                 <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-brand-100 font-bold text-brand-800">{i + 1}</div>
-                <p className="leading-relaxed text-stone-700">{item}</p>
+                <p className="whitespace-pre-line leading-relaxed text-stone-700">{item}</p>
               </div>
             ))}
           </div>
