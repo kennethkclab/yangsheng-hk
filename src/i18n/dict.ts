@@ -12,7 +12,7 @@ export const nav: Record<Locale, readonly NavItem[]> = {
       href: "/columns",
       children: [
         { label: "醫道-岑信棠醫生", href: "/Dr-ShamShunTong" },
-        { label: "活動相簿", href: "/gallery" },
+        { label: "袁麗萍教授圖片集", href: "/gallery" },
         { label: "健康專欄", href: "/columns" },
       ],
     },
@@ -30,7 +30,7 @@ export const nav: Record<Locale, readonly NavItem[]> = {
       href: "/en/columns",
       children: [
         { label: "Dr Sham Shun Tong", href: "/en/Dr-ShamShunTong" },
-        { label: "Gallery", href: "/en/gallery" },
+        { label: "Professor Yuen Gallery", href: "/en/gallery" },
         { label: "Health Columns", href: "/en/columns" },
       ],
     },
@@ -95,7 +95,7 @@ export const t = {
       "2009 年，「中華傳統醫學治療中心」與「香港大學行為健康教研中心」合作舉辦道家內功學習課程，研究內功對慢性疲勞綜合症的效果。學員練習後身體狀況有顯著改善，亦推動養生會正式成立。",
     eventsLead: "社區活動、課程與公益推廣",
     newsLead: "課程招生、活動紀錄與會務公告",
-    galleryLead: "原站相簿與活動紀錄",
+    galleryLead: "袁麗萍教授講學、公益活動與合照紀錄",
     videoTitle: "活動影片",
   },
   en: {
@@ -154,7 +154,7 @@ export const t = {
       "In 2009 the Chinese Traditional Medicine Treatment Centre and the HKU Centre on Behavioral Health ran a Daoist Neigong course to study its effect on chronic fatigue syndrome. Students reported clear improvement, which also led to the founding of the Association.",
     eventsLead: "Community programmes, classes and public education",
     newsLead: "Classes, events and association updates",
-    galleryLead: "Photos from courses and community activities",
+    galleryLead: "Teaching, community service and portraits of Professor Yuen",
     videoTitle: "Video",
   },
 } as const;
