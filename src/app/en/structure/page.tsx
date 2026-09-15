@@ -25,9 +25,9 @@ export default function EnglishStructurePage() {
       <main className="min-h-screen bg-stone-50">
         <PageHero title="Organisation" subtitle="Non-profit association · Founded December 2009" />
         <section className="mx-auto max-w-5xl px-4 py-14">
-          <article className="mb-8 overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-sm md:grid md:grid-cols-[280px_1fr]">
-            <div className="relative min-h-[320px] bg-stone-100">
-              <Image src={portrait} alt="Professor Yuen Lai Ping" fill className="object-cover object-top" sizes="(max-width: 768px) 100vw, 280px" />
+          <article className="mb-8 overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-sm">
+            <div className="bg-stone-100">
+              <Image src={portrait} alt="Professor Yuen Lai Ping" width={1200} height={1200} className="mx-auto h-auto w-full max-w-xl object-contain" />
             </div>
             <div className="p-6 md:p-8">
               <p className="text-sm font-medium text-brand-700">Founder and chairperson</p>
