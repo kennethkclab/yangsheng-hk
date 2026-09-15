@@ -28,7 +28,11 @@ export default function HomePage() {
           <div className="relative mx-auto max-w-6xl px-4 py-20 md:py-28">
             <div className="max-w-2xl">
               <p className="mb-4 inline-block rounded-full bg-white/15 px-4 py-1.5 text-sm font-medium tracking-wide text-brand-50 backdrop-blur">{siteData.brand.nature}</p>
-              <h1 className="mb-5 text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl">{siteData.brand.slogan}</h1>
+              <h1 className="mb-5 text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl">
+                健康立天下
+                <br />
+                逍遙渡時光
+              </h1>
               <p className="mb-8 text-lg leading-relaxed text-brand-50/90">結合道家內功智慧與現代科研實證，為追求健康長壽的人士提供專業協助。</p>
               <div className="flex flex-wrap gap-3">
                 <Link href="/about" className="rounded-full bg-white px-7 py-3 text-sm font-semibold text-brand-800 shadow-lg hover:bg-brand-50">了解養生會</Link>
