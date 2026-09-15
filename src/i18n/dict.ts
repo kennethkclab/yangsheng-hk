@@ -88,7 +88,7 @@ export const t = {
     columnsLead: "岑信棠醫生與養生會的健康資訊與報道",
     knowledgeLead: "預防勝於治療，從日常習慣開始",
     knowledgeP1: "道家內功著重氣血調理、呼吸與意念。持續練習有助緩解慢性疲勞、改善睡眠與集中力。",
-    knowledgeP2: "慧心健腦御智功結合身心運動，適合希望提升記憶力與心神平靜的人士。",
+    knowledgeP2: "科研健腦御智功結合身心運動，適合希望提升記憶力與心神平靜的人士。",
     knowledgeP3: "建議先由專業導師指導入門，並依個人身體狀況調整強度。",
     researchLead: "與香港大學行為健康教研中心合作的內功研究",
     researchText:
@@ -146,7 +146,7 @@ export const t = {
     knowledgeP1:
       "Daoist Neigong focuses on qi and blood, breathing and intention. Regular practice may ease chronic fatigue and support sleep and concentration.",
     knowledgeP2:
-      "Huixin Jiannao Yuzhi Gong combines qigong with mind-body movement for memory, focus and calm.",
+      "Research-based Jiannao Yuzhi Gong combines qigong with mind-body movement for memory, focus and calm.",
     knowledgeP3:
       "Begin with a qualified instructor and adjust intensity to your own condition.",
     researchLead: "Neigong research with HKU Centre on Behavioral Health",
@@ -169,7 +169,7 @@ export const coursesEn = [
   },
   {
     id: "brain",
-    title: "Huixin Jiannao Yuzhi Gong",
+    title: "Research-based Jiannao Yuzhi Gong",
     instructor: "Professor Yuen Lai Ping",
     description:
       "A qigong-based mind-body practice designed to support brain function, memory, concentration and inner calm.",
