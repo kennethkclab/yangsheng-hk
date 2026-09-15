@@ -60,7 +60,7 @@ export const siteData = {
     },
     {
       id: "brain",
-      title: "慧心健腦御智功",
+      title: "科研健腦御智功",
       instructor: "袁麗萍教授",
       description:
         "結合氣功的身心運動，旨在提升大腦功能、增強記憶力、集中力及心神平靜。",
