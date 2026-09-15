@@ -32,7 +32,7 @@ export default function HomePage() {
                 <span className="block pb-3 md:pb-5">健康立天下</span>
                 <span className="block">逍遙渡時光</span>
               </h1>
-              <p className="mb-8 text-lg leading-relaxed text-brand-50/90">結合道家內功智慧與現代科研實證，為追求健康長壽的人士提供專業協助。</p>
+              <p className="mb-8 text-lg leading-relaxed text-brand-50/90">結合香港大學科研功法與現代科研實證，為追求健康長壽人士提供專業協助。</p>
               <div className="flex flex-wrap gap-3">
                 <Link href="/about" className="rounded-full bg-white px-7 py-3 text-sm font-semibold text-brand-800 shadow-lg hover:bg-brand-50">了解養生會</Link>
                 <a href={siteData.contact.whatsappUrl} target="_blank" rel="noopener noreferrer" className="rounded-full border-2 border-white/40 px-7 py-3 text-sm font-semibold text-white hover:bg-white/10">WhatsApp 查詢</a>
