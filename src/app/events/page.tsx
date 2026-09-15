@@ -2,17 +2,19 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import PageHero from "@/components/layout/PageHero";
 import { media } from "@/data/media";
+import { t } from "@/i18n/dict";
 import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = { title: "養生活動" };
 
 export default function EventsPage() {
+  const copy = t.zh;
   return (
     <>
       <Header />
       <main className="min-h-screen bg-stone-50">
-        <PageHero title="養生活動" subtitle="社區活動、課程與公益推廣" />
+        <PageHero title="養生活動" subtitle="社區活動、課程與養生常識" />
         <section className="mx-auto max-w-6xl px-4 py-14">
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {media.events.map((item) => (
@@ -26,7 +28,23 @@ export default function EventsPage() {
               </article>
             ))}
           </div>
-          <div className="mt-12">
+
+          <div className="mt-16 grid gap-8 md:grid-cols-2">
+            <div className="relative min-h-[240px] overflow-hidden rounded-2xl">
+              <Image src={`${media.r2}/images/photo02.jpg`} alt="養生常識" fill className="object-cover" />
+            </div>
+            <div>
+              <h2 className="mb-4 text-2xl font-bold text-stone-900">養生常識</h2>
+              <p className="mb-4 text-stone-500">{copy.knowledgeLead}</p>
+              <div className="space-y-4 leading-relaxed text-stone-600">
+                <p>{copy.knowledgeP1}</p>
+                <p>{copy.knowledgeP2}</p>
+                <p>{copy.knowledgeP3}</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-16">
             <h2 className="mb-4 text-xl font-bold text-stone-900">活動影片</h2>
             <div className="overflow-hidden rounded-2xl bg-black">
               <video className="aspect-video w-full" controls preload="metadata">
