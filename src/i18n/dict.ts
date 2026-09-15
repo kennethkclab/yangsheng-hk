@@ -7,6 +7,7 @@ export const nav: Record<Locale, readonly NavItem[]> = {
   zh: [
     { label: "主頁", href: "/" },
     { label: "國際健康養生會簡介", href: "/about" },
+    { label: "行政架構", href: "/structure" },
     {
       label: "媒體及報道",
       href: "/gallery",
@@ -23,6 +24,7 @@ export const nav: Record<Locale, readonly NavItem[]> = {
   en: [
     { label: "Home", href: "/en" },
     { label: "About the Association", href: "/en/about" },
+    { label: "Organisation", href: "/en/structure" },
     {
       label: "Media & Reports",
       href: "/en/gallery",
