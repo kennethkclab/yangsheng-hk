@@ -8,11 +8,11 @@ export const media = {
   },
   news: [
     {
-      id: "award-2025",
-      title: "《資本平台》頒發 CEO x Entrepreneur of the Year 2025",
-      date: "2025-01-01",
-      image: `${R2}/images/news/24.jpg`,
-      summary: "國際健康養生會主席獲頒發獎項，肯定團體在健康養生與社區服務上的持續推動。",
+      id: "xian-2025",
+      title: "華夏龍脈之嶺·重啟身心能量之旅（西安 6 天 5 夜）",
+      date: "2025-08-14",
+      image: `${R2}/images/news/20.jpg`,
+      summary: "西安深度能量養生團，包括朱雀森林公園戶外練功、兵馬俑、大雁塔與大唐不夜城等行程。",
     },
     {
       id: "class-photo",
