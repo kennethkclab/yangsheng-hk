@@ -2,6 +2,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import YouTubeCarousel from "@/components/home/YouTubeCarousel";
 import YouTubeShorts from "@/components/home/YouTubeShorts";
+import LiteYouTube from "@/components/media/LiteYouTube";
 import { siteData } from "@/data/siteContent";
 import { media } from "@/data/media";
 import Link from "next/link";
@@ -45,15 +46,7 @@ export default function HomePage() {
         <section className="bg-white py-10 md:py-14">
           <div className="mx-auto max-w-5xl px-4">
             <div className="overflow-hidden rounded-2xl border border-stone-200 bg-stone-900 shadow-sm">
-              <div className="relative aspect-video">
-                <iframe
-                  className="absolute inset-0 h-full w-full"
-                  src="https://www.youtube-nocookie.com/embed/mfk2BhJGTSU"
-                  title="國際健康養生會影片"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                />
-              </div>
+              <LiteYouTube id="mfk2BhJGTSU" title="國際健康養生會影片" />
             </div>
           </div>
         </section>
@@ -84,7 +77,7 @@ export default function HomePage() {
               {siteData.courses.map((course) => (
                 <article key={course.id} className="overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-sm">
                   <div className="bg-stone-100">
-                    <Image src={course.imageUrl} alt={course.title} width={1200} height={800} className="h-auto w-full object-contain" />
+                    <Image src={course.imageUrl} alt={course.title} width={1200} height={800} className="h-auto w-full object-contain" sizes="(max-width: 768px) 100vw, 50vw" />
                   </div>
                   <div className="p-6">
                     <h3 className="mb-1 text-xl font-semibold text-stone-900">{course.title}</h3>
