@@ -8,14 +8,6 @@ export const media = {
   },
   news: [
     {
-      id: "brain-2026",
-      title: "慧心健腦御智功課程（2026 年 4 月至 6 月）",
-      date: "2026-03-17",
-      image: `${R2}/images/news/20.jpg`,
-      summary:
-        "由袁麗萍教授親自指導，結合氣功的身心運動，旨在提升大腦功能、增強記憶力及集中力。",
-    },
-    {
       id: "award-2025",
       title: "《資本平台》頒發 CEO x Entrepreneur of the Year 2025",
       date: "2025-01-01",
