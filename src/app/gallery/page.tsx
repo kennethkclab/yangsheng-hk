@@ -26,7 +26,7 @@ export default function GalleryPage() {
                 <div className="hidden bg-stone-100 md:block">
                   <Image src={item.desktop} alt={item.caption} width={1700} height={1300} className="h-auto w-full object-contain" />
                 </div>
-                <figcaption className="px-4 py-3 text-sm leading-relaxed text-stone-600">{item.caption}</figcaption>
+                <figcaption className="px-4 py-3 text-base leading-relaxed text-stone-600 lg:text-[18px]">{item.caption}</figcaption>
               </figure>
             ))}
           </div>
