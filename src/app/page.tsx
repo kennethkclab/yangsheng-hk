@@ -1,6 +1,7 @@
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import YouTubeCarousel from "@/components/home/YouTubeCarousel";
+import YouTubeShorts from "@/components/home/YouTubeShorts";
 import { siteData } from "@/data/siteContent";
 import { media } from "@/data/media";
 import Link from "next/link";
@@ -98,6 +99,7 @@ export default function HomePage() {
         </section>
 
         <YouTubeCarousel locale="zh" />
+        <YouTubeShorts locale="zh" />
 
         <section className="bg-stone-50 py-16">
           <div className="mx-auto max-w-6xl px-4">
