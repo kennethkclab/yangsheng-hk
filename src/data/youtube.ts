@@ -1,6 +1,7 @@
 export const youtubeChannel = {
   handle: "@yangshenghk",
   url: "https://youtube.com/@yangshenghk",
+  shortsUrl: "https://www.youtube.com/@yangshenghk/shorts",
 };
 
 export const featuredVideos = [
@@ -19,4 +20,10 @@ export const featuredVideos = [
     title: "資本平台 CEO x Entrepreneur of the Year 2025：岑信棠醫生",
     titleEn: "Capital Platform award: Dr Sham Shun Tong",
   },
+] as const;
+
+export const featuredShorts = [
+  { id: "dyB7GrbeGfU", title: "養生短片 1", titleEn: "Yangsheng Short 1" },
+  { id: "FsI8jlPcZTk", title: "養生短片 2", titleEn: "Yangsheng Short 2" },
+  { id: "vv-DIXjXi80", title: "養生短片 3", titleEn: "Yangsheng Short 3" },
 ] as const;
