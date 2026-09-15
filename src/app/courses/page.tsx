@@ -7,7 +7,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "課程介紹",
-  description: "國際健康養生會主要課程：道家內功養生班、慧心健腦御智功等。",
+  description: "國際健康養生會主要課程：道家內功養生班、科研健腦御智功等。",
 };
 
 export default function CoursesPage() {
