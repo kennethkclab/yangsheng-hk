@@ -36,20 +36,20 @@ export default function Header() {
   return (
     <>
       <header className="sticky top-0 z-50 border-b border-stone-200 bg-white">
-        <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-2.5">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-2.5">
           <Link href={homeHref} className="flex min-w-0 items-center gap-3" onClick={() => setOpen(false)}>
             <Image src={siteData.images.logo} alt={siteData.brand.name} width={280} height={72} className="h-11 w-auto md:h-14" priority />
           </Link>
 
-          <nav className="hidden items-center gap-2 text-[13px] text-stone-700 xl:flex">
+          <nav className="hidden items-center gap-3 text-[18px] leading-none text-stone-700 xl:flex">
             {items.map((item) =>
               item.children ? (
                 <div key={item.label} className="group relative">
                   <Link href={item.href} className="inline-flex items-center gap-1 whitespace-nowrap px-1 py-2 hover:text-brand-700">
                     {item.label}
-                    <span className="text-[10px]">▾</span>
+                    <span className="text-[12px]">▾</span>
                   </Link>
-                  <div className="invisible absolute left-0 top-full z-50 min-w-48 rounded-xl border border-stone-200 bg-white py-2 opacity-0 shadow-lg transition group-hover:visible group-hover:opacity-100">
+                  <div className="invisible absolute left-0 top-full z-50 min-w-48 rounded-xl border border-stone-200 bg-white py-2 text-[18px] opacity-0 shadow-lg transition group-hover:visible group-hover:opacity-100">
                     {item.children.map((child) => (
                       <Link key={child.href} href={child.href} className="block px-4 py-2 text-stone-700 hover:bg-brand-50 hover:text-brand-800">
                         {child.label}

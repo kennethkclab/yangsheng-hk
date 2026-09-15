@@ -14,7 +14,7 @@ export default function AboutPage() {
     <>
       <Header />
       <main className="min-h-screen bg-stone-50">
-        <PageHero title="國際健康養生會簡介" subtitle={siteData.brand.slogan} align="center" />
+        <PageHero title="國際健康養生會簡介" subtitle={"健康立天下\n逍遙渡時光"} />
         <section className="mx-auto max-w-4xl px-4 py-16">
           <h2 className="mb-6 text-2xl font-bold text-stone-900">{siteData.about.title}</h2>
           <p className="mb-10 text-lg leading-relaxed text-stone-600">{siteData.about.originText}</p>

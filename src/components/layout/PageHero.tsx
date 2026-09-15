@@ -9,6 +9,8 @@ type Props = {
 };
 
 export default function PageHero({ title, subtitle }: Props) {
+  const subtitleLines = subtitle ? subtitle.split("\n") : [];
+
   return (
     <section className="relative overflow-hidden">
       <div className="absolute inset-0">
@@ -17,9 +19,13 @@ export default function PageHero({ title, subtitle }: Props) {
       </div>
       <div className="relative mx-auto max-w-6xl px-4 py-16 text-center md:py-20">
         <h1 className="text-3xl font-bold tracking-wide text-emerald-950 drop-shadow-sm md:text-4xl">{title}</h1>
-        {subtitle ? (
-          <p className="mx-auto mt-3 max-w-2xl text-base font-medium text-emerald-950 md:text-lg">
-            {subtitle}
+        {subtitleLines.length > 0 ? (
+          <p className="mx-auto mt-4 max-w-2xl text-base font-medium text-emerald-950 md:text-lg">
+            {subtitleLines.map((line) => (
+              <span key={line} className="block py-1 md:py-1.5">
+                {line}
+              </span>
+            ))}
           </p>
         ) : null}
       </div>
