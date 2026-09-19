@@ -34,7 +34,7 @@ const board = [
     name: "陳麗雲教授",
     role: "創會秘書長",
     text: "國際健康養生會創會秘書長。",
-    photo: `${R2}/images/people/chan-lai-wan.jpg`,
+    photo: `${R2}/images/people/chan-lai-wan-v2.jpg`,
   },
   {
     name: "陳智軒教授",
