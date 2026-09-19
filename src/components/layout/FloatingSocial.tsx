@@ -85,7 +85,7 @@ export default function FloatingSocial() {
           type="button"
           onClick={() => setOpen((v) => !v)}
           className="flex h-14 w-14 items-center justify-center rounded-full bg-brand-700 text-white shadow-lg transition hover:bg-brand-800"
-          aria-label={open ? "關閉聯絡方式" : "打開聯絡方式"}
+          aria-label={open ? "關閉聯絡方式" : "打開社交平台"}
           aria-expanded={open}
         >
           {open ? (
@@ -93,10 +93,11 @@ export default function FloatingSocial() {
               <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
           ) : (
-            <svg viewBox="0 0 24 24" className="h-7 w-7" fill="none" stroke="currentColor" strokeWidth={1.8} aria-hidden>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M4 12a8 8 0 0 1 16 0v2a2.5 2.5 0 0 1-2.5 2.5H16v-4.5" />
-              <path strokeLinecap="round" strokeLinejoin="round" d="M8 12v4.5H6.5A2.5 2.5 0 0 1 4 14v-2" />
-              <path strokeLinecap="round" strokeLinejoin="round" d="M12 18.5v1a2 2 0 0 1-2 2H9" />
+            <svg viewBox="0 0 24 24" className="h-7 w-7" fill="none" stroke="currentColor" strokeWidth={2} aria-hidden>
+              <circle cx="18" cy="5" r="2.4" />
+              <circle cx="6" cy="12" r="2.4" />
+              <circle cx="18" cy="19" r="2.4" />
+              <path d="M8.2 10.8 15.8 6.2M8.2 13.2l7.6 4.6" />
             </svg>
           )}
         </button>
