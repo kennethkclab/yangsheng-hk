@@ -29,6 +29,7 @@ const board = [
     text: "香港大學醫學院臨床腫瘤學系榮譽教授、腫瘤專科醫生，國際健康養生會創會主席，推動科研與「生活方式醫學」。",
     href: "/Dr-ShamShunTong",
     link: "閱讀醫道文章 →",
+    photo: `${R2}/images/people/sham-shun-tong.jpg`,
   },
   {
     name: "陳麗雲教授",
