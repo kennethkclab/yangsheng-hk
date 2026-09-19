@@ -3,6 +3,8 @@
 import { useEffect, useState, type ReactNode } from "react";
 import { siteData } from "@/data/siteContent";
 
+const xhsLogo = "https://pub-5442f85cdccf43b0aed63eadbd58fc4f.r2.dev/images/icons/xiaohongshu.jpg";
+
 function TikTokMark({ className = "h-5 w-5" }: { className?: string }) {
   return (
     <svg viewBox="0 0 24 24" className={className} aria-hidden>
@@ -29,11 +31,6 @@ const icons: Record<string, ReactNode> = {
       <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.7 12 3.7 12 3.7s-7.5 0-9.4.4A3 3 0 0 0 .5 6.2 31.5 31.5 0 0 0 0 12a31.5 31.5 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.4 9.4.4 9.4.4s7.5 0 9.4-.4a3 3 0 0 0 2.1-2.1A31.5 31.5 0 0 0 24 12a31.5 31.5 0 0 0-.5-5.8zM9.8 15.5V8.5L16.2 12 9.8 15.5z" />
     </svg>
   ),
-  xiaohongshu: (
-    <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor" aria-hidden>
-      <path d="M7.2 3.2h9.6c2 0 3.2 1.2 3.2 3.1v11.4c0 1.9-1.2 3.1-3.2 3.1H7.2c-2 0-3.2-1.2-3.2-3.1V6.3c0-1.9 1.2-3.1 3.2-3.1zm.9 4.2v1.7h2.05V17h1.9V9.1H14.2c1.55 0 2.55.9 2.55 2.25S15.75 13.6 14.2 13.6h-.7v1.7h.75c2.55 0 4.3-1.55 4.3-3.85s-1.7-3.95-4.25-3.95H8.1z" />
-    </svg>
-  ),
   douyin: <TikTokMark />,
 };
 
@@ -41,7 +38,6 @@ const tones: Record<string, string> = {
   whatsapp: "bg-[#25D366] text-white",
   facebook: "bg-[#1877F2] text-white",
   youtube: "bg-[#FF0000] text-white",
-  xiaohongshu: "bg-[#FF2442] text-white",
   douyin: "bg-black text-white",
 };
 
@@ -61,7 +57,7 @@ export default function FloatingSocial() {
     <div className="fixed bottom-5 right-4 z-[80] md:bottom-8 md:right-8">
       <div className="flex flex-col items-end gap-3">
         {open && (
-          <div className="mb-1 w-48 overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-xl">
+          <div className="mb-1 w-52 overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-xl">
             {siteData.socials.map((item) => (
               <a
                 key={item.id}
@@ -71,9 +67,16 @@ export default function FloatingSocial() {
                 className="flex items-center gap-3 px-3.5 py-3 text-sm text-stone-700 hover:bg-stone-50"
                 onClick={() => setOpen(false)}
               >
-                <span className={`inline-flex h-8 w-8 items-center justify-center rounded-full ${tones[item.id] ?? "bg-brand-700 text-white"}`}>
-                  {icons[item.id]}
-                </span>
+                {item.id === "xiaohongshu" ? (
+                  <span className="inline-flex h-8 w-20 overflow-hidden rounded-md bg-[#FF2442]">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={xhsLogo} alt="小红书" className="h-full w-full object-cover object-center" />
+                  </span>
+                ) : (
+                  <span className={`inline-flex h-8 w-8 items-center justify-center rounded-full ${tones[item.id] ?? "bg-brand-700 text-white"}`}>
+                    {icons[item.id]}
+                  </span>
+                )}
                 {item.label}
               </a>
             ))}

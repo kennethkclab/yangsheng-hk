@@ -25,10 +25,10 @@ export const siteData = {
       label: "WhatsApp",
       href: "https://wa.me/85291316233?text=%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2%E5%9C%8B%E9%9A%9B%E5%81%A5%E5%BA%B7%E9%A4%8A%E7%94%9F%E6%9C%83%E7%9A%84%E8%AA%B2%E7%A8%8B%E8%88%87%E6%B4%BB%E5%8B%95",
     },
-    { id: "facebook", label: "Facebook", href: "https://www.facebook.com" },
-    { id: "youtube", label: "YouTube", href: "https://www.youtube.com/@yangshenghk" },
-    { id: "xiaohongshu", label: "小紅書", href: "https://www.xiaohongshu.com" },
-    { id: "douyin", label: "抖音", href: "https://www.douyin.com" },
+    { id: "facebook", label: "Facebook", href: "https://www.facebook.com/share/1K9sVQyx7H/" },
+    { id: "youtube", label: "YouTube", href: "https://youtube.com/@yangshenghk" },
+    { id: "xiaohongshu", label: "小紅書", href: "https://xhslink.cn/o/6A0GCdSYfqZ" },
+    { id: "douyin", label: "抖音", href: "https://v.douyin.com/vrHrHo718Eg/" },
   ],
   images: {
     logo: `${R2}/images/logo.png`,
@@ -55,16 +55,14 @@ export const siteData = {
       id: "neigong",
       title: "道家內功養生班",
       instructor: "袁麗萍教授",
-      description:
-        "配合香港大學科研數據驗證，著重氣血調理、強身健體，有效舒緩慢性疲勞綜合症。",
+      description: "配合香港大學科研數據驗證，著重氣血調理、強身健體，有效舒緩慢性疲勞綜合症。",
       imageUrl: `${R2}/images/news/23.jpg`,
     },
     {
       id: "brain",
       title: "科研健腦御智功",
       instructor: "袁麗萍教授",
-      description:
-        "結合氣功的身心運動，旨在提升大腦功能、增強記憶力、集中力及心神平靜。",
+      description: "結合氣功的身心運動，旨在提升大腦功能、增強記憶力、集中力及心神平靜。",
       imageUrl: `${R2}/images/courses/brain-poster.jpg`,
     },
   ],
