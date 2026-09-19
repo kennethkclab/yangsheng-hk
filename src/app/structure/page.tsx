@@ -45,6 +45,15 @@ const chetwynTitles = [
   "香港教育大學教授",
 ];
 
+const tatiaTitles = [
+  "香港心理學會註冊臨床心理學家",
+  "加拿大不列顛哥倫比亞省註冊心理學家",
+  "加拿大亞伯達省特許心理學家",
+  "澳洲註冊心理學家",
+  "美國認證臨床腦神經心理學家",
+  "香港大學心理科學與臨床心理學講座教授",
+];
+
 const board = [
   {
     name: "岑信棠教授",
@@ -77,6 +86,8 @@ const board = [
     role: "董事",
     text: "",
     photo: `${R2}/images/people/lee-mei-chun.jpg`,
+    listTitle: "職衔",
+    qualifications: tatiaTitles,
   },
 ];
 
