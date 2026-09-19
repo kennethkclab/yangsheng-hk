@@ -40,6 +40,7 @@ const board = [
     name: "陳智軒教授",
     role: "董事",
     text: "國際健康養生會董事。",
+    photo: `${R2}/images/people/chan-chi-hin.jpg`,
   },
   {
     name: "李湄珍教授",
