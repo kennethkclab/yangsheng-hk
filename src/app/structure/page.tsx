@@ -10,7 +10,8 @@ export const metadata: Metadata = {
   description: "國際健康養生會行政架構與主要職務。",
 };
 
-const portrait = "https://pub-5442f85cdccf43b0aed63eadbd58fc4f.r2.dev/images/people/yuen-lai-ping.jpg";
+const R2 = "https://pub-5442f85cdccf43b0aed63eadbd58fc4f.r2.dev";
+const portrait = `${R2}/images/people/yuen-lai-ping.jpg`;
 
 const titles = [
   { org: "國際健康養生會", role: "創會主席" },
@@ -38,11 +39,13 @@ const board = [
     name: "陳智軒教授",
     role: "董事",
     text: "國際健康養生會董事。",
+    photo: `${R2}/images/people/chan-chi-hin.jpg`,
   },
   {
     name: "李湄珍教授",
     role: "董事",
     text: "國際健康養生會董事。",
+    photo: `${R2}/images/people/lee-mei-chun.jpg`,
   },
 ];
 
@@ -75,15 +78,22 @@ export default function StructurePage() {
           </article>
 
           {board.map((person) => (
-            <article key={person.name} className="mb-5 rounded-md border border-stone-200 bg-white p-6 shadow-sm">
-              <p className="text-sm font-medium text-brand-700">{person.role}</p>
-              <h2 className="mt-1 text-2xl font-bold text-stone-900">{person.name}</h2>
-              <p className="mt-3 leading-relaxed text-stone-600">{person.text}</p>
-              {person.href ? (
-                <Link href={person.href} className="mt-4 inline-block text-brand-700 hover:underline">
-                  {person.link}
-                </Link>
+            <article key={person.name} className="mb-5 overflow-hidden rounded-md border border-stone-200 bg-white shadow-sm">
+              {person.photo ? (
+                <div className="bg-stone-100">
+                  <Image src={person.photo} alt={person.name} width={900} height={900} className="mx-auto h-auto w-full max-w-sm object-cover" />
+                </div>
               ) : null}
+              <div className="p-6">
+                <p className="text-sm font-medium text-brand-700">{person.role}</p>
+                <h2 className="mt-1 text-2xl font-bold text-stone-900">{person.name}</h2>
+                <p className="mt-3 leading-relaxed text-stone-600">{person.text}</p>
+                {person.href ? (
+                  <Link href={person.href} className="mt-4 inline-block text-brand-700 hover:underline">
+                    {person.link}
+                  </Link>
+                ) : null}
+              </div>
             </article>
           ))}
         </section>
