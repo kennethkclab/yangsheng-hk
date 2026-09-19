@@ -27,7 +27,7 @@ const stack = [
     id: "xiaohongshu",
     label: "小紅書",
     href: siteData.socials.find((s) => s.id === "xiaohongshu")?.href ?? "https://www.xiaohongshu.com",
-    src: `${R2}/images/icons/xiaohongshu.jpg?v=2`,
+    src: `${R2}/images/icons/xiaohongshu.jpg?v=3`,
   },
 ];
 
@@ -59,7 +59,7 @@ export default function FloatingSocial() {
               </span>
             ) : (
               // eslint-disable-next-line @next/next/no-img-element
-              <img src={item.src} alt={item.label} className={`h-full w-full object-cover ${item.id === "xiaohongshu" ? "scale-[1.35]" : ""}`} />
+              <img src={item.src} alt={item.label} className="h-full w-full object-cover" />
             )}
           </a>
         ))}
