@@ -29,15 +29,15 @@ export default function HomePage() {
           </div>
           <div className="relative mx-auto max-w-6xl px-4 py-20 md:py-28">
             <div className="max-w-2xl">
-              <p className="mb-4 inline-block rounded-full bg-white/15 px-4 py-1.5 text-sm font-medium tracking-wide text-brand-50 backdrop-blur">{siteData.brand.nature}</p>
+              <p className="mb-4 inline-block rounded-md bg-white/15 px-4 py-1.5 text-sm font-medium tracking-wide text-brand-50 backdrop-blur">{siteData.brand.nature}</p>
               <h1 className="mb-5 text-4xl font-bold leading-none text-white md:text-5xl lg:text-6xl">
                 <span className="block pb-3 md:pb-5">健康立天下</span>
                 <span className="block">逍遙渡時光</span>
               </h1>
               <p className="mb-8 text-lg leading-relaxed text-brand-50/90">結合香港大學科研功法與現代科研實證，為追求健康長壽人士提供專業協助。</p>
               <div className="flex flex-wrap gap-3">
-                <Link href="/about" className="rounded-full bg-white px-7 py-3 text-sm font-semibold text-brand-800 shadow-lg hover:bg-brand-50">了解養生會</Link>
-                <a href={siteData.contact.whatsappUrl} target="_blank" rel="noopener noreferrer" className="rounded-full border-2 border-white/40 px-7 py-3 text-sm font-semibold text-white hover:bg-white/10">WhatsApp 查詢</a>
+                <Link href="/about" className="rounded-md bg-white px-7 py-3 text-sm font-semibold text-brand-800 shadow-lg hover:bg-brand-50">了解養生會</Link>
+                <a href={siteData.contact.whatsappUrl} target="_blank" rel="noopener noreferrer" className="rounded-md border-2 border-white/40 px-7 py-3 text-sm font-semibold text-white hover:bg-white/10">WhatsApp 查詢</a>
               </div>
             </div>
           </div>
@@ -45,7 +45,7 @@ export default function HomePage() {
 
         <section className="bg-white py-10 md:py-14">
           <div className="mx-auto max-w-5xl px-4">
-            <div className="overflow-hidden rounded-2xl border border-stone-200 bg-stone-900 shadow-sm">
+            <div className="overflow-hidden rounded-md border border-stone-200 bg-stone-900 shadow-sm">
               <LiteYouTube id="mfk2BhJGTSU" title="國際健康養生會影片" />
             </div>
           </div>
@@ -59,8 +59,8 @@ export default function HomePage() {
           <p className="mb-10 max-w-3xl text-lg leading-relaxed text-stone-600">{siteData.about.originText}</p>
           <ul className="grid gap-5 sm:grid-cols-3">
             {siteData.about.missionList.map((item, i) => (
-              <li key={i} className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
-                <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-full bg-brand-100 text-sm font-bold text-brand-800">{i + 1}</div>
+              <li key={i} className="rounded-md border border-stone-200 bg-white p-6 shadow-sm">
+                <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-md bg-brand-100 text-sm font-bold text-brand-800">{i + 1}</div>
                 <p className="whitespace-pre-line leading-relaxed text-stone-700">{item}</p>
               </li>
             ))}
@@ -75,7 +75,7 @@ export default function HomePage() {
             </div>
             <div className="grid gap-6 md:grid-cols-2">
               {siteData.courses.map((course) => (
-                <article key={course.id} className="overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-sm">
+                <article key={course.id} className="overflow-hidden rounded-md border border-stone-200 bg-white shadow-sm">
                   <div className="bg-stone-100">
                     <Image src={course.imageUrl} alt={course.title} width={1200} height={800} className="h-auto w-full object-contain" sizes="(max-width: 768px) 100vw, 50vw" />
                   </div>
@@ -102,7 +102,7 @@ export default function HomePage() {
             </div>
             <div className="grid grid-cols-2 gap-3 md:grid-cols-3">
               {previewPhotos.map((src) => (
-                <div key={src} className="relative aspect-[4/3] overflow-hidden rounded-xl bg-stone-200">
+                <div key={src} className="relative aspect-[4/3] overflow-hidden rounded-md bg-stone-200">
                   <Image src={src} alt="活動相片" fill className="object-cover" sizes="(max-width: 768px) 50vw, 33vw" />
                 </div>
               ))}
@@ -115,7 +115,7 @@ export default function HomePage() {
             <h2 className="mb-3 text-2xl font-bold md:text-3xl">聯絡我們</h2>
             <p className="mb-1 text-brand-100">電話：{siteData.contact.phoneDisplay}</p>
             <p className="mb-8 text-brand-100">{siteData.contact.address}</p>
-            <a href={siteData.contact.whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-block rounded-full bg-white px-8 py-3.5 font-semibold text-brand-800 hover:bg-brand-50">立即 WhatsApp 查詢</a>
+            <a href={siteData.contact.whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-block rounded-md bg-white px-8 py-3.5 font-semibold text-brand-800 hover:bg-brand-50">立即 WhatsApp 查詢</a>
           </div>
         </section>
       </main>
