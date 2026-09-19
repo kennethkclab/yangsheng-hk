@@ -26,8 +26,9 @@ export const siteData = {
       href: "https://wa.me/85291316233?text=%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2%E5%9C%8B%E9%9A%9B%E5%81%A5%E5%BA%B7%E9%A4%8A%E7%94%9F%E6%9C%83%E7%9A%84%E8%AA%B2%E7%A8%8B%E8%88%87%E6%B4%BB%E5%8B%95",
     },
     { id: "facebook", label: "Facebook", href: "https://www.facebook.com" },
-    { id: "youtube", label: "YouTube", href: "https://www.youtube.com" },
+    { id: "youtube", label: "YouTube", href: "https://www.youtube.com/@yangshenghk" },
     { id: "xiaohongshu", label: "小紅書", href: "https://www.xiaohongshu.com" },
+    { id: "douyin", label: "抖音", href: "https://www.douyin.com" },
   ],
   images: {
     logo: `${R2}/images/logo.png`,
