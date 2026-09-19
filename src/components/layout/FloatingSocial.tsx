@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { siteData } from "@/data/siteContent";
 
 const R2 = "https://pub-5442f85cdccf43b0aed63eadbd58fc4f.r2.dev";
@@ -59,11 +60,13 @@ export default function FloatingSocial() {
                 </svg>
               </span>
             ) : (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
+              <Image
                 src={item.src}
                 alt={item.label}
+                width={64}
+                height={64}
                 className={`h-full w-full object-cover ${item.id === "xiaohongshu" ? "scale-125" : ""}`}
+                quality={75}
               />
             )}
           </a>
@@ -77,8 +80,7 @@ export default function FloatingSocial() {
         aria-label="WhatsApp"
         className="fixed bottom-5 right-3 z-[80] h-12 w-12 overflow-hidden rounded-full shadow-lg md:bottom-8 md:right-5"
       >
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={`${R2}/images/icons/whatsapp.jpg`} alt="WhatsApp" className="h-full w-full object-cover" />
+        <Image src={`${R2}/images/icons/whatsapp.jpg`} alt="WhatsApp" width={96} height={96} className="h-full w-full object-cover" quality={75} />
       </a>
     </>
   );
