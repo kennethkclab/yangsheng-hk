@@ -49,7 +49,7 @@ const board = [
   {
     name: "岑信棠教授",
     role: "創會主席",
-    text: "香港大學醫學院臨床腫瘤學系榮譽教授、腫瘤專科醫生，推動科研與「生活方式醫學」。",
+    text: "香港大學醫學院臨床腫瘤學系榮譽教授",
     href: "/Dr-ShamShunTong",
     link: "閱讀醫道文章 →",
     photo: `${R2}/images/people/sham-shun-tong.jpg`,
