@@ -40,6 +40,11 @@ const ceciliaTitles = [
   "世界死亡及哀傷專家組成員",
 ];
 
+const chetwynTitles = [
+  "香港復康會執行委員會主席",
+  "香港教育大學教授",
+];
+
 const board = [
   {
     name: "岑信棠教授",
@@ -62,8 +67,10 @@ const board = [
   {
     name: "陳智軒教授",
     role: "董事",
-    text: "國際健康養生會董事。",
+    text: "香港教育大學教授，香港復康會執行委員會主席，國際健康養生會董事。",
     photo: `${R2}/images/people/chan-chi-hin.jpg`,
+    listTitle: "職衔",
+    qualifications: chetwynTitles,
   },
   {
     name: "李湄珍教授",
