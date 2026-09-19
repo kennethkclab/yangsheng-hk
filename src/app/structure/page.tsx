@@ -49,7 +49,7 @@ const board = [
   {
     name: "岑信棠教授",
     role: "創會主席",
-    text: "香港大學醫學院臨床腫瘤學系榮譽教授、腫瘤專科醫生，國際健康養生會創會主席，推動科研與「生活方式醫學」。",
+    text: "香港大學醫學院臨床腫瘤學系榮譽教授、腫瘤專科醫生，推動科研與「生活方式醫學」。",
     href: "/Dr-ShamShunTong",
     link: "閱讀醫道文章 →",
     photo: `${R2}/images/people/sham-shun-tong.jpg`,
@@ -59,7 +59,7 @@ const board = [
   {
     name: "陳麗雲教授",
     role: "創會秘書長",
-    text: "香港大學社會工作及社會行政學系榮休教授，國際健康養生會創會秘書長。",
+    text: "",
     photo: `${R2}/images/people/chan-lai-wan-v2.jpg`,
     listTitle: "職衔",
     qualifications: ceciliaTitles,
@@ -67,7 +67,7 @@ const board = [
   {
     name: "陳智軒教授",
     role: "董事",
-    text: "香港教育大學教授，香港復康會執行委員會主席，國際健康養生會董事。",
+    text: "",
     photo: `${R2}/images/people/chan-chi-hin.jpg`,
     listTitle: "職衔",
     qualifications: chetwynTitles,
@@ -75,7 +75,7 @@ const board = [
   {
     name: "李湄珍教授",
     role: "董事",
-    text: "國際健康養生會董事。",
+    text: "",
     photo: `${R2}/images/people/lee-mei-chun.jpg`,
   },
 ];
@@ -94,7 +94,7 @@ export default function StructurePage() {
             <div className="p-6 md:p-8">
               <p className="text-sm font-medium text-brand-700">創會主席</p>
               <h2 className="mt-1 text-3xl font-bold text-stone-900">袁麗萍教授</h2>
-              <p className="mt-4 mb-5 leading-relaxed text-stone-600">國際健康養生會創會主席，主持道家內功與科研健腦御智功課程，並推動與香港大學的養生科研合作。</p>
+              <p className="mt-4 mb-5 leading-relaxed text-stone-600">主持道家內功與科研健腦御智功課程，並推動與香港大學的養生科研合作。</p>
               <h3 className="mb-3 text-lg font-semibold text-stone-900">袁麗萍教授職衔</h3>
               <ul className="space-y-2">
                 {titles.map((item) => (
@@ -118,7 +118,7 @@ export default function StructurePage() {
               <div className="p-6">
                 <p className="text-sm font-medium text-brand-700">{person.role}</p>
                 <h2 className="mt-1 text-2xl font-bold text-stone-900">{person.name}</h2>
-                <p className="mt-3 leading-relaxed text-stone-600">{person.text}</p>
+                {person.text ? <p className="mt-3 leading-relaxed text-stone-600">{person.text}</p> : null}
                 {person.qualifications ? (
                   <>
                     <h3 className="mt-5 mb-2 text-lg font-semibold text-stone-900">{person.listTitle}</h3>
