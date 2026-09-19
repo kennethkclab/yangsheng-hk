@@ -22,6 +22,15 @@ const titles = [
   { org: "聯合國特殊醫療貢獻獎", role: "第一位獲頒的中國人" },
 ];
 
+const shamQualifications = [
+  "香港大學內外全科醫學士 1980",
+  "英國放射治療學文憑 1985",
+  "英國皇家放射科學醫學院院士 1985",
+  "香港放射科醫學院院士 1991",
+  "香港大學醫學博士 1993",
+  "香港醫學專科學院院士（放射科） 1993",
+];
+
 const board = [
   {
     name: "岑信棠教授",
@@ -30,6 +39,7 @@ const board = [
     href: "/Dr-ShamShunTong",
     link: "閱讀醫道文章 →",
     photo: `${R2}/images/people/sham-shun-tong.jpg`,
+    qualifications: shamQualifications,
   },
   {
     name: "陳麗雲教授",
@@ -90,6 +100,18 @@ export default function StructurePage() {
                 <p className="text-sm font-medium text-brand-700">{person.role}</p>
                 <h2 className="mt-1 text-2xl font-bold text-stone-900">{person.name}</h2>
                 <p className="mt-3 leading-relaxed text-stone-600">{person.text}</p>
+                {person.qualifications ? (
+                  <>
+                    <h3 className="mt-5 mb-2 text-lg font-semibold text-stone-900">專業資格</h3>
+                    <ul className="space-y-2">
+                      {person.qualifications.map((item) => (
+                        <li key={item} className="border-b border-stone-100 py-2 text-stone-700 last:border-0">
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </>
+                ) : null}
                 {person.href ? (
                   <Link href={person.href} className="mt-4 inline-block text-brand-700 hover:underline">
                     {person.link}
