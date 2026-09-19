@@ -31,6 +31,10 @@ const icons: Record<string, ReactNode> = {
       <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.7 12 3.7 12 3.7s-7.5 0-9.4.4A3 3 0 0 0 .5 6.2 31.5 31.5 0 0 0 0 12a31.5 31.5 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.4 9.4.4 9.4.4s7.5 0 9.4-.4a3 3 0 0 0 2.1-2.1A31.5 31.5 0 0 0 24 12a31.5 31.5 0 0 0-.5-5.8zM9.8 15.5V8.5L16.2 12 9.8 15.5z" />
     </svg>
   ),
+  xiaohongshu: (
+    // eslint-disable-next-line @next/next/no-img-element
+    <img src={xhsLogo} alt="" className="h-full w-full scale-150 object-cover" />
+  ),
   douyin: <TikTokMark />,
 };
 
@@ -38,6 +42,7 @@ const tones: Record<string, string> = {
   whatsapp: "bg-[#25D366] text-white",
   facebook: "bg-[#1877F2] text-white",
   youtube: "bg-[#FF0000] text-white",
+  xiaohongshu: "overflow-hidden bg-[#FF2442] text-white",
   douyin: "bg-black text-white",
 };
 
@@ -57,7 +62,7 @@ export default function FloatingSocial() {
     <div className="fixed bottom-5 right-4 z-[80] md:bottom-8 md:right-8">
       <div className="flex flex-col items-end gap-3">
         {open && (
-          <div className="mb-1 w-52 overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-xl">
+          <div className="mb-1 w-48 overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-xl">
             {siteData.socials.map((item) => (
               <a
                 key={item.id}
@@ -67,16 +72,9 @@ export default function FloatingSocial() {
                 className="flex items-center gap-3 px-3.5 py-3 text-sm text-stone-700 hover:bg-stone-50"
                 onClick={() => setOpen(false)}
               >
-                {item.id === "xiaohongshu" ? (
-                  <span className="inline-flex h-8 w-20 overflow-hidden rounded-md bg-[#FF2442]">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={xhsLogo} alt="小红书" className="h-full w-full object-cover object-center" />
-                  </span>
-                ) : (
-                  <span className={`inline-flex h-8 w-8 items-center justify-center rounded-full ${tones[item.id] ?? "bg-brand-700 text-white"}`}>
-                    {icons[item.id]}
-                  </span>
-                )}
+                <span className={`inline-flex h-8 w-8 items-center justify-center overflow-hidden rounded-full ${tones[item.id] ?? "bg-brand-700 text-white"}`}>
+                  {icons[item.id]}
+                </span>
                 {item.label}
               </a>
             ))}
