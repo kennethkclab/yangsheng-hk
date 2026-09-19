@@ -31,6 +31,15 @@ const shamQualifications = [
   "香港醫學專科學院院士（放射科） 1993",
 ];
 
+const ceciliaTitles = [
+  "香港大學社會工作及社會行政學系榮休教授",
+  "太平紸士",
+  "腫瘤社會工作協會院士",
+  "香港社會工作專科學院創院院士",
+  "香港輔導專業人員協會會院士",
+  "世界死亡及哀傷專家組成員",
+];
+
 const board = [
   {
     name: "岑信棠教授",
@@ -39,13 +48,16 @@ const board = [
     href: "/Dr-ShamShunTong",
     link: "閱讀醫道文章 →",
     photo: `${R2}/images/people/sham-shun-tong.jpg`,
+    listTitle: "專業資格",
     qualifications: shamQualifications,
   },
   {
     name: "陳麗雲教授",
     role: "創會秘書長",
-    text: "國際健康養生會創會秘書長。",
+    text: "香港大學社會工作及社會行政學系榮休教授，國際健康養生會創會秘書長。",
     photo: `${R2}/images/people/chan-lai-wan-v2.jpg`,
+    listTitle: "職衔",
+    qualifications: ceciliaTitles,
   },
   {
     name: "陳智軒教授",
@@ -102,7 +114,7 @@ export default function StructurePage() {
                 <p className="mt-3 leading-relaxed text-stone-600">{person.text}</p>
                 {person.qualifications ? (
                   <>
-                    <h3 className="mt-5 mb-2 text-lg font-semibold text-stone-900">專業資格</h3>
+                    <h3 className="mt-5 mb-2 text-lg font-semibold text-stone-900">{person.listTitle}</h3>
                     <ul className="space-y-2">
                       {person.qualifications.map((item) => (
                         <li key={item} className="border-b border-stone-100 py-2 text-stone-700 last:border-0">
