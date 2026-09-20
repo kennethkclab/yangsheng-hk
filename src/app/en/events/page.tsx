@@ -18,7 +18,7 @@ export default function EnglishEventsPage() {
         <section className="mx-auto max-w-6xl px-4 py-14">
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {media.events.map((item) => (
-              <article key={item.id} className="overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-sm">
+              <article key={item.id} className="overflow-hidden border border-stone-200 bg-white shadow-sm">
                 <div className="relative aspect-[4/3] bg-stone-100">
                   <Image src={item.image} alt={item.titleEn} fill className="object-cover" sizes="(max-width: 1024px) 50vw, 33vw" />
                 </div>
@@ -29,18 +29,13 @@ export default function EnglishEventsPage() {
             ))}
           </div>
 
-          <div className="mt-16 grid gap-8 md:grid-cols-2">
-            <div className="relative min-h-[240px] overflow-hidden rounded-2xl">
-              <Image src={`${media.r2}/images/photo02.jpg`} alt="Wellness knowledge" fill className="object-cover" />
-            </div>
-            <div>
-              <h2 className="mb-4 text-2xl font-bold text-stone-900">Wellness knowledge</h2>
-              <p className="mb-4 text-stone-500">{copy.knowledgeLead}</p>
-              <div className="space-y-4 leading-relaxed text-stone-600">
-                <p>{copy.knowledgeP1}</p>
-                <p>{copy.knowledgeP2}</p>
-                <p>{copy.knowledgeP3}</p>
-              </div>
+          <div className="mt-16 max-w-3xl">
+            <h2 className="mb-4 text-2xl font-bold text-stone-900">Wellness knowledge</h2>
+            <p className="mb-4 text-stone-500">{copy.knowledgeLead}</p>
+            <div className="space-y-4 leading-relaxed text-stone-600">
+              <p>{copy.knowledgeP1}</p>
+              <p>{copy.knowledgeP2}</p>
+              <p>{copy.knowledgeP3}</p>
             </div>
           </div>
         </section>
