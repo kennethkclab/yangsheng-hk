@@ -10,10 +10,10 @@ import Image from "next/image";
 
 export default function HomePage() {
   const previewPhotos = [
-    media.r2 + "/images/gallery/8.jpg",
-    media.r2 + "/images/gallery/10.jpg",
-    media.r2 + "/images/gallery/7.jpg",
-    media.r2 + "/images/gallery/6.jpg",
+    media.r2 + "/images/gallery/8_4.jpg",
+    media.r2 + "/images/gallery/6_7.jpg",
+    media.r2 + "/images/gallery/7_1.jpg",
+    media.r2 + "/images/gallery/6_5.jpg",
     media.r2 + "/images/gallery/4.jpg",
     media.r2 + "/images/news/24.jpg",
   ];
@@ -103,7 +103,7 @@ export default function HomePage() {
             <div className="grid grid-cols-2 gap-3 md:grid-cols-3">
               {previewPhotos.map((src) => (
                 <div key={src} className="relative aspect-[4/3] overflow-hidden rounded-md bg-stone-200">
-                  <Image src={src} alt="活動相片" fill className="object-cover" sizes="(max-width: 768px) 50vw, 33vw" />
+                  <Image src={src} alt="活動相片" fill className="object-cover" sizes="(max-width: 768px) 50vw, 33vw" quality={90} unoptimized />
                 </div>
               ))}
             </div>
