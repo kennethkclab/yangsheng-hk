@@ -2,6 +2,23 @@
 
 import { useEffect, useState } from "react";
 
+function thumbCandidates(id: string, aspect: "video" | "short") {
+  if (aspect === "short") {
+    return [
+      `https://i.ytimg.com/vi/${id}/oar2.jpg`,
+      `https://i.ytimg.com/vi/${id}/oardefault.jpg`,
+      `https://i.ytimg.com/vi/${id}/maxresdefault.jpg`,
+      `https://i.ytimg.com/vi/${id}/hqdefault.jpg`,
+    ];
+  }
+  return [
+    `https://i.ytimg.com/vi/${id}/maxresdefault.jpg`,
+    `https://i.ytimg.com/vi/${id}/hq720.jpg`,
+    `https://i.ytimg.com/vi/${id}/sddefault.jpg`,
+    `https://i.ytimg.com/vi/${id}/hqdefault.jpg`,
+  ];
+}
+
 export default function LiteYouTube({
   id,
   title,
@@ -13,15 +30,17 @@ export default function LiteYouTube({
 }) {
   const [play, setPlay] = useState(false);
   const [ready, setReady] = useState(false);
-  const [thumb, setThumb] = useState(`https://i.ytimg.com/vi/${id}/maxresdefault.jpg`);
+  const [thumbIndex, setThumbIndex] = useState(0);
+  const thumbs = thumbCandidates(id, aspect);
+  const thumb = thumbs[Math.min(thumbIndex, thumbs.length - 1)];
   const ratio = aspect === "short" ? "aspect-[9/16]" : "aspect-video";
   const size = 44;
 
   useEffect(() => {
     setPlay(false);
     setReady(false);
-    setThumb(`https://i.ytimg.com/vi/${id}/maxresdefault.jpg`);
-  }, [id]);
+    setThumbIndex(0);
+  }, [id, aspect]);
 
   return (
     <div className={`relative ${ratio} overflow-hidden bg-stone-900`}>
@@ -32,10 +51,7 @@ export default function LiteYouTube({
             src={thumb}
             alt={title}
             className="absolute inset-0 h-full w-full object-cover"
-            onError={() => {
-              if (thumb.includes("maxresdefault")) setThumb(`https://i.ytimg.com/vi/${id}/sddefault.jpg`);
-              else if (thumb.includes("sddefault")) setThumb(`https://i.ytimg.com/vi/${id}/hqdefault.jpg`);
-            }}
+            onError={() => setThumbIndex((i) => Math.min(i + 1, thumbs.length - 1))}
           />
           <button type="button" onClick={() => setPlay(true)} className="absolute inset-0 z-10" aria-label={`Play ${title}`}>
             <span
