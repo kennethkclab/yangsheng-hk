@@ -16,10 +16,11 @@ export default function EnglishGalleryPage() {
         <section className="mx-auto max-w-6xl px-4 py-14">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             {yuenGallery.items.map((item, index) => (
-              <figure key={item.id} className="overflow-hidden rounded-md border border-stone-200 bg-white shadow-sm [content-visibility:auto]">
+              <figure key={item.id} className="overflow-hidden border border-stone-200 bg-white shadow-sm [content-visibility:auto]">
                 <div className="bg-stone-100">
                   <ResponsivePhoto desktop={item.desktop} mobile={item.mobile} alt={item.captionEn} priority={index === 0} />
                 </div>
+                <figcaption className="p-4 text-stone-700">{item.captionEn}</figcaption>
               </figure>
             ))}
           </div>
