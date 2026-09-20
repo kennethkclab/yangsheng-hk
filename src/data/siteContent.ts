@@ -74,7 +74,7 @@ export const siteData = {
     { label: "養生活動", href: "/events" },
     { label: "活動相簿", href: "/gallery" },
     { label: "養生常識", href: "/knowledge" },
-    { label: "科研結果", href: "/research" },
+    { label: "科研成果", href: "/research" },
     { label: "聯絡我們", href: "/contact" },
   ],
 } as const;
