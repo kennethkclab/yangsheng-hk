@@ -18,9 +18,9 @@ export default function EventsPage() {
         <section className="mx-auto max-w-6xl px-4 py-14">
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {media.events.map((item) => (
-              <article key={item.id} className="overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-sm">
+              <article key={item.id} className="overflow-hidden rounded-md border border-stone-200 bg-white shadow-sm [content-visibility:auto]">
                 <a href={item.image} target="_blank" rel="noopener noreferrer" className="relative block aspect-[4/3] bg-stone-100">
-                  <Image src={item.image} alt={item.title} fill className="object-cover" sizes="(max-width: 1024px) 50vw, 33vw" />
+                  <Image src={item.image} alt={item.title} fill quality={70} className="object-cover" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" />
                 </a>
                 <div className="p-5">
                   <h2 className="text-lg font-semibold text-stone-900">{item.title}</h2>
@@ -30,8 +30,8 @@ export default function EventsPage() {
           </div>
 
           <div className="mt-16 grid gap-8 md:grid-cols-2">
-            <div className="relative min-h-[240px] overflow-hidden rounded-2xl">
-              <Image src={`${media.r2}/images/photo02.jpg`} alt="養生常識" fill className="object-cover" />
+            <div className="relative min-h-[240px] overflow-hidden rounded-md">
+              <Image src={`${media.r2}/images/photo02.jpg`} alt="養生常識" fill quality={70} className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
             </div>
             <div>
               <h2 className="mb-4 text-2xl font-bold text-stone-900">養生常識</h2>
@@ -46,8 +46,8 @@ export default function EventsPage() {
 
           <div className="mt-16">
             <h2 className="mb-4 text-xl font-bold text-stone-900">活動影片</h2>
-            <div className="overflow-hidden rounded-2xl bg-black">
-              <video className="aspect-video w-full" controls preload="metadata">
+            <div className="overflow-hidden rounded-md bg-black">
+              <video className="aspect-video w-full" controls preload="none" poster={`${media.r2}/images/photo02.jpg`}>
                 <source src={media.videos.happyValley} type="video/mp4" />
               </video>
             </div>

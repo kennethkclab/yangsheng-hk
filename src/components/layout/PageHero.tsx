@@ -14,7 +14,7 @@ export default function PageHero({ title, subtitle }: Props) {
   return (
     <section className="relative overflow-hidden">
       <div className="absolute inset-0">
-        <Image src={HERO_BG} alt="" fill priority className="object-cover object-center" sizes="100vw" />
+        <Image src={HERO_BG} alt="" fill priority quality={60} className="object-cover object-center" sizes="100vw" />
         <div className="absolute inset-0 bg-gradient-to-r from-emerald-50/70 via-teal-100/45 to-sky-100/40 backdrop-blur-[2px]" />
       </div>
       <div className="relative mx-auto max-w-6xl px-4 py-16 text-center md:py-20">
