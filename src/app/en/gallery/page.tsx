@@ -20,7 +20,6 @@ export default function EnglishGalleryPage() {
                 <div className="bg-stone-100">
                   <ResponsivePhoto desktop={item.desktop} mobile={item.mobile} alt={item.captionEn} priority={index === 0} />
                 </div>
-                <figcaption className="p-4 text-stone-700">{item.captionEn}</figcaption>
               </figure>
             ))}
           </div>
