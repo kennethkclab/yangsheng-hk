@@ -33,7 +33,7 @@ const shamQualifications = [
 
 const ceciliaTitles = [
   "香港大學社會工作及社會行政學系榮休教授",
-  "太平紸士",
+  "太平紳士",
   "腫瘤社會工作協會院士",
   "香港社會工作專科學院創院院士",
   "香港輔導專業人員協會會院士",
@@ -56,7 +56,7 @@ const tatiaTitles = [
 
 const board = [
   {
-    name: "岑信棠教授",
+    name: "岑信棣教授",
     role: "創會主席",
     text: "香港大學醫學院臨床腫瘤學系榮譽教授",
     href: "/Dr-ShamShunTong",
@@ -105,7 +105,7 @@ export default function StructurePage() {
             <div className="p-6 md:p-8">
               <p className="text-sm font-medium text-brand-700">創會主席</p>
               <h2 className="mt-1 text-3xl font-bold text-stone-900">袁麗萍教授</h2>
-              <p className="mt-4 mb-5 leading-relaxed text-stone-600">主持道家內功與科研健腦御智功課程，並推動與香港大學的養生科研合作。</p>
+              <p className="mt-4 mb-5 leading-relaxed text-stone-600">主持科研功法與科研健腦御智功課程，並推動與香港大學的養生科研合作。</p>
               <h3 className="mb-3 text-lg font-semibold text-stone-900">袁麗萍教授頭衔</h3>
               <ul className="space-y-2">
                 {titles.map((item) => (
