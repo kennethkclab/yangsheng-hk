@@ -20,7 +20,7 @@ export default function EventsPage() {
             {media.events.map((item) => (
               <article key={item.id} className="overflow-hidden border border-stone-200 bg-white shadow-sm [content-visibility:auto]">
                 <a href={item.image} target="_blank" rel="noopener noreferrer" className="relative block aspect-[4/3] bg-stone-100">
-                  <Image src={item.image} alt={item.title} fill quality={75} className="object-cover" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" />
+                  <Image src={item.image} alt={item.title} fill className="object-cover" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" />
                 </a>
                 <div className="p-5">
                   <h2 className="text-lg font-semibold text-stone-900">{item.title}</h2>
@@ -29,25 +29,20 @@ export default function EventsPage() {
             ))}
           </div>
 
-          <div className="mt-16 grid gap-8 md:grid-cols-2">
-            <div className="relative min-h-[240px] overflow-hidden">
-              <Image src={`${media.r2}/images/photo02.jpg`} alt="養生常識" fill quality={75} className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
-            </div>
-            <div>
-              <h2 className="mb-4 text-2xl font-bold text-stone-900">養生常識</h2>
-              <p className="mb-4 text-stone-500">{copy.knowledgeLead}</p>
-              <div className="space-y-4 leading-relaxed text-stone-600">
-                <p>{copy.knowledgeP1}</p>
-                <p>{copy.knowledgeP2}</p>
-                <p>{copy.knowledgeP3}</p>
-              </div>
+          <div className="mt-16 max-w-3xl">
+            <h2 className="mb-4 text-2xl font-bold text-stone-900">養生常識</h2>
+            <p className="mb-4 text-stone-500">{copy.knowledgeLead}</p>
+            <div className="space-y-4 leading-relaxed text-stone-600">
+              <p>{copy.knowledgeP1}</p>
+              <p>{copy.knowledgeP2}</p>
+              <p>{copy.knowledgeP3}</p>
             </div>
           </div>
 
           <div className="mt-16">
             <h2 className="mb-4 text-xl font-bold text-stone-900">活動影片</h2>
             <div className="overflow-hidden bg-black">
-              <video className="aspect-video w-full" controls preload="none" poster={`${media.r2}/images/photo02.jpg`}>
+              <video className="aspect-video w-full" controls preload="none">
                 <source src={media.videos.happyValley} type="video/mp4" />
               </video>
             </div>
