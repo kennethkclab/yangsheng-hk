@@ -6,6 +6,13 @@ export const yuenGallery = {
   source: "https://yangshengdao.hk/%e8%a2%81%e9%ba%97%e8%90%8d%e6%95%99%e6%8e%88%e5%9c%96%e7%89%87%e9%9b%86/",
   items: [
     {
+      id: "13",
+      caption: "袁麗萍教授出席香港大學「為生命喝采」講座。",
+      captionEn: "Professor Yuen speaking at HKU Living a Legacy symposium",
+      desktop: `${R2}/images/yuen/desktop/13.png`,
+      mobile: `${R2}/images/yuen/mobile/13.png`,
+    },
+    {
       id: "01",
       caption: "左起：香港地產大亨李兆基先生、中國道教協會會長任法融道長及袁教授於九寨溝採靈氣",
       captionEn: "Lee Shau-kee, Taoist master Ren Farong and Professor Yuen in Jiuzhaigou",
