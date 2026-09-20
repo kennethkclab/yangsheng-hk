@@ -142,9 +142,9 @@ export const t = {
     columnsLead: "Health articles and reports from Dr Sham and the Association",
     knowledgeLead: "Prevention begins with daily habits",
     knowledgeP1:
-      "Research-based practice focuses on qi and blood, breathing and intention. Regular practice may ease chronic fatigue and support sleep and concentration.",
+      "Research-based practice focuses on circulation, breathing and intention. Regular practice may ease chronic fatigue and support sleep and concentration.",
     knowledgeP2:
-      "Research-based Jiannao Yuzhi Gong combines qigong with mind-body movement for memory, focus and calm.",
+      "Research-based Jiannao Yuzhi Gong combines mind-body movement for memory, focus and calm.",
     knowledgeP3:
       "Begin with a qualified instructor and adjust intensity to your own condition.",
     researchLead: "Research-based practice studies with HKU Centre on Behavioral Health",
@@ -163,14 +163,14 @@ export const coursesEn = [
     title: "Research-based Practice Wellness Class",
     instructor: "Professor Yuen Lai Ping",
     description:
-      "Supported by University of Hong Kong research data, this practice focuses on regulating qi and blood, strengthening the body, and easing chronic fatigue syndrome.",
+      "Supported by University of Hong Kong research data, this practice focuses on circulation, strengthening the body, and easing chronic fatigue syndrome.",
   },
   {
     id: "brain",
     title: "Research-based Jiannao Yuzhi Gong",
     instructor: "Professor Yuen Lai Ping",
     description:
-      "A qigong-based mind-body practice designed to support brain function, memory, concentration and inner calm.",
+      "A research-based mind-body practice designed to support brain function, memory, concentration and inner calm.",
   },
 ] as const;
 
