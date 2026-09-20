@@ -5,7 +5,7 @@ import Image from "next/image";
 import { media } from "@/data/media";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = { title: "科研結果" };
+export const metadata: Metadata = { title: "科研成果" };
 
 const paragraphs = [
   "袁麗萍教授自幼在深山成長，深諳科研養生之道。她曾多次與香港大學合作，研究「科研功法對慢性疲勞綜合症及癌症的療效」。作為國際健康養生會主席、港大行為健康教研中心臨床顧問、註冊中醫師及中華傳統醫學研究所所長，袁教授在醫療界享有崇高的聲譽，曾榮獲聯合國特殊醫療貢獻獎和多項國際獎項。",
@@ -21,7 +21,7 @@ export default function ResearchPage() {
     <>
       <Header />
       <main className="min-h-screen bg-stone-50">
-        <PageHero title="科研結果" subtitle="袁麗萍教授與香港大學的科研功法臨床研究" />
+        <PageHero title="科研成果" subtitle="袁麗萍教授與香港大學的科研功法臨床研究" />
         <section className="mx-auto max-w-3xl px-4 py-14">
           <div className="relative mb-10 aspect-[16/8] overflow-hidden rounded-md">
             <Image src={`${media.r2}/images/photo01.jpg`} alt="科研與課程" fill className="object-cover" />
