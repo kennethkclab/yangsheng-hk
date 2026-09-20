@@ -10,7 +10,7 @@ export const yuenGallery = {
       caption: "袁麗萍教授出席香港大學「為生命喝采」講座。",
       captionEn: "Professor Yuen speaking at HKU Living a Legacy symposium",
       desktop: `${R2}/images/yuen/desktop/13.png`,
-      mobile: `${R2}/images/yuen/mobile/13.png`,
+      mobile: `${R2}/images/yuen/mobile/13b.png`,
     },
     {
       id: "01",
