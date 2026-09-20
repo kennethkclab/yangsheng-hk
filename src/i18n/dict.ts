@@ -18,7 +18,7 @@ export const nav: Record<Locale, readonly NavItem[]> = {
     },
     { label: "最新資訊", href: "/news" },
     { label: "養生活動", href: "/events" },
-    { label: "科研結果", href: "/research" },
+    { label: "科研成果", href: "/research" },
     { label: "聯絡我們", href: "/contact" },
   ],
   en: [
