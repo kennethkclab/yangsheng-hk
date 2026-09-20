@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const awardPhotos = [
   {
     src: "https://pub-5442f85cdccf43b0aed63eadbd58fc4f.r2.dev/images/about/award-sham.jpg",
-    alt: "岑信棠醫生獲頒《資本平台》CEO x Entrepreneur of the Year 2025",
+    alt: "岑信棣醫生獲頒《資本平台》CEO x Entrepreneur of the Year 2025",
   },
   {
     src: "https://pub-5442f85cdccf43b0aed63eadbd58fc4f.r2.dev/images/about/award-yuen.jpg",
@@ -53,7 +53,7 @@ export default function AboutPage() {
         <section className="bg-white py-16">
           <div className="mx-auto max-w-4xl px-4 text-center">
             <h2 className="mb-4 text-2xl font-bold text-stone-900">核心理念</h2>
-            <p className="mx-auto mb-8 max-w-2xl text-lg text-stone-600">我們相信健康不是等到生病後才去治療，而是日常生活中需要持續經營的「身心資本」。透過結合傳統道家智慧與現代科研實證，協助大眾建立正確的養生習慣。</p>
+            <p className="mx-auto mb-8 max-w-2xl text-lg text-stone-600">我們相信健康不是等到生病後才去治療，而是日常生活中需要持續經營的「身心資本」。透過結合科研功法與現代科研實證，協助大眾建立正確的養生習慣。</p>
             <a href={siteData.contact.whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-block rounded-full bg-brand-700 px-8 py-3 text-sm font-medium text-white hover:bg-brand-800">聯絡我們了解更多</a>
           </div>
         </section>
