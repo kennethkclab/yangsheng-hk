@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 const R2 = "https://pub-5442f85cdccf43b0aed63eadbd58fc4f.r2.dev";
-const portrait = `${R2}/images/people/yuen-lai-ping.jpg`;
+const portrait = `${R2}/images/people/yuen-lai-ping-v2.jpg`;
 
 const titles = [
   { org: "國際健康養生會", role: "創會主席" },
@@ -98,9 +98,9 @@ export default function StructurePage() {
       <main className="min-h-screen bg-stone-50">
         <PageHero title="行政架構" subtitle="非牟利社團·成立於 2009 年 12 月" />
         <section className="mx-auto max-w-5xl px-4 py-14">
-          <article className="mb-8 overflow-hidden rounded-md border border-stone-200 bg-white shadow-sm">
-            <div className="bg-stone-100">
-              <Image src={portrait} alt="袁麗萍教授" width={1200} height={1200} className="mx-auto h-auto w-full max-w-xl object-contain" />
+          <article className="mb-8 overflow-hidden border border-stone-200 bg-white shadow-sm">
+            <div className="relative mx-auto aspect-square w-full max-w-md bg-stone-100">
+              <Image src={portrait} alt="袁麗萍教授" fill className="object-cover" sizes="(max-width: 768px) 100vw, 448px" />
             </div>
             <div className="p-6 md:p-8">
               <p className="text-sm font-medium text-brand-700">創會主席</p>
@@ -120,10 +120,10 @@ export default function StructurePage() {
           </article>
 
           {board.map((person) => (
-            <article key={person.name} className="mb-5 overflow-hidden rounded-md border border-stone-200 bg-white shadow-sm">
+            <article key={person.name} className="mb-5 overflow-hidden border border-stone-200 bg-white shadow-sm">
               {person.photo ? (
-                <div className="bg-stone-100">
-                  <Image src={person.photo} alt={person.name} width={900} height={900} className="mx-auto h-auto w-full max-w-sm object-cover" />
+                <div className="relative mx-auto aspect-square w-full max-w-md bg-stone-100">
+                  <Image src={person.photo} alt={person.name} fill className="object-cover" sizes="(max-width: 768px) 100vw, 448px" />
                 </div>
               ) : null}
               <div className="p-6">
