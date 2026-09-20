@@ -4,11 +4,7 @@ const nextConfig: NextConfig = {
   compress: true,
   poweredByHeader: false,
   images: {
-    formats: ["image/avif", "image/webp"],
-    minimumCacheTTL: 2592000,
-    deviceSizes: [360, 640, 750, 828, 1080, 1200, 1920],
-    imageSizes: [32, 48, 64, 96, 128, 256, 384],
-    qualities: [50, 60, 70, 75, 80, 90],
+    unoptimized: true,
     remotePatterns: [
       { protocol: "https", hostname: "yangsheng.hk" },
       { protocol: "https", hostname: "yangshengdao.hk" },
