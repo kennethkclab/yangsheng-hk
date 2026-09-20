@@ -43,7 +43,7 @@ export const siteData = {
   about: {
     title: "緣起與宗旨",
     originText:
-      "2009 年中，「中華傳統醫學治療中心」與「香港大學行為健康教研中心」合作舉辦免費「道家內功學習課程」，研究內功對治療「慢性疲勞綜合症」的功效。數小時內吸引數千市民報名，150 個名額瞬即爆滿。學員練習後身體狀況有顯著改善，在學員及袁麗萍老師推動下，於 2009 年 12 月正式成立「國際健康養生會」。",
+      "2009 年中，「中華傳統醫學治療中心」與「香港大學行為健康教研中心」合作舉辦免費「科研功法學習課程」，研究科研功法對治療「慢性疲勞綜合症」的功效。數小時內吸引數千市民報名，150 個名額瞬即爆滿。學員練習後身體狀況有顯著改善，在學員及袁麗萍老師推動下，於 2009 年 12 月正式成立「國際健康養生會」。",
     missionList: [
       "貫徹「預防勝於治療」理念。",
       "為追求健康長壽的人士提供協助\n，提升生活素質。",
@@ -53,7 +53,7 @@ export const siteData = {
   courses: [
     {
       id: "neigong",
-      title: "道家內功養生班",
+      title: "科研功法養生班",
       instructor: "袁麗萍教授",
       description: "配合香港大學科研數據驗證，著重氣血調理、強身健體，有效舒緩慢性疲勞綜合症。",
       imageUrl: `${R2}/images/news/23.jpg`,
@@ -69,7 +69,7 @@ export const siteData = {
   navigation: [
     { label: "主頁", href: "/" },
     { label: "國際健康養生會簡介", href: "/about" },
-    { label: "醫道-岑信棠醫生", href: "/Dr-ShamShunTong" },
+    { label: "醫道-岑信棣醫生", href: "/Dr-ShamShunTong" },
     { label: "最新資訊", href: "/news" },
     { label: "養生活動", href: "/events" },
     { label: "活動相簿", href: "/gallery" },
