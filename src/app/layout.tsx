@@ -17,7 +17,6 @@ export const metadata: Metadata = {
   keywords: [
     "國際健康養生會",
     "養生",
-    "氣功",
     "科研功法",
     "預防勝於治療",
     "袁麗萍",
