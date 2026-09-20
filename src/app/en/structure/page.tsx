@@ -32,7 +32,7 @@ export default function EnglishStructurePage() {
             <div className="p-6 md:p-8">
               <p className="text-sm font-medium text-brand-700">Founder and chairperson</p>
               <h2 className="mt-1 text-3xl font-bold text-stone-900">Professor Yuen Lai Ping</h2>
-              <p className="mt-4 mb-5 leading-relaxed text-stone-600">Founder and chairperson of the Association. She teaches Daoist Neigong and research-based Jiannao Yuzhi Gong, and leads research collaboration with the University of Hong Kong.</p>
+              <p className="mt-4 mb-5 leading-relaxed text-stone-600">Founder and chairperson of the Association. She teaches research-based practice and Jiannao Yuzhi Gong, and leads research collaboration with the University of Hong Kong.</p>
               <h3 className="mb-3 text-lg font-semibold text-stone-900">Titles</h3>
               <ul className="space-y-2">
                 {titles.map((item) => (
