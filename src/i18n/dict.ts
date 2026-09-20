@@ -12,7 +12,7 @@ export const nav: Record<Locale, readonly NavItem[]> = {
       label: "媒體及報道",
       href: "/gallery",
       children: [
-        { label: "醫道-岑信棠醫生", href: "/Dr-ShamShunTong" },
+        { label: "醫道-岑信棣醫生", href: "/Dr-ShamShunTong" },
         { label: "袁麗萍教授圖片集", href: "/gallery" },
       ],
     },
@@ -44,12 +44,12 @@ export const t = {
   zh: {
     nature: "康健及養生非牟利社團",
     slogan: "預防勝於治療",
-    heroLead: "結合道家內功智慧與現代科研實證，為追求健康長壽的人士提供專業協助。",
+    heroLead: "結合香港大學科研功法與現代科研實證，為追求健康長壽人士提供專業協助。",
     learnMore: "了解養生會",
     whatsapp: "WhatsApp 查詢",
     originTitle: "緣起與宗旨",
     originText:
-      "2009 年中，「中華傳統醫學治療中心」與「香港大學行為健康教研中心」合作舉辦免費「道家內功學習課程」，研究內功對治療「慢性疲勞綜合症」的功效。數小時內吸引數千市民報名，150 個名額瞬即爆滿。學員練習後身體狀況有顯著改善，在學員及袁麗萍老師推動下，於 2009 年 12 月正式成立「國際健康養生會」。",
+      "2009 年中，「中華傳統醫學治療中心」與「香港大學行為健康教研中心」合作舉辦免費「科研功法學習課程」，研究科研功法對治療「慢性疲勞綜合症」的功效。數小時內吸引數千市民報名，150 個名額瞬即爆滿。學員練習後身體狀況有顯著改善，在學員及袁麗萍老師推動下，於 2009 年 12 月正式成立「國際健康養生會」。",
     missions: [
       "貫徹「預防勝於治療」理念。",
       "為追求健康長壽的人士提供協助，提升生活素質。",
@@ -69,7 +69,7 @@ export const t = {
     ourMission: "我們的宗旨",
     coreIdea: "核心理念",
     coreText:
-      "我們相信健康不是等到生病後才去治療，而是日常生活中需要持續經營的「身心資本」。透過結合傳統道家智慧與現代科研實證，協助大眾建立正確的養生習慣。",
+      "我們相信健康不是等到生病後才去治療，而是日常生活中需要持續經營的「身心資本」。透過結合科研功法與現代科研實證，協助大眾建立正確的養生習慣。",
     contactMore: "聯絡我們了解更多",
     quickLinks: "快速連結",
     founded: "成立於 2009 年 12 月",
@@ -77,20 +77,20 @@ export const t = {
     openMenu: "開啟選單",
     closeMenu: "關閉選單",
     yidaoHeading: "醫道",
-    yidaoName: "岑信棠醫生",
+    yidaoName: "岑信棣醫生",
     yidaoBio:
       "香港大學醫學院臨床腫瘤學系榮譽教授，腫瘤專科醫生，國際健康養生會主席，行醫40多年，親眼見證科技進步，癌症由不治之症，至大部分都有得醫。",
     yidaoSource: "資料來源：東周刊",
     yidaoColumns: "健康生活專欄",
     columnsTitle: "健康專欄",
-    columnsLead: "岑信棠醫生與養生會的健康資訊與報道",
+    columnsLead: "岑信棣醫生與養生會的健康資訊與報道",
     knowledgeLead: "預防勝於治療，從日常習慣開始",
-    knowledgeP1: "道家內功著重氣血調理、呼吸與意念。持續練習有助緩解慢性疲勞、改善睡眠與集中力。",
+    knowledgeP1: "科研功法著重氣血調理、呼吸與意念。持續練習有助緩解慢性疲勞、改善睡眠與集中力。",
     knowledgeP2: "科研健腦御智功結合身心運動，適合希望提升記憶力與心神平靜的人士。",
     knowledgeP3: "建議先由專業導師指導入門，並依個人身體狀況調整強度。",
-    researchLead: "與香港大學行為健康教研中心合作的內功研究",
+    researchLead: "與香港大學行為健康教研中心合作的科研功法研究",
     researchText:
-      "2009 年，「中華傳統醫學治療中心」與「香港大學行為健康教研中心」合作舉辦道家內功學習課程，研究內功對慢性疲勞綜合症的效果。學員練習後身體狀況有顯著改善，亦推動養生會正式成立。",
+      "2009 年，「中華傳統醫學治療中心」與「香港大學行為健康教研中心」合作舉辦科研功法學習課程，研究科研功法對慢性疲勞綜合症的效果。學員練習後身體狀況有顯著改善，亦推動養生會正式成立。",
     eventsLead: "社區活動、課程與養生常識",
     newsLead: "課程招生、活動紀錄與會務公告",
     galleryLead: "袁麗萍教授講學、公益活動與合照紀錄",
@@ -100,12 +100,12 @@ export const t = {
     nature: "A non-profit association for health and yangsheng",
     slogan: "Prevention is better than cure",
     heroLead:
-      "We combine Daoist inner-cultivation practice with modern research to support people seeking long-term health and vitality.",
+      "We combine University of Hong Kong research-based practice with modern evidence to support people seeking long-term health and vitality.",
     learnMore: "About the Association",
     whatsapp: "WhatsApp enquiry",
     originTitle: "Origin and purpose",
     originText:
-      "In mid-2009, the Chinese Traditional Medicine Treatment Centre and the Centre on Behavioral Health at the University of Hong Kong jointly offered a free Daoist Neigong course to study its effect on chronic fatigue syndrome. Thousands applied within hours and the 150 places filled immediately. After students reported clear improvements, the International Association for Health and Yangsheng was founded in December 2009, with the support of students and Professor Yuen Lai Ping.",
+      "In mid-2009, the Chinese Traditional Medicine Treatment Centre and the Centre on Behavioral Health at the University of Hong Kong jointly offered a free research-based practice course to study its effect on chronic fatigue syndrome. Thousands applied within hours and the 150 places filled immediately. After students reported clear improvements, the International Association for Health and Yangsheng was founded in December 2009, with the support of students and Professor Yuen Lai Ping.",
     missions: [
       "Put prevention before treatment.",
       "Help people who seek health and longevity improve quality of life.",
@@ -125,7 +125,7 @@ export const t = {
     ourMission: "Our purpose",
     coreIdea: "Our belief",
     coreText:
-      "Health is not something to treat only after illness. It is daily capital for body and mind. We combine traditional Daoist wisdom with modern research to help people form sound wellness habits.",
+      "Health is not something to treat only after illness. It is daily capital for body and mind. We combine research-based practice with modern evidence to help people form sound wellness habits.",
     contactMore: "Contact us to learn more",
     quickLinks: "Quick links",
     founded: "Founded December 2009",
@@ -142,14 +142,14 @@ export const t = {
     columnsLead: "Health articles and reports from Dr Sham and the Association",
     knowledgeLead: "Prevention begins with daily habits",
     knowledgeP1:
-      "Daoist Neigong focuses on qi and blood, breathing and intention. Regular practice may ease chronic fatigue and support sleep and concentration.",
+      "Research-based practice focuses on qi and blood, breathing and intention. Regular practice may ease chronic fatigue and support sleep and concentration.",
     knowledgeP2:
       "Research-based Jiannao Yuzhi Gong combines qigong with mind-body movement for memory, focus and calm.",
     knowledgeP3:
       "Begin with a qualified instructor and adjust intensity to your own condition.",
-    researchLead: "Neigong research with HKU Centre on Behavioral Health",
+    researchLead: "Research-based practice studies with HKU Centre on Behavioral Health",
     researchText:
-      "In 2009 the Chinese Traditional Medicine Treatment Centre and the HKU Centre on Behavioral Health ran a Daoist Neigong course to study its effect on chronic fatigue syndrome. Students reported clear improvement, which also led to the founding of the Association.",
+      "In 2009 the Chinese Traditional Medicine Treatment Centre and the HKU Centre on Behavioral Health ran a research-based practice course to study its effect on chronic fatigue syndrome. Students reported clear improvement, which also led to the founding of the Association.",
     eventsLead: "Community programmes, classes and wellness knowledge",
     newsLead: "Classes, events and association updates",
     galleryLead: "Teaching, community service and portraits of Professor Yuen",
@@ -160,7 +160,7 @@ export const t = {
 export const coursesEn = [
   {
     id: "neigong",
-    title: "Daoist Neigong Wellness Class",
+    title: "Research-based Practice Wellness Class",
     instructor: "Professor Yuen Lai Ping",
     description:
       "Supported by University of Hong Kong research data, this practice focuses on regulating qi and blood, strengthening the body, and easing chronic fatigue syndrome.",
