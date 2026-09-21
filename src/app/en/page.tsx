@@ -40,12 +40,11 @@ export default function EnglishHomePage() {
               className="object-cover object-[78%_18%] md:object-[82%_22%]"
               sizes="100vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-emerald-950/30 via-emerald-900/10 to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-b from-white/28 via-transparent to-white/25" />
+            <div className="absolute inset-0 bg-gradient-to-r from-white/20 via-transparent to-white/10" />
           </div>
           <div className="relative mx-auto flex min-h-[72vh] max-w-6xl items-center px-4 py-16 md:min-h-[78vh] md:py-24">
             <div className="w-full max-w-3xl pr-16 md:pr-12">
-              <p className="hero-shadow mb-4 inline-block max-w-full rounded-md bg-black/25 px-3 py-1.5 text-left text-[15px] font-semibold leading-snug tracking-wide text-white backdrop-blur-sm md:whitespace-nowrap md:px-4 md:text-base">
+              <p className="hero-shadow mb-4 inline-block max-w-full rounded-md bg-black/20 px-3 py-1.5 text-left text-[15px] font-semibold leading-snug tracking-wide text-white md:whitespace-nowrap md:px-4 md:text-base">
                 {copy.nature}
               </p>
               <h1 className="hero-shadow mb-5 text-4xl font-extrabold leading-none text-white md:text-5xl lg:text-6xl">
