@@ -24,7 +24,7 @@ export default function PageHero({ title, subtitle, image, overlay = "default" }
         <Image src={src} alt="" fill priority quality={70} className="object-cover object-center" sizes="100vw" />
         <div className={wash} />
       </div>
-      <div className="relative mx-auto max-w-6xl px-4 py-16 text-center md:py-20">
+      <div className="relative mx-auto flex min-h-[220px] max-w-6xl flex-col items-center justify-center px-4 py-16 text-center md:min-h-[268px] md:py-20">
         <h1 className="text-3xl font-bold tracking-wide text-emerald-950 drop-shadow-sm md:text-4xl">{title}</h1>
         {subtitleLines.length > 0 ? (
           <p className="mx-auto mt-4 max-w-2xl text-base font-medium text-emerald-950 md:text-lg">
