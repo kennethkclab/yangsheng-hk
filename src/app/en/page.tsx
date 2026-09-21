@@ -38,7 +38,10 @@ export default function EnglishHomePage() {
           <div className="relative mx-auto max-w-6xl px-4 py-20 md:py-28">
             <div className="max-w-2xl">
               <p className="mb-4 inline-block rounded-md bg-white/15 px-4 py-1.5 text-sm font-medium tracking-wide text-brand-50 backdrop-blur">{copy.nature}</p>
-              <h1 className="mb-5 text-4xl font-bold leading-tight text-white md:text-5xl">{copy.slogan}</h1>
+              <h1 className="mb-5 text-4xl font-bold leading-none text-white md:text-5xl lg:text-6xl">
+                <span className="block pb-3 md:pb-5">Health for the world</span>
+                <span className="block">Ease through the years</span>
+              </h1>
               <p className="mb-8 text-lg leading-relaxed text-brand-50/90">{copy.heroLead}</p>
               <div className="flex flex-wrap gap-3">
                 <Link href="/en/about" className="rounded-md bg-white px-7 py-3 text-sm font-semibold text-brand-800 shadow-lg hover:bg-brand-50">{copy.learnMore}</Link>
@@ -57,7 +60,10 @@ export default function EnglishHomePage() {
         </section>
 
         <section className="mx-auto max-w-6xl px-4 py-16">
-          <h2 className="mb-6 text-2xl font-bold text-stone-900 md:text-3xl">{copy.originTitle}</h2>
+          <div className="mb-8 flex items-end justify-between gap-4">
+            <h2 className="text-2xl font-bold text-stone-900 md:text-3xl">{copy.originTitle}</h2>
+            <Link href="/en/about" className="shrink-0 text-sm font-medium text-brand-700 hover:underline">Learn more →</Link>
+          </div>
           <p className="mb-10 max-w-3xl text-lg leading-relaxed text-stone-600">{copy.originText}</p>
           <ul className="grid gap-5 sm:grid-cols-3">
             {copy.missions.map((item, i) => (
@@ -71,7 +77,10 @@ export default function EnglishHomePage() {
 
         <section className="bg-white py-16">
           <div className="mx-auto max-w-6xl px-4">
-            <h2 className="mb-8 text-2xl font-bold text-stone-900 md:text-3xl">{copy.coursesTitle}</h2>
+            <div className="mb-8 flex items-end justify-between gap-4">
+              <h2 className="text-2xl font-bold text-stone-900 md:text-3xl">{copy.coursesTitle}</h2>
+              <Link href="/en/about" className="shrink-0 text-sm font-medium text-brand-700 hover:underline">{copy.allCourses}</Link>
+            </div>
             <div className="grid gap-6 md:grid-cols-2">
               {coursesEn.map((course, i) => (
                 <article key={course.id} className="overflow-hidden rounded-md border border-stone-200 bg-white shadow-sm">
@@ -105,6 +114,15 @@ export default function EnglishHomePage() {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        <section className="bg-brand-800 py-16 text-white">
+          <div className="mx-auto max-w-6xl px-4 text-center">
+            <h2 className="mb-3 text-2xl font-bold md:text-3xl">{copy.contactTitle}</h2>
+            <p className="mb-1 text-brand-100">{copy.phone}: {siteData.contact.phoneDisplay}</p>
+            <p className="mb-8 text-brand-100">{siteData.contact.addressEn}</p>
+            <a href={siteData.contact.whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-block rounded-md bg-white px-8 py-3.5 font-semibold text-brand-800 hover:bg-brand-50">{copy.whatsappNow}</a>
           </div>
         </section>
       </main>
