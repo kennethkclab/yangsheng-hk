@@ -10,7 +10,7 @@ export const metadata: Metadata = { title: "About the Association" };
 
 const awardPhotos = [
   {
-    src: "https://pub-5442f85cdccf43b0aed63eadbd58fc4f.r2.dev/images/about/award-yuen-v2.jpg",
+    src: "https://pub-5442f85cdccf43b0aed63eadbd58fc4f.r2.dev/images/about/award-yuen-v3.jpg",
     alt: "Capital CEO x Entrepreneur of the Year 2025",
   },
   {
