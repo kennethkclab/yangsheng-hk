@@ -91,19 +91,22 @@ export default function EnglishHomePage() {
               <h2 className="text-2xl font-bold text-stone-900 md:text-3xl">{copy.coursesTitle}</h2>
               <Link href="/en/about" className="shrink-0 text-sm font-medium text-brand-700 hover:underline">{copy.allCourses}</Link>
             </div>
-            <div className="grid gap-6 md:grid-cols-2">
-              {coursesEn.map((course, i) => (
-                <article key={course.id} className="overflow-hidden rounded-md border border-stone-200 bg-white shadow-sm">
-                  <div className="bg-stone-100">
-                    <Image src={siteData.courses[i].imageUrl} alt={course.title} width={1200} height={800} className="h-auto w-full object-contain" sizes="(max-width: 768px) 100vw, 50vw" />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="mb-1 text-xl font-semibold text-stone-900">{course.title}</h3>
-                    <p className="mb-3 text-sm text-brand-700">{copy.instructor}: {course.instructor}</p>
-                    <p className="leading-relaxed text-stone-600">{course.description}</p>
-                  </div>
-                </article>
-              ))}
+            <div className="space-y-6">
+              {siteData.courses.map((course) => {
+                const text = coursesEn.find((item) => item.id === course.id) ?? course;
+                return (
+                  <article key={course.id} className="overflow-hidden border border-stone-200 bg-white shadow-sm md:flex md:items-center">
+                    <div className="bg-stone-50 md:w-[42%] md:shrink-0">
+                      <Image src={course.imageUrl} alt={text.title} width={1200} height={900} className="h-auto w-full object-contain" sizes="(max-width: 768px) 100vw, 42vw" />
+                    </div>
+                    <div className="flex flex-1 flex-col justify-center p-6">
+                      <h3 className="mb-1 text-xl font-semibold text-stone-900">{text.title}</h3>
+                      <p className="mb-3 text-sm text-brand-700">{copy.instructor}: {text.instructor}</p>
+                      <p className="leading-relaxed text-stone-600">{text.description}</p>
+                    </div>
+                  </article>
+                );
+              })}
             </div>
           </div>
         </section>
