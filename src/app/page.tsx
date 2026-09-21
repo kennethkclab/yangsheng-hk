@@ -83,9 +83,9 @@ export default function HomePage() {
             </div>
             <div className="space-y-6">
               {siteData.courses.map((course) => (
-                <article key={course.id} className="overflow-hidden border border-stone-200 bg-white shadow-sm md:flex md:items-stretch">
-                  <div className="relative aspect-[4/3] bg-stone-100 md:aspect-auto md:w-[38%] md:min-h-[220px] md:shrink-0">
-                    <Image src={course.imageUrl} alt={course.title} fill className="object-cover" sizes="(max-width: 768px) 100vw, 38vw" />
+                <article key={course.id} className="overflow-hidden border border-stone-200 bg-white shadow-sm md:flex md:items-center">
+                  <div className="bg-stone-50 md:w-[42%] md:shrink-0">
+                    <Image src={course.imageUrl} alt={course.title} width={1200} height={900} className="h-auto w-full object-contain" sizes="(max-width: 768px) 100vw, 42vw" />
                   </div>
                   <div className="flex flex-1 flex-col justify-center p-6">
                     <h3 className="mb-1 text-xl font-semibold text-stone-900">{course.title}</h3>
