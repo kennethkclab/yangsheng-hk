@@ -7,6 +7,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = { title: "科研成果" };
 
+const RESEARCH_HERO = "https://pub-5442f85cdccf43b0aed63eadbd58fc4f.r2.dev/images/hero-research.jpg";
+
 const paragraphs = [
   "袁麗萍教授自幼在深山成長，深諧科研養生之道。她曾多次與香港大學合作，研究「科研功法對慢性疲勞綜合症及癌症的療效」。作為國際健康養生會主席、港大行為健康教研中心臨床顧問、註冊中醫師及中華傳統醫學研究所所長，袁教授在醫療界享有崇高的聲譽，曾榮獲聯合國特殊醫療貢獻獎和多項國際獎項。",
   "在行醫期間，袁教授觀察到都市人患慢性病多，特別是癌症，年輕化趨勢明顯。她指出，隨著香港社會壓力加劇，許多人身體健康受損。袁教授重點指出科研功法可以改善新陳代謝，有助血液循環，提升氧氣供應，平衡五臟健康，並有效紓緩癌症化療的副作用。",
@@ -21,7 +23,7 @@ export default function ResearchPage() {
     <>
       <Header />
       <main className="min-h-screen bg-stone-50">
-        <PageHero title="科研成果" subtitle="袁麗萍教授與香港大學的科研功法臨床研究" />
+        <PageHero title="科研成果" subtitle="袁麗萍教授與香港大學的科研功法臨床研究" image={RESEARCH_HERO} overlay="soft" />
         <section className="mx-auto max-w-3xl px-4 py-14">
           <div className="relative mb-10 aspect-[16/8] overflow-hidden rounded-md">
             <Image src={`${media.r2}/images/photo01.jpg`} alt="科研與課程" fill className="object-cover" />
