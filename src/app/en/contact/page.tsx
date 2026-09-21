@@ -16,7 +16,7 @@ export default function EnglishContactPage() {
     <>
       <Header />
       <main className="min-h-screen bg-stone-50">
-        <PageHero title={copy.contactTitle} subtitle="Enquiries about classes, events and wellness practice" align="center" image={CONTACT_HERO} overlay="soft" imagePosition="center bottom" />
+        <PageHero title={copy.contactTitle} subtitle="Enquiries about classes, events and wellness practice" align="center" image={CONTACT_HERO} overlay="soft" imagePosition="center 68%" />
         <section className="mx-auto max-w-5xl px-4 py-16">
           <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
             <div className="rounded-md border border-stone-200 bg-white p-8 shadow-sm">
