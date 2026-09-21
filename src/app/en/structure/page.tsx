@@ -91,6 +91,14 @@ const board = [
   },
 ];
 
+function Portrait({ src, alt }: { src: string; alt: string }) {
+  return (
+    <div className="relative aspect-square w-full shrink-0 bg-stone-100 md:w-64 lg:w-72">
+      <Image src={src} alt={alt} fill className="object-cover object-top" sizes="(max-width: 768px) 100vw, 288px" />
+    </div>
+  );
+}
+
 export default function EnglishStructurePage() {
   return (
     <>
@@ -98,11 +106,9 @@ export default function EnglishStructurePage() {
       <main className="min-h-screen bg-stone-50">
         <PageHero title="Organisation" subtitle="Non-profit association · Founded December 2009" />
         <section className="mx-auto max-w-5xl px-4 py-14">
-          <article className="mb-8 overflow-hidden border border-stone-200 bg-white shadow-sm">
-            <div className="relative mx-auto aspect-square w-full max-w-md bg-stone-100">
-              <Image src={portrait} alt="Professor Yuen Lai Ping" fill className="object-cover" sizes="(max-width: 768px) 100vw, 448px" />
-            </div>
-            <div className="p-6 md:p-8">
+          <article className="mb-8 overflow-hidden border border-stone-200 bg-white shadow-sm md:flex md:items-start">
+            <Portrait src={portrait} alt="Professor Yuen Lai Ping" />
+            <div className="min-w-0 flex-1 p-6 md:p-8">
               <p className="text-sm font-medium text-brand-700">Founding Chairperson</p>
               <h2 className="mt-1 text-3xl font-bold text-stone-900">Professor Yuen Lai Ping</h2>
               <p className="mt-4 mb-5 leading-relaxed text-stone-600">She teaches research-based practice and Jiannao Yuzhi Gong, and leads wellness research with the University of Hong Kong.</p>
@@ -120,13 +126,9 @@ export default function EnglishStructurePage() {
           </article>
 
           {board.map((person) => (
-            <article key={person.name} className="mb-5 overflow-hidden border border-stone-200 bg-white shadow-sm">
-              {person.photo ? (
-                <div className="relative mx-auto aspect-square w-full max-w-md bg-stone-100">
-                  <Image src={person.photo} alt={person.name} fill className="object-cover" sizes="(max-width: 768px) 100vw, 448px" />
-                </div>
-              ) : null}
-              <div className="p-6">
+            <article key={person.name} className="mb-5 overflow-hidden border border-stone-200 bg-white shadow-sm md:flex md:items-start">
+              {person.photo ? <Portrait src={person.photo} alt={person.name} /> : null}
+              <div className="min-w-0 flex-1 p-6">
                 <p className="text-sm font-medium text-brand-700">{person.role}</p>
                 <h2 className="mt-1 text-2xl font-bold text-stone-900">{person.name}</h2>
                 {person.text ? <p className="mt-3 leading-relaxed text-stone-600">{person.text}</p> : null}
