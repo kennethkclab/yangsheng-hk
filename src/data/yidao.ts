@@ -1,7 +1,7 @@
 const R2 = "https://pub-5442f85cdccf43b0aed63eadbd58fc4f.r2.dev";
 
 export const yidao = {
-  title: "醫道-岑信棠醫生",
+  title: "醫道 | 岑信棠醫生",
   name: "岑信棠醫生",
   heading: "醫道",
   sourcePage:
