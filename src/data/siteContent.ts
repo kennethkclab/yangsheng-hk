@@ -56,7 +56,7 @@ export const siteData = {
       title: "科研功法養生班",
       instructor: "袁麗萍教授",
       description: "配合香港大學科研數據驗證，著重氣血調理、強身健體，有效舒緩慢性疲勞綜合症。",
-      imageUrl: `${R2}/images/news/23.jpg`,
+      imageUrl: `${R2}/images/courses/neigong-cover.png`,
     },
     {
       id: "brain",
@@ -69,7 +69,7 @@ export const siteData = {
   navigation: [
     { label: "主頁", href: "/" },
     { label: "國際健康養生會簡介", href: "/about" },
-    { label: "醫道-岑信棠醫生", href: "/Dr-ShamShunTong" },
+    { label: "醫道 | 岑信棠醫生", href: "/Dr-ShamShunTong" },
     { label: "最新資訊", href: "/news" },
     { label: "養生活動", href: "/events" },
     { label: "活動相簿", href: "/gallery" },
