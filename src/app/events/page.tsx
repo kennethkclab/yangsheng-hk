@@ -8,13 +8,15 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = { title: "養生活動" };
 
+const EVENTS_HERO = "https://pub-5442f85cdccf43b0aed63eadbd58fc4f.r2.dev/images/hero-events.jpg";
+
 export default function EventsPage() {
   const copy = t.zh;
   return (
     <>
       <Header />
       <main className="min-h-screen bg-stone-50">
-        <PageHero title="養生活動" subtitle="社區活動、課程與養生常識" />
+        <PageHero title="養生活動" subtitle="社區活動、課程與養生常識" image={EVENTS_HERO} overlay="soft" />
         <section className="mx-auto max-w-6xl px-4 py-14">
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {media.events.map((item) => (
