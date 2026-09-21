@@ -10,12 +10,14 @@ export const metadata: Metadata = {
   description: yidao.bio,
 };
 
+const MEDIA_HERO = "https://pub-5442f85cdccf43b0aed63eadbd58fc4f.r2.dev/images/hero-media.jpg";
+
 export default function DrShamShunTongPage() {
   return (
     <>
       <Header />
       <main className="min-h-screen bg-stone-50">
-        <PageHero title={yidao.title} subtitle={yidao.name} />
+        <PageHero title={yidao.title} subtitle={yidao.name} image={MEDIA_HERO} overlay="soft" />
         <section className="border-b border-stone-200 bg-white">
           <div className="mx-auto flex max-w-5xl flex-col items-start gap-6 px-4 py-12 md:flex-row md:items-center md:gap-10">
             <div className="relative h-36 w-36 shrink-0 overflow-hidden rounded-full border border-stone-200 bg-stone-100">
