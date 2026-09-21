@@ -15,7 +15,7 @@ export default function PageHero({ title, subtitle, image, overlay = "default" }
   const src = image || HERO_BG;
   const wash =
     overlay === "soft"
-      ? "absolute inset-0 bg-emerald-900/15"
+      ? "absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.42)_0%,rgba(255,255,255,0.12)_42%,rgba(16,64,48,0.12)_100%)]"
       : "absolute inset-0 bg-gradient-to-r from-emerald-50/70 via-teal-100/45 to-sky-100/40 backdrop-blur-[2px]";
 
   return (
