@@ -29,7 +29,7 @@ export default function HomePage() {
               alt="養生會"
               fill
               priority
-              className="object-cover object-center"
+              className="object-cover object-[50%_18%] md:object-[50%_16%]"
               sizes="100vw"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-sky-950/25 via-transparent to-transparent" />
