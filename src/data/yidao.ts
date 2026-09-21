@@ -38,7 +38,12 @@ export const yidao = {
     { title: "卵巢癌", date: "2026-03-05", url: "https://eastweek.stheadline.com/column/healthlife/105169" },
     { title: "食品防腐劑", date: "2026-02-26", url: "https://eastweek.stheadline.com/column/healthlife/105140" },
     { title: "慢性乙肝", date: "2026-02-19", url: "https://eastweek.stheadline.com/column/healthlife/105134" },
-    { title: "春節飲食", date: "2026-02-12", url: "https://eastweek.stheadline.com/column/healthlife/105100" },
+    {
+      title: "春節飲食",
+      date: "2026-02-12",
+      url: "https://eastweek.stheadline.com/column/healthlife/105100",
+      image: `${R2}/images/yidao/spring-festival-diet.jpg`,
+    },
     { title: "三聯療法", date: "2026-02-06", url: "https://eastweek.stheadline.com/column/healthlife/105068" },
     { title: "大腸癌篩查", date: "2026-01-30", url: "https://eastweek.stheadline.com/column/healthlife/105034" },
     { title: "節拍式化療", date: "2026-01-23", url: "https://eastweek.stheadline.com/column/healthlife/104996" },
