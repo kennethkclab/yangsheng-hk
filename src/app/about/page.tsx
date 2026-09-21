@@ -12,12 +12,12 @@ export const metadata: Metadata = {
 
 const awardPhotos = [
   {
-    src: "https://pub-5442f85cdccf43b0aed63eadbd58fc4f.r2.dev/images/about/award-yuen-v2.jpg",
+    src: "https://pub-5442f85cdccf43b0aed63eadbd58fc4f.r2.dev/images/about/award-yuen-v3.jpg",
     alt: "國際健康養生會獲頒《資本平台》CEO x Entrepreneur of the Year 2025",
   },
   {
     src: "https://pub-5442f85cdccf43b0aed63eadbd58fc4f.r2.dev/images/about/award-sham.jpg",
-    alt: "岑信棣醫生獲頒《資本平台》CEO x Entrepreneur of the Year 2025",
+    alt: "岑信棠醫生獲頒《資本平台》CEO x Entrepreneur of the Year 2025",
   },
 ];
 
