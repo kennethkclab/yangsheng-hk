@@ -11,6 +11,7 @@ export const metadata: Metadata = {
 };
 
 const R2 = "https://pub-5442f85cdccf43b0aed63eadbd58fc4f.r2.dev";
+const STRUCTURE_HERO = `${R2}/images/hero-structure.jpg`;
 const portrait = `${R2}/images/people/yuen-lai-ping-v2.jpg`;
 
 const titles = [
@@ -104,7 +105,7 @@ export default function StructurePage() {
     <>
       <Header />
       <main className="min-h-screen bg-stone-50">
-        <PageHero title="行政架構" subtitle="非牟利社團·成立於 2009 年 12 月" />
+        <PageHero title="行政架構" subtitle="非牟利社團·成立於 2009 年 12 月" image={STRUCTURE_HERO} overlay="soft" />
         <section className="mx-auto max-w-3xl px-4 py-14">
           <article className="mb-8 overflow-hidden border border-stone-200 bg-white shadow-sm">
             <Portrait src={portrait} alt="袁麗萍教授" />
