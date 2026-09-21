@@ -37,11 +37,10 @@ export default function EnglishHomePage() {
               alt="Association"
               fill
               priority
-              className="object-cover object-[55%_30%] md:object-[58%_22%]"
+              className="object-cover object-center"
               sizes="100vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-emerald-50/20 via-transparent to-emerald-50/65" />
-            <div className="absolute inset-y-0 right-0 w-[50%] bg-gradient-to-l from-emerald-50/85 via-lime-100/50 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-sky-950/25 via-transparent to-transparent" />
           </div>
           <div className="relative mx-auto flex min-h-[72vh] max-w-6xl items-center px-4 py-16 md:min-h-[78vh] md:py-24">
             <div className="w-full max-w-3xl pr-16 md:pr-12">
