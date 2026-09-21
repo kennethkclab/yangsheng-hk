@@ -32,8 +32,8 @@ export default function EnglishDoctorPage() {
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {yidao.articles.map((item) => (
               <a key={`${item.title}-${item.date}`} href={item.url} target="_blank" rel="noopener noreferrer" className="overflow-hidden border border-stone-200 bg-white shadow-sm">
-                <div className="relative aspect-[16/10] bg-stone-100">
-                  <Image src={yidao.cover} alt={item.title} fill className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" />
+                <div className="relative aspect-[16/10] bg-white">
+                  <Image src={"image" in item ? item.image : yidao.cover} alt={item.title} fill className="object-contain" sizes="(max-width: 768px) 100vw, 33vw" />
                 </div>
                 <div className="p-4">
                   <p className="text-xs text-stone-500">{item.date}</p>
