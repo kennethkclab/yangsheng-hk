@@ -28,7 +28,12 @@ export const yidao = {
     { title: "雙免疫治療", date: "2026-04-14", url: "https://eastweek.stheadline.com/column/healthlife/105359" },
     { title: "免疫治療盲區", date: "2026-04-14", url: "https://eastweek.stheadline.com/column/healthlife/105358" },
     { title: "運動處方", date: "2026-04-14", url: "https://eastweek.stheadline.com/column/healthlife/105357" },
-    { title: "體重管理", date: "2026-03-20", url: "https://eastweek.stheadline.com/column/healthlife/105249" },
+    {
+      title: "體重管理",
+      date: "2026-03-20",
+      url: "https://eastweek.stheadline.com/column/healthlife/105249",
+      image: `${R2}/images/yidao/weight-management.jpg`,
+    },
     { title: "新雙標靶治療", date: "2026-03-12", url: "https://eastweek.stheadline.com/column/healthlife/105203" },
     { title: "卵巢癌", date: "2026-03-05", url: "https://eastweek.stheadline.com/column/healthlife/105169" },
     { title: "食品防腐劑", date: "2026-02-26", url: "https://eastweek.stheadline.com/column/healthlife/105140" },
