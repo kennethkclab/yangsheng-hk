@@ -11,6 +11,7 @@ export const metadata: Metadata = {
 };
 
 const R2 = "https://pub-5442f85cdccf43b0aed63eadbd58fc4f.r2.dev";
+const STRUCTURE_HERO = `${R2}/images/hero-structure.jpg`;
 const portrait = `${R2}/images/people/yuen-lai-ping-v2.jpg`;
 
 const titles = [
@@ -104,7 +105,7 @@ export default function EnglishStructurePage() {
     <>
       <Header />
       <main className="min-h-screen bg-stone-50">
-        <PageHero title="Organisation" subtitle="Non-profit association · Founded December 2009" />
+        <PageHero title="Organisation" subtitle="Non-profit association · Founded December 2009" image={STRUCTURE_HERO} overlay="soft" />
         <section className="mx-auto max-w-3xl px-4 py-14">
           <article className="mb-8 overflow-hidden border border-stone-200 bg-white shadow-sm">
             <Portrait src={portrait} alt="Professor Yuen Lai Ping" />
