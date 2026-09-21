@@ -108,7 +108,7 @@ export default function EnglishStructurePage() {
         <section className="mx-auto max-w-3xl px-4 py-14">
           <article className="mb-8 overflow-hidden border border-stone-200 bg-white shadow-sm">
             <Portrait src={portrait} alt="Professor Yuen Lai Ping" />
-            <div className="p-6 md:p-8">
+            <div className="border-t border-stone-100 px-6 pb-6 pt-5 md:px-8 md:pb-8 md:pt-6">
               <p className="text-sm font-medium text-brand-700">Founding Chairperson</p>
               <h2 className="mt-1 text-3xl font-bold text-stone-900">Professor Yuen Lai Ping</h2>
               <p className="mt-4 mb-5 leading-relaxed text-stone-600">She teaches research-based practice and Jiannao Yuzhi Gong, and leads wellness research with the University of Hong Kong.</p>
@@ -128,7 +128,7 @@ export default function EnglishStructurePage() {
           {board.map((person) => (
             <article key={person.name} className="mb-5 overflow-hidden border border-stone-200 bg-white shadow-sm">
               {person.photo ? <Portrait src={person.photo} alt={person.name} /> : null}
-              <div className="p-6">
+              <div className="border-t border-stone-100 px-6 pb-6 pt-5">
                 <p className="text-sm font-medium text-brand-700">{person.role}</p>
                 <h2 className="mt-1 text-2xl font-bold text-stone-900">{person.name}</h2>
                 {person.text ? <p className="mt-3 leading-relaxed text-stone-600">{person.text}</p> : null}
