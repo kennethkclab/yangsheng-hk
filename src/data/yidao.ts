@@ -6,8 +6,8 @@ export const yidao = {
   heading: "醫道",
   sourcePage:
     "https://yangshengdao.hk/%e9%86%ab%e9%81%93-%e5%b2%91%e4%bf%a1%e6%a3%a0%e9%86%ab%e7%94%9f/",
-  portrait: `${R2}/images/people/sham-shun-tong.jpg`,
-  cover: `${R2}/images/people/sham-shun-tong.jpg`,
+  portrait: `${R2}/images/yidao/avatar.png`,
+  cover: `${R2}/images/yidao/cover.jpg`,
   bio: "香港大學醫學院臨床腫瘤學系榮譽教授，腫瘤專科醫生，國際健康養生會主席，行醫40多年，親眼見證科技進步，癌症由不治之症，至大部分都有得醫。",
   source: "資料來源：東周刊",
   articles: [
