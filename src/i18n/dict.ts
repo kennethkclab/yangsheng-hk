@@ -49,7 +49,7 @@ export const t = {
     whatsapp: "WhatsApp 查詢",
     originTitle: "緣起與宗旨",
     originText:
-      "2009 年中，「中華傳統醫學治療中心」與「香港大學行為健康教研中心」合作舉辦免費「科研功法學習課程」，研究科研功法對治療「慢性疲勞綜合症」的功效。數小時內吸引數千市民報名，150 個名額瞬即爆滿。學員練習後身體狀況有顯著改善，在學員及袁麗萍老師推動下，於 2009 年 12 月正式成立「國際健康養生會」。",
+      "2009 年中，「中華傳統醫學治療中心」與「香港大學行為健康教研中心」合作舉辦免費「科研功法學習課程」，研究科研功法對治療「慢性疲勞綜合症」的功效。數小時內吸引數千市民報名，300 多個名額瞬即爆滿。學員練習後身體狀況有顯著改善，在學員及袁麗萍教授推動下，於 2009 年 12 月正式成立「國際健康養生會」。",
     missions: [
       "貫徹「預防勝於治療」理念。",
       "為追求健康長壽的人士提供協助，提升生活素質。",
@@ -105,7 +105,7 @@ export const t = {
     whatsapp: "WhatsApp",
     originTitle: "Origin and purpose",
     originText:
-      "In mid-2009, the Chinese Traditional Medicine Treatment Centre and the Centre on Behavioral Health at the University of Hong Kong jointly offered a free research-based practice course to study its effect on chronic fatigue syndrome. Thousands applied within hours and the 150 places filled immediately. After students reported clear improvements, the International Association for Health and Yangsheng was founded in December 2009, with the support of students and Professor Yuen Lai Ping.",
+      "In mid-2009, the Chinese Traditional Medicine Treatment Centre and the Centre on Behavioral Health at the University of Hong Kong jointly offered a free research-based practice course to study its effect on chronic fatigue syndrome. Thousands applied within hours and more than 300 places filled immediately. After students reported clear improvements, the International Association for Health and Yangsheng was founded in December 2009, with the support of students and Professor Yuen Lai Ping.",
     missions: [
       "Put prevention before treatment.",
       "Help people who seek health and longevity improve quality of life.",
