@@ -7,7 +7,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = { title: "Research outcomes" };
 
-const RESEARCH_HERO = "https://pub-5442f85cdccf43b0aed63eadbd58fc4f.r2.dev/images/hero-research.jpg";
+const RESEARCH_HERO = "https://pub-5442f85cdccf43b0aed63eadbd58fc4f.r2.dev/images/hero-research-v2.jpg";
 
 const paragraphs = [
   "Professor Yuen Lai Ping grew up in the mountains and is deeply versed in research-based wellness practice. She has worked with the University of Hong Kong on studies of research-based practice for chronic fatigue syndrome and cancer. As Chairperson of the International Association for Health and Yangsheng, clinical adviser to the HKU Centre on Behavioral Health, a registered Chinese medicine practitioner and Director of the Chinese Traditional Medicine Research Institute, she is widely respected in healthcare and has received the United Nations Special Medical Contribution Award and other international honours.",
