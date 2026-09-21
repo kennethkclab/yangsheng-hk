@@ -32,7 +32,7 @@ export const siteData = {
   ],
   images: {
     logo: `${R2}/images/logo.png`,
-    hero1: `${R2}/images/hero-leaves.jpg`,
+    hero1: `${R2}/images/hero-lake.jpg`,
     hero2: `${R2}/images/photo02.jpg`,
     pho: `${R2}/images/pho.jpg`,
     adv1: `${R2}/images/adv/1.jpg`,
