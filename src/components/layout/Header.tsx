@@ -7,6 +7,12 @@ import { usePathname } from "next/navigation";
 import { siteData } from "@/data/siteContent";
 import { localizedPath, nav, t } from "@/i18n/dict";
 
+function pathKey(path: string) {
+  const raw = path || "/";
+  if (raw === "/en") return "/";
+  return raw.replace(/^\/en/, "") || "/";
+}
+
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [openGroup, setOpenGroup] = useState<string | null>(null);
@@ -18,6 +24,16 @@ export default function Header() {
   const homeHref = isEn ? "/en" : "/";
   const zhHref = localizedPath(pathname, "zh");
   const enHref = localizedPath(pathname, "en");
+  const current = pathKey(pathname);
+
+  const isActive = (href: string, children?: readonly { href: string }[]) => {
+    const target = pathKey(href);
+    if (children?.length) {
+      return children.some((child) => pathKey(child.href) === current) || current === target;
+    }
+    if (target === "/") return current === "/";
+    return current === target || current.startsWith(`${target}/`);
+  };
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
@@ -42,27 +58,38 @@ export default function Header() {
           </Link>
 
           <nav className="hidden items-center gap-3 text-[18px] leading-none text-stone-700 xl:flex">
-            {items.map((item) =>
-              item.children ? (
+            {items.map((item) => {
+              const active = isActive(item.href, item.children);
+              const tabClass = active
+                ? "text-brand-800 font-semibold"
+                : "text-stone-700 hover:text-brand-800";
+              return item.children ? (
                 <div key={item.label} className="group relative">
-                  <Link href={item.href} className="inline-flex items-center gap-1 whitespace-nowrap px-1 py-2 hover:text-brand-700">
+                  <Link href={item.href} className={`inline-flex items-center gap-1 whitespace-nowrap px-1 py-2 ${tabClass}`}>
                     {item.label}
                     <span className="text-[12px]">▾</span>
                   </Link>
                   <div className="invisible absolute left-0 top-full z-50 min-w-48 rounded-xl border border-stone-200 bg-white py-2 text-[18px] opacity-0 shadow-lg transition group-hover:visible group-hover:opacity-100">
-                    {item.children.map((child) => (
-                      <Link key={child.href} href={child.href} className="block px-4 py-2 text-stone-700 hover:bg-brand-50 hover:text-brand-800">
-                        {child.label}
-                      </Link>
-                    ))}
+                    {item.children.map((child) => {
+                      const childActive = isActive(child.href);
+                      return (
+                        <Link
+                          key={child.href}
+                          href={child.href}
+                          className={`block px-4 py-2 ${childActive ? "bg-brand-50 font-semibold text-brand-800" : "text-stone-700 hover:bg-brand-50 hover:text-brand-800"}`}
+                        >
+                          {child.label}
+                        </Link>
+                      );
+                    })}
                   </div>
                 </div>
               ) : (
-                <Link key={item.href} href={item.href} className="whitespace-nowrap px-1 py-2 hover:text-brand-700">
+                <Link key={item.href} href={item.href} className={`whitespace-nowrap px-1 py-2 ${tabClass}`}>
                   {item.label}
                 </Link>
-              )
-            )}
+              );
+            })}
           </nav>
 
           <div className="flex shrink-0 items-center gap-2">
@@ -87,29 +114,33 @@ export default function Header() {
           </button>
         </div>
         <nav className="flex-1 overflow-y-auto bg-white px-3 py-4 space-y-1">
-          {items.map((item) =>
-            item.children ? (
+          {items.map((item) => {
+            const active = isActive(item.href, item.children);
+            return item.children ? (
               <div key={item.label}>
-                <button type="button" className="flex w-full items-center justify-between rounded-md px-4 py-3 text-left text-base text-stone-700 hover:bg-brand-50" onClick={() => setOpenGroup(openGroup === item.label ? null : item.label)}>
+                <button type="button" className={`flex w-full items-center justify-between rounded-md px-4 py-3 text-left text-base hover:bg-brand-50 ${active ? "font-semibold text-brand-800" : "text-stone-700"}`} onClick={() => setOpenGroup(openGroup === item.label ? null : item.label)}>
                   <span>{item.label}</span>
                   <span className="text-xs">{openGroup === item.label ? "–" : "+"}</span>
                 </button>
                 {openGroup === item.label ? (
                   <div className="mb-2 ml-3 space-y-1 border-l border-stone-200 pl-3">
-                    {item.children.map((child) => (
-                      <Link key={child.href} href={child.href} onClick={() => setOpen(false)} className="block rounded-md px-3 py-2 text-sm text-stone-600 hover:bg-brand-50 hover:text-brand-800">
-                        {child.label}
-                      </Link>
-                    ))}
+                    {item.children.map((child) => {
+                      const childActive = isActive(child.href);
+                      return (
+                        <Link key={child.href} href={child.href} onClick={() => setOpen(false)} className={`block rounded-md px-3 py-2 text-sm ${childActive ? "bg-brand-50 font-semibold text-brand-800" : "text-stone-600 hover:bg-brand-50 hover:text-brand-800"}`}>
+                          {child.label}
+                        </Link>
+                      );
+                    })}
                   </div>
                 ) : null}
               </div>
             ) : (
-              <Link key={item.href} href={item.href} onClick={() => setOpen(false)} className="block rounded-md px-4 py-3 text-base text-stone-700 hover:bg-brand-50 hover:text-brand-800">
+              <Link key={item.href} href={item.href} onClick={() => setOpen(false)} className={`block rounded-md px-4 py-3 text-base ${active ? "bg-brand-50 font-semibold text-brand-800" : "text-stone-700 hover:bg-brand-50 hover:text-brand-800"}`}>
                 {item.label}
               </Link>
-            )
-          )}
+            );
+          })}
         </nav>
         <div className="border-t border-stone-100 bg-white p-4">
           <a href={siteData.contact.whatsappUrl} target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)} className="flex items-center justify-center gap-2 rounded-md bg-[#25D366] px-4 py-3 text-sm font-semibold text-white">
