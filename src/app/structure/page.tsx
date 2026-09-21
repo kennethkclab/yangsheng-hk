@@ -56,7 +56,7 @@ const tatiaTitles = [
 
 const board = [
   {
-    name: "岑信棠教授",
+    name: "岑信棠醫生",
     role: "創會主席",
     text: "香港大學醫學院臨床腫瘤學系榮譽教授",
     href: "/Dr-ShamShunTong",
