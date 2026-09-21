@@ -10,12 +10,14 @@ export const metadata: Metadata = {
   description: "聯絡國際健康養生會，查詢課程與活動資訊。",
 };
 
+const CONTACT_HERO = "https://pub-5442f85cdccf43b0aed63eadbd58fc4f.r2.dev/images/hero-research.jpg";
+
 export default function ContactPage() {
   return (
     <>
       <Header />
       <main className="min-h-screen bg-stone-50">
-        <PageHero title="聯絡我們" subtitle="歡迎查詢課程、活動或養生相關問題" align="center" />
+        <PageHero title="聯絡我們" subtitle="歡迎查詢課程、活動或養生相關問題" align="center" image={CONTACT_HERO} overlay="soft" />
         <section className="mx-auto max-w-5xl px-4 py-16">
           <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
             <div className="rounded-2xl border border-stone-200 bg-white p-8 shadow-sm">
