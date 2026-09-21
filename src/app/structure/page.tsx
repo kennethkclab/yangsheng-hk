@@ -34,7 +34,7 @@ const shamQualifications = [
 
 const ceciliaTitles = [
   "香港大學社會工作及社會行政學系榮休教授",
-  "太平紳士",
+  "太平紸士",
   "腫瘤社會工作協會院士",
   "香港社會工作專科學院創院院士",
   "香港輔導專業人員協會會院士",
@@ -71,7 +71,7 @@ const board = [
     role: "創會秘書長",
     text: "",
     photo: `${R2}/images/people/chan-lai-wan-v2.jpg`,
-    listTitle: "頭銜",
+    listTitle: "頭衔",
     qualifications: ceciliaTitles,
   },
   {
@@ -79,7 +79,7 @@ const board = [
     role: "董事",
     text: "",
     photo: `${R2}/images/people/chan-chi-hin.jpg`,
-    listTitle: "頭銜",
+    listTitle: "頭衔",
     qualifications: chetwynTitles,
   },
   {
@@ -87,7 +87,7 @@ const board = [
     role: "董事",
     text: "",
     photo: `${R2}/images/people/lee-mei-chun.jpg`,
-    listTitle: "頭銜",
+    listTitle: "頭衔",
     qualifications: tatiaTitles,
   },
 ];
@@ -105,7 +105,7 @@ export default function StructurePage() {
     <>
       <Header />
       <main className="min-h-screen bg-stone-50">
-        <PageHero title="行政架構" subtitle="非牟利社團·成立於 2009 年 12 月" image={STRUCTURE_HERO} overlay="soft" imagePosition="center 32%" />
+        <PageHero title="行政架構" subtitle="非牟利社團·成立於 2009 年 12 月" image={STRUCTURE_HERO} overlay="soft" imagePosition="center 22%" />
         <section className="mx-auto max-w-3xl px-4 py-14">
           <article className="mb-8 overflow-hidden border border-stone-200 bg-white shadow-sm">
             <Portrait src={portrait} alt="袁麗萍教授" />
@@ -113,7 +113,7 @@ export default function StructurePage() {
               <p className="text-sm font-medium text-brand-700">創會主席</p>
               <h2 className="mt-1 text-3xl font-bold text-stone-900">袁麗萍教授</h2>
               <p className="mt-4 mb-5 leading-relaxed text-stone-600">主持科研功法與科研健腦御智功課程，並推動與香港大學的養生科研合作。</p>
-              <h3 className="mb-3 text-lg font-semibold text-stone-900">袁麗萍教授頭銜</h3>
+              <h3 className="mb-3 text-lg font-semibold text-stone-900">袁麗萍教授頭衔</h3>
               <ul className="space-y-2">
                 {titles.map((item) => (
                   <li key={item.org} className="flex flex-col gap-0.5 border-b border-stone-100 py-2 last:border-0 sm:flex-row sm:items-baseline sm:justify-between">
