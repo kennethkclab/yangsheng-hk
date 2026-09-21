@@ -22,22 +22,30 @@ export default function HomePage() {
     <>
       <Header />
       <main className="min-h-screen bg-stone-50">
-        <section className="relative overflow-hidden">
+        <section className="relative min-h-[72vh] overflow-hidden md:min-h-[78vh]">
           <div className="absolute inset-0">
-            <Image src={siteData.images.hero1} alt="養生會活動" fill priority className="object-cover" sizes="100vw" />
-            <div className="absolute inset-0 bg-gradient-to-r from-brand-900/80 via-brand-800/70 to-brand-900/40" />
+            <Image
+              src={siteData.images.hero1}
+              alt="養生會"
+              fill
+              priority
+              className="object-cover object-[78%_18%] md:object-[82%_22%]"
+              sizes="100vw"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-emerald-950/55 via-emerald-900/20 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-emerald-950/35 via-transparent to-emerald-900/10" />
           </div>
-          <div className="relative mx-auto max-w-6xl px-4 py-20 md:py-28">
-            <div className="max-w-2xl">
-              <p className="mb-4 inline-block rounded-md bg-white/15 px-4 py-1.5 text-sm font-medium tracking-wide text-brand-50 backdrop-blur">{siteData.brand.nature}</p>
-              <h1 className="mb-5 text-4xl font-bold leading-none text-white md:text-5xl lg:text-6xl">
+          <div className="relative mx-auto flex min-h-[72vh] max-w-6xl items-center px-4 py-16 md:min-h-[78vh] md:py-24">
+            <div className="max-w-xl md:max-w-2xl">
+              <p className="mb-4 inline-block rounded-md bg-white/20 px-4 py-1.5 text-sm font-medium tracking-wide text-white backdrop-blur-sm">{siteData.brand.nature}</p>
+              <h1 className="mb-5 text-4xl font-bold leading-none text-white drop-shadow-md md:text-5xl lg:text-6xl">
                 <span className="block pb-3 md:pb-5">健康立天下</span>
                 <span className="block">逍遙渡時光</span>
               </h1>
-              <p className="mb-8 text-lg leading-relaxed text-brand-50/90">結合香港大學科研功法與現代科研實證，為追求健康長壽人士提供專業協助。</p>
+              <p className="mb-8 text-lg leading-relaxed text-white/95 drop-shadow-sm">結合香港大學科研功法與現代科研實證，為追求健康長壽人士提供專業協助。</p>
               <div className="flex flex-wrap gap-3">
                 <Link href="/about" className="rounded-md bg-white px-7 py-3 text-sm font-semibold text-brand-800 shadow-lg hover:bg-brand-50">了解養生會</Link>
-                <a href={siteData.contact.whatsappUrl} target="_blank" rel="noopener noreferrer" className="rounded-md border-2 border-white/40 px-7 py-3 text-sm font-semibold text-white hover:bg-white/10">WhatsApp 查詢</a>
+                <a href={siteData.contact.whatsappUrl} target="_blank" rel="noopener noreferrer" className="rounded-md border-2 border-white/70 px-7 py-3 text-sm font-semibold text-white hover:bg-white/10">WhatsApp 查詢</a>
               </div>
             </div>
           </div>
