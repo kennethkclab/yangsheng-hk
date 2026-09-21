@@ -8,6 +8,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = { title: "About the Association" };
 
+const ABOUT_HERO = "https://pub-5442f85cdccf43b0aed63eadbd58fc4f.r2.dev/images/hero-about.jpg";
+
 const awardPhotos = [
   {
     src: "https://pub-5442f85cdccf43b0aed63eadbd58fc4f.r2.dev/images/about/award-yuen-v3.jpg",
@@ -25,7 +27,7 @@ export default function EnglishAboutPage() {
     <>
       <Header />
       <main className="min-h-screen bg-stone-50">
-        <PageHero title={copy.aboutTitle} subtitle={copy.slogan} align="center" />
+        <PageHero title={copy.aboutTitle} subtitle={copy.slogan} align="center" image={ABOUT_HERO} overlay="soft" />
         <section className="mx-auto max-w-4xl px-4 py-16">
           <h2 className="mb-6 text-2xl font-bold text-stone-900">{copy.originTitle}</h2>
           <p className="mb-10 text-lg leading-relaxed text-stone-600">{copy.originText}</p>
