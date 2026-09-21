@@ -41,8 +41,8 @@ export default function EnglishEventsPage() {
 
           <div className="mt-16">
             <h2 className="mb-4 text-xl font-bold text-stone-900">Activity video</h2>
-            <div className="overflow-hidden bg-black">
-              <video className="aspect-video w-full" controls preload="none">
+            <div className="overflow-hidden bg-stone-100">
+              <video className="aspect-video w-full" controls preload="none" poster={media.videos.happyValleyPoster} playsInline>
                 <source src={media.videos.happyValley} type="video/mp4" />
               </video>
             </div>
