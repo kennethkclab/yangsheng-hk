@@ -101,8 +101,8 @@ export const t = {
     slogan: "Prevention is better than cure",
     heroLead:
       "We combine University of Hong Kong research-based practice with modern evidence to support people seeking long-term health and vitality.",
-    learnMore: "About the Association",
-    whatsapp: "WhatsApp enquiry",
+    learnMore: "About us",
+    whatsapp: "WhatsApp",
     originTitle: "Origin and purpose",
     originText:
       "In mid-2009, the Chinese Traditional Medicine Treatment Centre and the Centre on Behavioral Health at the University of Hong Kong jointly offered a free research-based practice course to study its effect on chronic fatigue syndrome. Thousands applied within hours and the 150 places filled immediately. After students reported clear improvements, the International Association for Health and Yangsheng was founded in December 2009, with the support of students and Professor Yuen Lai Ping.",
