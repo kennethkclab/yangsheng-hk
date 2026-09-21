@@ -7,7 +7,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = { title: "科研成果" };
 
-const RESEARCH_HERO = "https://pub-5442f85cdccf43b0aed63eadbd58fc4f.r2.dev/images/hero-research.jpg";
+const RESEARCH_HERO = "https://pub-5442f85cdccf43b0aed63eadbd58fc4f.r2.dev/images/hero-research-v2.jpg";
 
 const paragraphs = [
   "袁麗萍教授自幼在深山成長，深諧科研養生之道。她曾多次與香港大學合作，研究「科研功法對慢性疲勞綜合症及癌症的療效」。作為國際健康養生會主席、港大行為健康教研中心臨床顧問、註冊中醫師及中華傳統醫學研究所所長，袁教授在醫療界享有崇高的聲譽，曾榮獲聯合國特殊醫療貢獻獎和多項國際獎項。",
