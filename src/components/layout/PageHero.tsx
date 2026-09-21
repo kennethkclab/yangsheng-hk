@@ -10,13 +10,20 @@ type Props = {
   overlay?: "default" | "soft";
 };
 
+const headingStyle = {
+  color: "#ffffff",
+  WebkitTextStroke: "2px #064e3b",
+  paintOrder: "stroke fill",
+  textShadow: "0 1px 8px rgba(6,78,59,0.28)",
+} as const;
+
 export default function PageHero({ title, subtitle, image, overlay = "default" }: Props) {
   const subtitleLines = subtitle ? subtitle.split("\n") : [];
   const src = image || HERO_BG;
   const wash =
     overlay === "soft"
-      ? "absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.42)_0%,rgba(255,255,255,0.12)_42%,rgba(16,64,48,0.12)_100%)]"
-      : "absolute inset-0 bg-gradient-to-r from-emerald-50/70 via-teal-100/45 to-sky-100/40 backdrop-blur-[2px]";
+      ? "absolute inset-0 bg-emerald-950/10"
+      : "absolute inset-0 bg-emerald-950/12";
 
   return (
     <section className="relative overflow-hidden">
@@ -25,9 +32,11 @@ export default function PageHero({ title, subtitle, image, overlay = "default" }
         <div className={wash} />
       </div>
       <div className="relative mx-auto flex min-h-[220px] max-w-6xl flex-col items-center justify-center px-4 py-16 text-center md:min-h-[268px] md:py-20">
-        <h1 className="text-3xl font-bold tracking-wide text-emerald-950 drop-shadow-sm md:text-4xl">{title}</h1>
+        <h1 className="text-3xl font-bold tracking-wide md:text-4xl" style={headingStyle}>
+          {title}
+        </h1>
         {subtitleLines.length > 0 ? (
-          <p className="mx-auto mt-4 max-w-2xl text-base font-medium text-emerald-950 md:text-lg">
+          <p className="mx-auto mt-4 max-w-2xl text-base font-semibold md:text-lg" style={headingStyle}>
             {subtitleLines.map((line) => (
               <span key={line} className="block py-1 md:py-1.5">
                 {line}
