@@ -19,7 +19,7 @@ export default function DrShamShunTongPage() {
         <section className="border-b border-stone-200 bg-white">
           <div className="mx-auto flex max-w-5xl flex-col items-start gap-6 px-4 py-12 md:flex-row md:items-center md:gap-10">
             <div className="relative h-36 w-36 shrink-0 overflow-hidden rounded-full border border-stone-200 bg-stone-100">
-              <Image src={yidao.portrait} alt={yidao.name} fill className="object-cover object-top" />
+              <Image src={yidao.portrait} alt={yidao.name} fill className="object-cover" />
             </div>
             <div>
               <p className="text-sm font-medium tracking-widest text-brand-700">{yidao.heading}</p>
@@ -33,9 +33,9 @@ export default function DrShamShunTongPage() {
           <h2 className="mb-8 text-2xl font-bold text-stone-900">健康生活專欄</h2>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {yidao.articles.map((item) => (
-              <a key={`${item.title}-${item.date}`} href={item.url} target="_blank" rel="noopener noreferrer" className="overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-sm transition hover:shadow-md">
+              <a key={`${item.title}-${item.date}`} href={item.url} target="_blank" rel="noopener noreferrer" className="overflow-hidden border border-stone-200 bg-white shadow-sm transition hover:shadow-md">
                 <div className="relative aspect-[16/10] bg-stone-100">
-                  <Image src={yidao.cover} alt={item.title} fill className="object-contain p-2" />
+                  <Image src={yidao.cover} alt={item.title} fill className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" />
                 </div>
                 <div className="p-4">
                   <p className="text-xs text-stone-500">健康生活 · {item.date}</p>
