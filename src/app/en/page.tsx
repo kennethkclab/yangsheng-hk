@@ -40,22 +40,22 @@ export default function EnglishHomePage() {
               className="object-cover object-[78%_18%] md:object-[82%_22%]"
               sizes="100vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-emerald-950/55 via-emerald-900/20 to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-t from-emerald-950/35 via-transparent to-emerald-900/10" />
+            <div className="absolute inset-0 bg-gradient-to-r from-white/70 via-white/35 to-white/10" />
+            <div className="absolute inset-0 bg-gradient-to-t from-white/40 via-transparent to-white/15" />
           </div>
           <div className="relative mx-auto flex min-h-[72vh] max-w-6xl items-center px-4 py-16 md:min-h-[78vh] md:py-24">
             <div className="w-full max-w-3xl pr-12">
-              <p className="hero-shadow mb-4 inline-block max-w-full whitespace-nowrap rounded-md bg-black/25 px-3 py-1.5 text-[15px] font-semibold tracking-wide text-white backdrop-blur-sm md:px-4 md:text-base">
+              <p className="mb-4 inline-block max-w-full whitespace-nowrap rounded-md bg-white/80 px-3 py-1.5 text-[15px] font-semibold tracking-wide text-emerald-900 shadow-sm md:px-4 md:text-base">
                 {copy.nature}
               </p>
-              <h1 className="hero-shadow mb-5 text-4xl font-extrabold leading-none text-white md:text-5xl lg:text-6xl">
+              <h1 className="mb-5 text-4xl font-extrabold leading-none text-emerald-950 md:text-5xl lg:text-6xl">
                 <span className="block pb-3 md:pb-5">Health for the world</span>
                 <span className="block">Ease through the years</span>
               </h1>
-              <p className="hero-shadow mb-8 text-lg font-semibold leading-relaxed text-white">{copy.heroLead}</p>
+              <p className="mb-8 text-lg font-semibold leading-relaxed text-emerald-950/90">{copy.heroLead}</p>
               <div className="flex flex-nowrap gap-3">
-                <Link href="/en/about" className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-brand-800 shadow-lg hover:bg-brand-50">{copy.learnMore}</Link>
-                <a href={siteData.contact.whatsappUrl} target="_blank" rel="noopener noreferrer" className="rounded-md border-2 border-white/80 bg-black/15 px-6 py-3 text-sm font-semibold text-white shadow-md hover:bg-white/10">{copy.whatsapp}</a>
+                <Link href="/en/about" className="rounded-md bg-brand-700 px-6 py-3 text-sm font-semibold text-white shadow-lg hover:bg-brand-800">{copy.learnMore}</Link>
+                <a href={siteData.contact.whatsappUrl} target="_blank" rel="noopener noreferrer" className="rounded-md border-2 border-emerald-800 bg-white/80 px-6 py-3 text-sm font-semibold text-emerald-900 shadow-sm hover:bg-white">{copy.whatsapp}</a>
               </div>
             </div>
           </div>
