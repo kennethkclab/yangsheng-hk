@@ -12,7 +12,7 @@ export const nav: Record<Locale, readonly NavItem[]> = {
       label: "媒體及報道",
       href: "/gallery",
       children: [
-        { label: "醫道-岑信棠醫生", href: "/Dr-ShamShunTong" },
+        { label: "醫道 | 岑信棠醫生", href: "/Dr-ShamShunTong" },
         { label: "袁麗萍教授圖片集", href: "/gallery" },
       ],
     },
@@ -29,7 +29,7 @@ export const nav: Record<Locale, readonly NavItem[]> = {
       label: "Media & Reports",
       href: "/en/gallery",
       children: [
-        { label: "Dr Sham Shun Tong", href: "/en/Dr-ShamShunTong" },
+        { label: "The Way of Medicine | Dr Sham Shun Tong", href: "/en/Dr-ShamShunTong" },
         { label: "Professor Yuen Gallery", href: "/en/gallery" },
       ],
     },
@@ -76,7 +76,7 @@ export const t = {
     menu: "選單",
     openMenu: "開啟選單",
     closeMenu: "關閉選單",
-    yidaoHeading: "醫道",
+    yidaoHeading: "醫道 | 岑信棠醫生",
     yidaoName: "岑信棠醫生",
     yidaoBio:
       "香港大學醫學院臨床腫瘤學系榮譽教授，腫瘤專科醫生，國際健康養生會主席，行醫40多年，親眼見證科技進步，癌症由不治之症，至大部分都有得醫。",
@@ -132,7 +132,7 @@ export const t = {
     menu: "Menu",
     openMenu: "Open menu",
     closeMenu: "Close menu",
-    yidaoHeading: "The Way of Medicine",
+    yidaoHeading: "The Way of Medicine | Dr Sham Shun Tong",
     yidaoName: "Dr Sham Shun Tong",
     yidaoBio:
       "Honorary Professor in Clinical Oncology at the University of Hong Kong Faculty of Medicine, specialist in oncology, and Chairman of the International Association for Health and Yangsheng. After more than 40 years in practice, he has seen cancer move from an often untreatable disease to one that can be treated in most cases.",
