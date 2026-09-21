@@ -37,15 +37,15 @@ export default function HomePage() {
           </div>
           <div className="relative mx-auto flex min-h-[72vh] max-w-6xl items-center px-4 py-16 md:min-h-[78vh] md:py-24">
             <div className="max-w-xl md:max-w-2xl">
-              <p className="mb-4 inline-block rounded-md bg-white/20 px-4 py-1.5 text-sm font-medium tracking-wide text-white backdrop-blur-sm">{siteData.brand.nature}</p>
-              <h1 className="mb-5 text-4xl font-bold leading-none text-white drop-shadow-md md:text-5xl lg:text-6xl">
+              <p className="hero-shadow mb-4 inline-block rounded-md bg-black/25 px-4 py-1.5 text-sm font-semibold tracking-wide text-white backdrop-blur-sm">{siteData.brand.nature}</p>
+              <h1 className="hero-shadow mb-5 text-4xl font-extrabold leading-none text-white md:text-5xl lg:text-6xl">
                 <span className="block pb-3 md:pb-5">健康立天下</span>
                 <span className="block">逍遙渡時光</span>
               </h1>
-              <p className="mb-8 text-lg leading-relaxed text-white/95 drop-shadow-sm">結合香港大學科研功法與現代科研實證，為追求健康長壽人士提供專業協助。</p>
+              <p className="hero-shadow mb-8 text-lg font-semibold leading-relaxed text-white">結合香港大學科研功法與現代科研實證，為追求健康長壽人士提供專業協助。</p>
               <div className="flex flex-wrap gap-3">
                 <Link href="/about" className="rounded-md bg-white px-7 py-3 text-sm font-semibold text-brand-800 shadow-lg hover:bg-brand-50">了解養生會</Link>
-                <a href={siteData.contact.whatsappUrl} target="_blank" rel="noopener noreferrer" className="rounded-md border-2 border-white/70 px-7 py-3 text-sm font-semibold text-white hover:bg-white/10">WhatsApp 查詢</a>
+                <a href={siteData.contact.whatsappUrl} target="_blank" rel="noopener noreferrer" className="rounded-md border-2 border-white/80 bg-black/15 px-7 py-3 text-sm font-semibold text-white shadow-md hover:bg-white/10">WhatsApp 查詢</a>
               </div>
             </div>
           </div>
