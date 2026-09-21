@@ -7,6 +7,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = { title: "Research outcomes" };
 
+const RESEARCH_HERO = "https://pub-5442f85cdccf43b0aed63eadbd58fc4f.r2.dev/images/hero-research.jpg";
+
 const paragraphs = [
   "Professor Yuen Lai Ping grew up in the mountains and is deeply versed in research-based wellness practice. She has worked with the University of Hong Kong on studies of research-based practice for chronic fatigue syndrome and cancer. As Chairperson of the International Association for Health and Yangsheng, clinical adviser to the HKU Centre on Behavioral Health, a registered Chinese medicine practitioner and Director of the Chinese Traditional Medicine Research Institute, she is widely respected in healthcare and has received the United Nations Special Medical Contribution Award and other international honours.",
   "In clinical practice she observed that chronic illness, especially cancer, is becoming more common among younger city dwellers. As social pressure in Hong Kong has grown, many people’s health has suffered. She notes that research-based practice can support metabolism, circulation and oxygen supply, help balance the internal organs, and ease side effects of cancer chemotherapy.",
@@ -21,7 +23,7 @@ export default function EnglishResearchPage() {
     <>
       <Header />
       <main className="min-h-screen bg-stone-50">
-        <PageHero title="Research outcomes" subtitle="Clinical studies by Professor Yuen Lai Ping with the University of Hong Kong" />
+        <PageHero title="Research outcomes" subtitle="Clinical studies by Professor Yuen Lai Ping with the University of Hong Kong" image={RESEARCH_HERO} overlay="soft" />
         <section className="mx-auto max-w-3xl px-4 py-14">
           <div className="relative mb-10 aspect-[16/8] overflow-hidden rounded-md">
             <Image src={`${media.r2}/images/photo01.jpg`} alt="Research and classes" fill className="object-cover" />
