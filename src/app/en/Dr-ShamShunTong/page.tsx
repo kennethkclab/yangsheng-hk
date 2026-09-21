@@ -8,13 +8,15 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = { title: "Dr Sham Shun Tong" };
 
+const MEDIA_HERO = "https://pub-5442f85cdccf43b0aed63eadbd58fc4f.r2.dev/images/hero-media.jpg";
+
 export default function EnglishDoctorPage() {
   const copy = t.en;
   return (
     <>
       <Header />
       <main className="min-h-screen bg-stone-50">
-        <PageHero title={copy.yidaoHeading} subtitle={copy.yidaoName} />
+        <PageHero title={copy.yidaoHeading} subtitle={copy.yidaoName} image={MEDIA_HERO} overlay="soft" />
         <section className="border-b border-stone-200 bg-white">
           <div className="mx-auto flex max-w-5xl flex-col items-start gap-6 px-4 py-12 md:flex-row md:items-center">
             <div className="relative h-36 w-36 shrink-0 overflow-hidden rounded-full border border-stone-200 bg-stone-100">
