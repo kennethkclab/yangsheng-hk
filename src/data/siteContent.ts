@@ -10,8 +10,8 @@ export const siteData = {
     slogan: "預防勝於治療",
   },
   contact: {
-    address: "香港跑馬地雲地利道 20 號",
-    addressEn: "20 Ventris Road, Happy Valley, Hong Kong",
+    address: "香港跑馬地雲地利道 20 號地下",
+    addressEn: "G/F, 20 Ventris Road, Happy Valley, Hong Kong",
     phone: "+852 2893 1938",
     phoneDisplay: "2893 1938",
     whatsapp: "91316233",
