@@ -23,7 +23,7 @@ export default function EnglishResearchPage() {
     <>
       <Header />
       <main className="min-h-screen bg-stone-50">
-        <PageHero title="Research outcomes" subtitle="Clinical studies by Professor Yuen Lai Ping with the University of Hong Kong" image={RESEARCH_HERO} overlay="soft" />
+        <PageHero title="Research outcomes" subtitle="Clinical studies by Professor Yuen Lai Ping with the University of Hong Kong" image={RESEARCH_HERO} overlay="soft" imagePosition="center bottom" />
         <section className="mx-auto max-w-3xl px-4 py-14">
           <div className="relative mb-10 aspect-[16/8] overflow-hidden rounded-md">
             <Image src={`${media.r2}/images/photo01.jpg`} alt="Research and classes" fill className="object-cover" />
