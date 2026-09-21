@@ -19,9 +19,9 @@ export default function CoursesPage() {
         <section className="mx-auto max-w-5xl px-4 py-16">
           <div className="space-y-8">
             {siteData.courses.map((course) => (
-              <article key={course.id} className="overflow-hidden border border-stone-200 bg-white shadow-sm md:flex md:items-stretch">
-                <div className="relative aspect-[4/3] bg-stone-100 md:aspect-auto md:w-[42%] md:min-h-[260px] md:shrink-0">
-                  <Image src={course.imageUrl} alt={course.title} fill className="object-cover object-center" sizes="(max-width: 768px) 100vw, 42vw" />
+              <article key={course.id} className="overflow-hidden border border-stone-200 bg-white shadow-sm md:flex md:items-center">
+                <div className="bg-stone-50 md:w-[46%] md:shrink-0">
+                  <Image src={course.imageUrl} alt={course.title} width={1200} height={900} className="h-auto w-full object-contain" sizes="(max-width: 768px) 100vw, 46vw" />
                 </div>
                 <div className="flex flex-1 flex-col justify-center p-6 md:p-8">
                   <h2 className="mb-2 text-2xl font-bold text-stone-900">{course.title}</h2>
