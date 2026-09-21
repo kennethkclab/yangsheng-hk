@@ -40,8 +40,8 @@ export default function EnglishHomePage() {
               className="object-cover object-[78%_18%] md:object-[82%_22%]"
               sizes="100vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-emerald-950/35 via-emerald-900/12 to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-t from-emerald-950/20 via-transparent to-white/10" />
+            <div className="absolute inset-0 bg-gradient-to-r from-emerald-950/22 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-b from-white/50 via-transparent to-white/45" />
           </div>
           <div className="relative mx-auto flex min-h-[72vh] max-w-6xl items-center px-4 py-16 md:min-h-[78vh] md:py-24">
             <div className="w-full max-w-3xl pr-16 md:pr-12">
