@@ -39,6 +39,7 @@ export default function PageHero({ title, subtitle, image, overlay = "default", 
           fill
           priority
           fetchPriority="high"
+          loading="eager"
           quality={82}
           className="object-cover"
           style={{ objectPosition: imagePosition }}
