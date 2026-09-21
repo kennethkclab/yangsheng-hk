@@ -4,6 +4,7 @@ export const media = {
   r2: R2,
   videos: {
     happyValley: "https://yangsheng.hk/HappyValley.mp4",
+    happyValleyPoster: `${R2}/images/videos/happy-valley-poster.jpg`,
     intro2025: "https://yangsheng.hk/video/video_20250502.mp4",
   },
   news: [
