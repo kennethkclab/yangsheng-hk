@@ -19,15 +19,15 @@ export default function CoursesPage() {
         <section className="mx-auto max-w-5xl px-4 py-16">
           <div className="space-y-8">
             {siteData.courses.map((course) => (
-              <article key={course.id} className="overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-sm">
-                <div className="bg-stone-100">
-                  <Image src={course.imageUrl} alt={course.title} width={1400} height={900} className="h-auto w-full object-contain" />
+              <article key={course.id} className="overflow-hidden border border-stone-200 bg-white shadow-sm md:flex md:items-stretch">
+                <div className="relative aspect-[4/3] bg-stone-100 md:aspect-auto md:w-[42%] md:min-h-[260px] md:shrink-0">
+                  <Image src={course.imageUrl} alt={course.title} fill className="object-cover object-center" sizes="(max-width: 768px) 100vw, 42vw" />
                 </div>
-                <div className="p-8">
+                <div className="flex flex-1 flex-col justify-center p-6 md:p-8">
                   <h2 className="mb-2 text-2xl font-bold text-stone-900">{course.title}</h2>
                   <p className="mb-4 text-sm font-medium text-brand-700">導師：{course.instructor}</p>
                   <p className="mb-6 leading-relaxed text-stone-600">{course.description}</p>
-                  <a href={siteData.contact.whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-block rounded-full bg-brand-700 px-6 py-2.5 text-sm font-medium text-white hover:bg-brand-800">查詢報名</a>
+                  <a href={siteData.contact.whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-block self-start rounded-md bg-brand-700 px-6 py-2.5 text-sm font-medium text-white hover:bg-brand-800">查詢報名</a>
                 </div>
               </article>
             ))}
