@@ -81,13 +81,13 @@ export default function HomePage() {
               <h2 className="text-2xl font-bold text-stone-900 md:text-3xl">主要課程</h2>
               <Link href="/courses" className="shrink-0 text-sm font-medium text-brand-700 hover:underline">查看全部課程 →</Link>
             </div>
-            <div className="grid gap-6 md:grid-cols-2">
+            <div className="space-y-6">
               {siteData.courses.map((course) => (
-                <article key={course.id} className="overflow-hidden rounded-md border border-stone-200 bg-white shadow-sm">
-                  <div className="bg-stone-100">
-                    <Image src={course.imageUrl} alt={course.title} width={1200} height={800} className="h-auto w-full object-contain" sizes="(max-width: 768px) 100vw, 50vw" />
+                <article key={course.id} className="overflow-hidden border border-stone-200 bg-white shadow-sm md:flex md:items-stretch">
+                  <div className="relative aspect-[4/3] bg-stone-100 md:aspect-auto md:w-[38%] md:min-h-[220px] md:shrink-0">
+                    <Image src={course.imageUrl} alt={course.title} fill className="object-cover" sizes="(max-width: 768px) 100vw, 38vw" />
                   </div>
-                  <div className="p-6">
+                  <div className="flex flex-1 flex-col justify-center p-6">
                     <h3 className="mb-1 text-xl font-semibold text-stone-900">{course.title}</h3>
                     <p className="mb-3 text-sm text-brand-700">導師：{course.instructor}</p>
                     <p className="mb-5 leading-relaxed text-stone-600">{course.description}</p>
