@@ -56,7 +56,7 @@ const tatiaTitles = [
 
 const board = [
   {
-    name: "岑信棣教授",
+    name: "岑信棠教授",
     role: "創會主席",
     text: "香港大學醫學院臨床腫瘤學系榮譽教授",
     href: "/Dr-ShamShunTong",
@@ -70,7 +70,7 @@ const board = [
     role: "創會秘書長",
     text: "",
     photo: `${R2}/images/people/chan-lai-wan-v2.jpg`,
-    listTitle: "頭衔",
+    listTitle: "頭衞",
     qualifications: ceciliaTitles,
   },
   {
@@ -78,7 +78,7 @@ const board = [
     role: "董事",
     text: "",
     photo: `${R2}/images/people/chan-chi-hin.jpg`,
-    listTitle: "頭衔",
+    listTitle: "頭衞",
     qualifications: chetwynTitles,
   },
   {
@@ -86,10 +86,18 @@ const board = [
     role: "董事",
     text: "",
     photo: `${R2}/images/people/lee-mei-chun.jpg`,
-    listTitle: "頭衔",
+    listTitle: "頭衞",
     qualifications: tatiaTitles,
   },
 ];
+
+function Portrait({ src, alt }: { src: string; alt: string }) {
+  return (
+    <div className="relative aspect-square w-full shrink-0 bg-stone-100 md:w-64 lg:w-72">
+      <Image src={src} alt={alt} fill className="object-cover object-top" sizes="(max-width: 768px) 100vw, 288px" />
+    </div>
+  );
+}
 
 export default function StructurePage() {
   return (
@@ -98,15 +106,13 @@ export default function StructurePage() {
       <main className="min-h-screen bg-stone-50">
         <PageHero title="行政架構" subtitle="非牟利社團·成立於 2009 年 12 月" />
         <section className="mx-auto max-w-5xl px-4 py-14">
-          <article className="mb-8 overflow-hidden border border-stone-200 bg-white shadow-sm">
-            <div className="relative mx-auto aspect-square w-full max-w-md bg-stone-100">
-              <Image src={portrait} alt="袁麗萍教授" fill className="object-cover" sizes="(max-width: 768px) 100vw, 448px" />
-            </div>
-            <div className="p-6 md:p-8">
+          <article className="mb-8 overflow-hidden border border-stone-200 bg-white shadow-sm md:flex md:items-start">
+            <Portrait src={portrait} alt="袁麗萍教授" />
+            <div className="min-w-0 flex-1 p-6 md:p-8">
               <p className="text-sm font-medium text-brand-700">創會主席</p>
               <h2 className="mt-1 text-3xl font-bold text-stone-900">袁麗萍教授</h2>
               <p className="mt-4 mb-5 leading-relaxed text-stone-600">主持科研功法與科研健腦御智功課程，並推動與香港大學的養生科研合作。</p>
-              <h3 className="mb-3 text-lg font-semibold text-stone-900">袁麗萍教授頭衔</h3>
+              <h3 className="mb-3 text-lg font-semibold text-stone-900">袁麗萍教授頭衞</h3>
               <ul className="space-y-2">
                 {titles.map((item) => (
                   <li key={item.org} className="flex flex-col gap-0.5 border-b border-stone-100 py-2 last:border-0 sm:flex-row sm:items-baseline sm:justify-between">
@@ -120,13 +126,9 @@ export default function StructurePage() {
           </article>
 
           {board.map((person) => (
-            <article key={person.name} className="mb-5 overflow-hidden border border-stone-200 bg-white shadow-sm">
-              {person.photo ? (
-                <div className="relative mx-auto aspect-square w-full max-w-md bg-stone-100">
-                  <Image src={person.photo} alt={person.name} fill className="object-cover" sizes="(max-width: 768px) 100vw, 448px" />
-                </div>
-              ) : null}
-              <div className="p-6">
+            <article key={person.name} className="mb-5 overflow-hidden border border-stone-200 bg-white shadow-sm md:flex md:items-start">
+              {person.photo ? <Portrait src={person.photo} alt={person.name} /> : null}
+              <div className="min-w-0 flex-1 p-6">
                 <p className="text-sm font-medium text-brand-700">{person.role}</p>
                 <h2 className="mt-1 text-2xl font-bold text-stone-900">{person.name}</h2>
                 {person.text ? <p className="mt-3 leading-relaxed text-stone-600">{person.text}</p> : null}
