@@ -22,7 +22,7 @@ function toWebp(src: string) {
   return src.replace(/\.jpe?g($|\?)/i, ".webp$1");
 }
 
-export default function PageHero({ title, subtitle, image, overlay = "default", imagePosition = "center" }: Props) {
+export default function PageHero({ title, subtitle, image, overlay = "default", imagePosition = "center 42%" }: Props) {
   const subtitleLines = subtitle ? subtitle.split("\n") : [];
   const src = toWebp(image || HERO_BG);
   const wash =
@@ -31,7 +31,7 @@ export default function PageHero({ title, subtitle, image, overlay = "default", 
       : "absolute inset-0 bg-emerald-950/12";
 
   return (
-    <section className="relative h-[220px] overflow-hidden md:h-[268px]">
+    <section className="relative h-[300px] overflow-hidden md:h-[420px]">
       <div className="absolute inset-0">
         <Image
           src={src}
