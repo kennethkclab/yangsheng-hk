@@ -93,8 +93,8 @@ const board = [
 
 function Portrait({ src, alt }: { src: string; alt: string }) {
   return (
-    <div className="relative aspect-square w-full shrink-0 bg-stone-100 md:w-64 lg:w-72">
-      <Image src={src} alt={alt} fill className="object-cover object-top" sizes="(max-width: 768px) 100vw, 288px" />
+    <div className="relative mx-auto aspect-square w-full max-w-sm bg-stone-100">
+      <Image src={src} alt={alt} fill className="object-cover object-top" sizes="(max-width: 640px) 100vw, 384px" />
     </div>
   );
 }
@@ -105,10 +105,10 @@ export default function StructurePage() {
       <Header />
       <main className="min-h-screen bg-stone-50">
         <PageHero title="行政架構" subtitle="非牟利社團·成立於 2009 年 12 月" />
-        <section className="mx-auto max-w-5xl px-4 py-14">
-          <article className="mb-8 overflow-hidden border border-stone-200 bg-white shadow-sm md:flex md:items-start">
+        <section className="mx-auto max-w-3xl px-4 py-14">
+          <article className="mb-8 overflow-hidden border border-stone-200 bg-white shadow-sm">
             <Portrait src={portrait} alt="袁麗萍教授" />
-            <div className="min-w-0 flex-1 p-6 md:p-8">
+            <div className="p-6 md:p-8">
               <p className="text-sm font-medium text-brand-700">創會主席</p>
               <h2 className="mt-1 text-3xl font-bold text-stone-900">袁麗萍教授</h2>
               <p className="mt-4 mb-5 leading-relaxed text-stone-600">主持科研功法與科研健腦御智功課程，並推動與香港大學的養生科研合作。</p>
@@ -126,9 +126,9 @@ export default function StructurePage() {
           </article>
 
           {board.map((person) => (
-            <article key={person.name} className="mb-5 overflow-hidden border border-stone-200 bg-white shadow-sm md:flex md:items-start">
+            <article key={person.name} className="mb-5 overflow-hidden border border-stone-200 bg-white shadow-sm">
               {person.photo ? <Portrait src={person.photo} alt={person.name} /> : null}
-              <div className="min-w-0 flex-1 p-6">
+              <div className="p-6">
                 <p className="text-sm font-medium text-brand-700">{person.role}</p>
                 <h2 className="mt-1 text-2xl font-bold text-stone-900">{person.name}</h2>
                 {person.text ? <p className="mt-3 leading-relaxed text-stone-600">{person.text}</p> : null}
