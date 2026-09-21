@@ -7,12 +7,14 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = { title: yuenGallery.titleEn };
 
+const MEDIA_HERO = "https://pub-5442f85cdccf43b0aed63eadbd58fc4f.r2.dev/images/hero-media.jpg";
+
 export default function EnglishGalleryPage() {
   return (
     <>
       <Header />
       <main className="min-h-screen bg-stone-50">
-        <PageHero title={yuenGallery.titleEn} subtitle="Teaching, community service and portraits" />
+        <PageHero title={yuenGallery.titleEn} subtitle="Teaching, community service and portraits" image={MEDIA_HERO} overlay="soft" />
         <section className="mx-auto max-w-6xl px-4 py-14">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             {yuenGallery.items.map((item, index) => (
