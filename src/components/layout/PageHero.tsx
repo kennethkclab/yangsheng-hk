@@ -8,6 +8,7 @@ type Props = {
   align?: "left" | "center";
   image?: string;
   overlay?: "default" | "soft";
+  imagePosition?: string;
 };
 
 const headingStyle = {
@@ -17,7 +18,7 @@ const headingStyle = {
   textShadow: "0 1px 8px rgba(6,78,59,0.28)",
 } as const;
 
-export default function PageHero({ title, subtitle, image, overlay = "default" }: Props) {
+export default function PageHero({ title, subtitle, image, overlay = "default", imagePosition = "center" }: Props) {
   const subtitleLines = subtitle ? subtitle.split("\n") : [];
   const src = image || HERO_BG;
   const wash =
@@ -28,7 +29,16 @@ export default function PageHero({ title, subtitle, image, overlay = "default" }
   return (
     <section className="relative overflow-hidden">
       <div className="absolute inset-0">
-        <Image src={src} alt="" fill priority quality={70} className="object-cover object-center" sizes="100vw" />
+        <Image
+          src={src}
+          alt=""
+          fill
+          priority
+          quality={70}
+          className="object-cover"
+          style={{ objectPosition: imagePosition }}
+          sizes="100vw"
+        />
         <div className={wash} />
       </div>
       <div className="relative mx-auto flex min-h-[220px] max-w-6xl flex-col items-center justify-center px-4 py-16 text-center md:min-h-[268px] md:py-20">
