@@ -50,6 +50,8 @@ export default function LiteYouTube({
           <img
             src={thumb}
             alt={title}
+            loading="eager"
+            fetchPriority="high"
             className="absolute inset-0 h-full w-full object-cover"
             onError={() => setThumbIndex((i) => Math.min(i + 1, thumbs.length - 1))}
           />
