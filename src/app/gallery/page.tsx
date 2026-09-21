@@ -10,12 +10,14 @@ export const metadata: Metadata = {
   description: "袁麗萍教授活動、講學與合照紀錄。",
 };
 
+const MEDIA_HERO = "https://pub-5442f85cdccf43b0aed63eadbd58fc4f.r2.dev/images/hero-media.jpg";
+
 export default function GalleryPage() {
   return (
     <>
       <Header />
       <main className="min-h-screen bg-stone-50">
-        <PageHero title={yuenGallery.title} subtitle="講學、公益活動與合照紀錄" />
+        <PageHero title={yuenGallery.title} subtitle="講學、公益活動與合照紀錄" image={MEDIA_HERO} overlay="soft" />
         <section className="mx-auto max-w-6xl px-4 py-14">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             {yuenGallery.items.map((item, index) => (
