@@ -23,7 +23,7 @@ export default function ResearchPage() {
     <>
       <Header />
       <main className="min-h-screen bg-stone-50">
-        <PageHero title="科研成果" subtitle="袁麗萍教授與香港大學的科研功法臨床研究" image={RESEARCH_HERO} overlay="soft" />
+        <PageHero title="科研成果" subtitle="袁麗萍教授與香港大學的科研功法臨床研究" image={RESEARCH_HERO} overlay="soft" imagePosition="center bottom" />
         <section className="mx-auto max-w-3xl px-4 py-14">
           <div className="relative mb-10 aspect-[16/8] overflow-hidden rounded-md">
             <Image src={`${media.r2}/images/photo01.jpg`} alt="科研與課程" fill className="object-cover" />
