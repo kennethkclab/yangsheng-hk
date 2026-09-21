@@ -105,7 +105,7 @@ export default function StructurePage() {
     <>
       <Header />
       <main className="min-h-screen bg-stone-50">
-        <PageHero title="行政架構" subtitle="非牟利社團·成立於 2009 年 12 月" image={STRUCTURE_HERO} overlay="soft" imagePosition="center 22%" />
+        <PageHero title="行政架構" subtitle="非牟利社團·成立於 2009 年 12 月" image={STRUCTURE_HERO} overlay="soft" imagePosition="center top" />
         <section className="mx-auto max-w-3xl px-4 py-14">
           <article className="mb-8 overflow-hidden border border-stone-200 bg-white shadow-sm">
             <Portrait src={portrait} alt="袁麗萍教授" />
