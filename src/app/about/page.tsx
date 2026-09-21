@@ -10,6 +10,8 @@ export const metadata: Metadata = {
   description: "了解國際健康養生會的緣起、宗旨與理念。",
 };
 
+const ABOUT_HERO = "https://pub-5442f85cdccf43b0aed63eadbd58fc4f.r2.dev/images/hero-about.jpg";
+
 const awardPhotos = [
   {
     src: "https://pub-5442f85cdccf43b0aed63eadbd58fc4f.r2.dev/images/about/award-yuen-v3.jpg",
@@ -26,7 +28,7 @@ export default function AboutPage() {
     <>
       <Header />
       <main className="min-h-screen bg-stone-50">
-        <PageHero title="國際健康養生會簡介" subtitle={"健康立天下\n逍遙渡時光"} />
+        <PageHero title="國際健康養生會簡介" subtitle={"健康立天下\n逍遙渡時光"} image={ABOUT_HERO} overlay="soft" />
         <section className="mx-auto max-w-4xl px-4 py-16">
           <h2 className="mb-6 text-2xl font-bold text-stone-900">{siteData.about.title}</h2>
           <p className="mb-10 text-lg leading-relaxed text-stone-600">{siteData.about.originText}</p>
