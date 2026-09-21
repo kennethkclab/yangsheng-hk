@@ -7,17 +7,22 @@ type Props = {
   subtitle?: string;
   align?: "left" | "center";
   image?: string;
+  overlay?: "default" | "soft";
 };
 
-export default function PageHero({ title, subtitle, image }: Props) {
+export default function PageHero({ title, subtitle, image, overlay = "default" }: Props) {
   const subtitleLines = subtitle ? subtitle.split("\n") : [];
   const src = image || HERO_BG;
+  const wash =
+    overlay === "soft"
+      ? "absolute inset-0 bg-emerald-900/15"
+      : "absolute inset-0 bg-gradient-to-r from-emerald-50/70 via-teal-100/45 to-sky-100/40 backdrop-blur-[2px]";
 
   return (
     <section className="relative overflow-hidden">
       <div className="absolute inset-0">
         <Image src={src} alt="" fill priority quality={70} className="object-cover object-center" sizes="100vw" />
-        <div className="absolute inset-0 bg-gradient-to-r from-emerald-50/70 via-teal-100/45 to-sky-100/40 backdrop-blur-[2px]" />
+        <div className={wash} />
       </div>
       <div className="relative mx-auto max-w-6xl px-4 py-16 text-center md:py-20">
         <h1 className="text-3xl font-bold tracking-wide text-emerald-950 drop-shadow-sm md:text-4xl">{title}</h1>
