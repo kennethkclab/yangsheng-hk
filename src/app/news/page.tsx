@@ -17,7 +17,7 @@ export default function NewsPage() {
     <>
       <Header />
       <main className="min-h-screen bg-stone-50">
-        <PageHero title="最新資訊" image={NEWS_HERO} />
+        <PageHero title="最新資訊" image={NEWS_HERO} overlay="soft" />
         <section className="mx-auto max-w-2xl space-y-8 px-4 py-14">
           {media.news.map((item) => (
             <FacebookPost key={item.id} href={item.href} />
