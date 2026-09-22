@@ -89,12 +89,5 @@ export const yuenGallery = {
       desktop: `${R2}/images/yuen/desktop/11.webp`,
       mobile: `${R2}/images/yuen/mobile/11.webp`,
     },
-    {
-      id: "12",
-      caption: "冬季氣功露營班於鯉魚門渡假村",
-      captionEn: "Winter qigong camp at Lei Yue Mun",
-      desktop: `${R2}/images/yuen/desktop/12.webp`,
-      mobile: `${R2}/images/yuen/mobile/12.webp`,
-    },
   ],
 } as const;
