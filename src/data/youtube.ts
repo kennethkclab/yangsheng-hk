@@ -22,11 +22,23 @@ export const featuredVideos = [
   },
 ] as const;
 
-export const activityHighlights = [] as {
-  id: string;
-  title: string;
-  titleEn: string;
-}[];
+export const activityHighlights = [
+  {
+    id: "v3lWPcljICQ",
+    title: "紫微歸航心靈療癒之旅由袁麗萍教授率領",
+    titleEn: "Ziwei homecoming healing journey led by Professor Yuen Lai Ping",
+  },
+  {
+    id: "HL0OVT3ovEA",
+    title: "6月4日活動回顧：身心靈全人健康講座",
+    titleEn: "4 June recap: whole-person health talk",
+  },
+  {
+    id: "OJVokfj3aQ8",
+    title: "資本平台頒發 CEO x Entrepreneur of the Year 2025 給袁麗萍教授",
+    titleEn: "Capital Platform award: CEO x Entrepreneur of the Year 2025",
+  },
+];
 
 export const featuredShorts = [
   { id: "dyB7GrbeGfU", title: "養生短片 1", titleEn: "Yangsheng Short 1" },
