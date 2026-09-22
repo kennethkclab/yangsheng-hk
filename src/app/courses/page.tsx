@@ -3,7 +3,6 @@ import Footer from "@/components/layout/Footer";
 import PageHero from "@/components/layout/PageHero";
 import LiteYouTube from "@/components/media/LiteYouTube";
 import { siteData } from "@/data/siteContent";
-import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -22,11 +21,7 @@ export default function CoursesPage() {
             {siteData.courses.map((course) => (
               <article key={course.id} className="overflow-hidden border border-stone-200 bg-white shadow-sm md:flex md:items-center">
                 <div className="bg-stone-50 md:w-[46%] md:shrink-0">
-                  {course.videoId ? (
-                    <LiteYouTube id={course.videoId} title={course.title} />
-                  ) : (
-                    <Image src={course.imageUrl} alt={course.title} width={1200} height={900} className="h-auto w-full object-contain" sizes="(max-width: 768px) 100vw, 46vw" />
-                  )}
+                  <LiteYouTube id={course.videoId} title={course.title} />
                 </div>
                 <div className="flex flex-1 flex-col justify-center p-6 md:p-8">
                   <h2 className="mb-2 text-2xl font-bold text-stone-900">{course.title}</h2>
