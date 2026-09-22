@@ -1,6 +1,7 @@
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import YouTubeCarousel from "@/components/home/YouTubeCarousel";
+import ActivityHighlights from "@/components/home/ActivityHighlights";
 import YouTubeShorts from "@/components/home/YouTubeShorts";
 import LiteYouTube from "@/components/media/LiteYouTube";
 import { siteData } from "@/data/siteContent";
@@ -111,6 +112,7 @@ export default function EnglishHomePage() {
         </section>
 
         <YouTubeCarousel locale="en" />
+        <ActivityHighlights locale="en" />
         <YouTubeShorts locale="en" />
 
         <section className="bg-stone-50 py-16">
