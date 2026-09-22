@@ -57,6 +57,7 @@ export const siteData = {
       instructor: "袁麗萍教授",
       description: "結合科研功法的身心運動，旨在提升大腦功能、增強記憶力、集中力及心神平靜。",
       imageUrl: `${R2}/images/courses/brain-poster.jpg`,
+      videoId: "",
     },
     {
       id: "neigong",
@@ -64,6 +65,7 @@ export const siteData = {
       instructor: "袁麗萍教授",
       description: "配合香港大學科研數據驗證，著重氣血調理、強身健體，有效舒緩慢性疲勞綜合症。",
       imageUrl: `${R2}/images/courses/neigong-cover.png`,
+      videoId: "G2qwd1fulZA",
     },
   ],
   navigation: [
