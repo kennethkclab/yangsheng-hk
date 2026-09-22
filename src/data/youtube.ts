@@ -6,19 +6,19 @@ export const youtubeChannel = {
 
 export const featuredVideos = [
   {
-    id: "mGY7LwnaGOI",
-    title: "告別不健康生活：醫生親授「不說教」的行為改變法",
-    titleEn: "Leaving unhealthy habits: a doctor's practical approach",
+    id: "G9Ac3CgK3-M",
+    title: "認識抑鬱症：專家深度解析",
+    titleEn: "Understanding depression: an in-depth expert discussion",
   },
   {
-    id: "Z_vwXg67Lhc",
-    title: "真正的健康管理，從日常預防開始",
-    titleEn: "Real health management starts with daily prevention",
+    id: "WOX__C6tgcs",
+    title: "認知障礙是否無藥可救？教授送您三個預防腦退化功法",
+    titleEn: "Is cognitive impairment hopeless? Three practices to help protect the brain",
   },
   {
-    id: "Y4t0xA7MHRY",
-    title: "資本平台 CEO x Entrepreneur of the Year 2025：岑信棠醫生",
-    titleEn: "Capital Platform award: Dr Sham Shun Tong",
+    id: "u4A67Kj2xyE",
+    title: "在生命的最後時刻，我們該如何確保活得最好？",
+    titleEn: "How can we live our best in the final chapter of life?",
   },
 ] as const;
 
