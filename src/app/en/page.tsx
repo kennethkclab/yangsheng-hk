@@ -97,11 +97,7 @@ export default function EnglishHomePage() {
                 return (
                   <article key={course.id} className="overflow-hidden border border-stone-200 bg-white shadow-sm md:flex md:items-center">
                     <div className="bg-stone-50 md:w-[42%] md:shrink-0">
-                      {course.videoId ? (
-                        <LiteYouTube id={course.videoId} title={text.title} />
-                      ) : (
-                        <Image src={course.imageUrl} alt={text.title} width={1200} height={900} className="h-auto w-full object-contain" sizes="(max-width: 768px) 100vw, 42vw" />
-                      )}
+                      <LiteYouTube id={course.videoId} title={text.title} />
                     </div>
                     <div className="flex flex-1 flex-col justify-center p-6">
                       <h3 className="mb-1 text-xl font-semibold text-stone-900">{text.title}</h3>
