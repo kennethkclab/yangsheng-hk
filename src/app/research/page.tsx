@@ -4,9 +4,14 @@ import PageHero from "@/components/layout/PageHero";
 import LiteYouTube from "@/components/media/LiteYouTube";
 import Image from "next/image";
 import { media } from "@/data/media";
+import { pageSeo } from "@/lib/seo";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = { title: "科研成果" };
+export const metadata: Metadata = pageSeo(
+  "/research",
+  "科研成果",
+  "袁麗萍教授與香港大學的科研功法臨床研究，探討五行平衡功對慢性疲勞與生活質量的影響。",
+);
 
 const RESEARCH_HERO = "https://pub-5442f85cdccf43b0aed63eadbd58fc4f.r2.dev/images/hero-research-v2.jpg";
 

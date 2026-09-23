@@ -3,12 +3,14 @@ import Footer from "@/components/layout/Footer";
 import PageHero from "@/components/layout/PageHero";
 import ResponsivePhoto from "@/components/media/ResponsivePhoto";
 import { yuenGallery } from "@/data/yuenGallery";
+import { pageSeo } from "@/lib/seo";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: yuenGallery.title,
-  description: "袁麗萍教授活動、講學與合照紀錄。",
-};
+export const metadata: Metadata = pageSeo(
+  "/gallery",
+  yuenGallery.title,
+  "袁麗萍教授講學、公益活動與合照紀錄。",
+);
 
 const MEDIA_HERO = "https://pub-5442f85cdccf43b0aed63eadbd58fc4f.r2.dev/images/hero-media.jpg";
 

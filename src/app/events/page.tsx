@@ -3,10 +3,15 @@ import Footer from "@/components/layout/Footer";
 import PageHero from "@/components/layout/PageHero";
 import { media } from "@/data/media";
 import { t } from "@/i18n/dict";
+import { pageSeo } from "@/lib/seo";
 import Image from "next/image";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = { title: "養生活動" };
+export const metadata: Metadata = pageSeo(
+  "/events",
+  "養生活動",
+  "國際健康養生會社區活動、課程與養生常識，講座、練習與活動花絮紀錄。",
+);
 
 const EVENTS_HERO = "https://pub-5442f85cdccf43b0aed63eadbd58fc4f.r2.dev/images/hero-events.jpg";
 
