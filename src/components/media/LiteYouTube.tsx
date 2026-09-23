@@ -6,16 +6,16 @@ function thumbCandidates(id: string, aspect: "video" | "short") {
   if (aspect === "short") {
     return [
       `https://i.ytimg.com/vi/${id}/oar2.jpg`,
-      `https://i.ytimg.com/vi/${id}/oardefault.jpg`,
-      `https://i.ytimg.com/vi/${id}/maxresdefault.jpg`,
       `https://i.ytimg.com/vi/${id}/hqdefault.jpg`,
+      `https://i.ytimg.com/vi/${id}/mqdefault.jpg`,
+      `https://i.ytimg.com/vi/${id}/0.jpg`,
     ];
   }
   return [
-    `https://i.ytimg.com/vi/${id}/maxresdefault.jpg`,
-    `https://i.ytimg.com/vi/${id}/hq720.jpg`,
-    `https://i.ytimg.com/vi/${id}/sddefault.jpg`,
     `https://i.ytimg.com/vi/${id}/hqdefault.jpg`,
+    `https://i.ytimg.com/vi/${id}/sddefault.jpg`,
+    `https://i.ytimg.com/vi/${id}/mqdefault.jpg`,
+    `https://i.ytimg.com/vi/${id}/0.jpg`,
   ];
 }
 
@@ -41,6 +41,8 @@ export default function LiteYouTube({
     setThumbIndex(0);
   }, [id, aspect]);
 
+  const nextThumb = () => setThumbIndex((i) => Math.min(i + 1, thumbs.length - 1));
+
   return (
     <div className={`relative ${ratio} overflow-hidden bg-stone-900`}>
       {!ready ? (
@@ -51,7 +53,11 @@ export default function LiteYouTube({
             alt={title}
             loading="eager"
             className="absolute inset-0 h-full w-full object-cover"
-            onError={() => setThumbIndex((i) => Math.min(i + 1, thumbs.length - 1))}
+            onError={nextThumb}
+            onLoad={(e) => {
+              const img = e.currentTarget;
+              if (img.naturalWidth <= 120 || img.naturalHeight <= 90) nextThumb();
+            }}
           />
           <div className="pointer-events-none absolute inset-x-0 top-0 z-10 bg-gradient-to-b from-black/75 via-black/25 to-transparent px-3 pb-10 pt-3">
             <p className="line-clamp-2 text-[15px] font-semibold leading-snug text-white drop-shadow">{title}</p>
