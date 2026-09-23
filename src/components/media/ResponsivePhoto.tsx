@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 type Props = {
@@ -21,7 +22,15 @@ export default function ResponsivePhoto({ desktop, mobile, alt, priority = false
   }, [desktop, mobile]);
 
   return (
-    // eslint-disable-next-line @next/next/no-img-element
-    <img src={src} alt={alt} className="h-auto w-full object-contain" {...(priority ? { fetchPriority: "high" as const } : {})} />
+    <Image
+      src={src}
+      alt={alt}
+      width={1600}
+      height={1200}
+      className="h-auto w-full object-contain"
+      sizes="(max-width: 767px) 100vw, 50vw"
+      quality={90}
+      priority={priority}
+    />
   );
 }

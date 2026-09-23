@@ -52,8 +52,6 @@ export default function RootLayout({
         <link rel="icon" href={FAVICON} type="image/png" sizes="512x512" />
         <link rel="apple-touch-icon" href={APPLE} />
         <link rel="preconnect" href="https://pub-5442f85cdccf43b0aed63eadbd58fc4f.r2.dev" />
-        <link rel="preconnect" href="https://i.ytimg.com" />
-        <link rel="dns-prefetch" href="https://www.youtube-nocookie.com" />
       </head>
       <body className="min-h-screen antialiased">
         {children}

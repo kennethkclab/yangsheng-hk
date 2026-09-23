@@ -18,13 +18,9 @@ const headingStyle = {
   textShadow: "0 1px 8px rgba(6,78,59,0.28)",
 } as const;
 
-function toWebp(src: string) {
-  return src.replace(/\.jpe?g($|\?)/i, ".webp$1");
-}
-
 export default function PageHero({ title, subtitle, image, overlay = "default", imagePosition = "center 28%" }: Props) {
   const subtitleLines = subtitle ? subtitle.split("\n") : [];
-  const src = toWebp(image || HERO_BG);
+  const src = image || HERO_BG;
   const wash =
     overlay === "soft"
       ? "absolute inset-0 bg-emerald-950/10"
@@ -35,12 +31,11 @@ export default function PageHero({ title, subtitle, image, overlay = "default", 
       <div className="absolute inset-0">
         <Image
           src={src}
-          alt=""
+          alt={title}
           fill
           priority
           fetchPriority="high"
-          loading="eager"
-          quality={82}
+          quality={90}
           className="object-cover"
           style={{ objectPosition: imagePosition }}
           sizes="100vw"
