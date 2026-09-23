@@ -61,7 +61,7 @@ export const siteData = {
     },
     {
       id: "neigong",
-      title: "科研功法養生班",
+      title: "五行平衡功",
       instructor: "袁麗萍教授",
       description: "配合香港大學科研數據驗證，著重氣血調理、強身健體，有效舒緩慢性疲勞綜合症。",
       imageUrl: `${R2}/images/courses/neigong-cover.png`,
