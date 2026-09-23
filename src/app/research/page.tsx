@@ -27,7 +27,7 @@ export default function ResearchPage() {
         <PageHero title="科研成果" subtitle="袁麗萍教授與香港大學的科研功法臨床研究" image={RESEARCH_HERO} overlay="soft" imagePosition="center bottom" />
         <section className="mx-auto max-w-3xl px-4 pb-14 pt-6 md:pt-8">
           <div className="mb-8 overflow-hidden rounded-md border border-stone-200 bg-stone-900 shadow-sm">
-            <LiteYouTube id="G2qwd1fulZA" title="科研功法養生班" />
+            <LiteYouTube id="G2qwd1fulZA" title="五行平衡功" />
           </div>
           <div className="relative mb-10 aspect-[16/8] overflow-hidden rounded-md">
             <Image src={`${media.r2}/images/photo01.jpg`} alt="科研與課程" fill className="object-cover" />
