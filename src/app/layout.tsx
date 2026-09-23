@@ -3,7 +3,7 @@ import { headers } from "next/headers";
 import "./globals.css";
 import { siteData } from "@/data/siteContent";
 import FloatingSocial from "@/components/layout/FloatingSocial";
-import { LOGO, OG_IMAGE, SITE, organizationJsonLd, pageSeo } from "@/lib/seo";
+import { OG_IMAGE, SITE, organizationJsonLd, pageSeo } from "@/lib/seo";
 
 const FAVICON = "https://pub-5442f85cdccf43b0aed63eadbd58fc4f.r2.dev/images/favicon.png";
 const FAVICON_32 = "https://pub-5442f85cdccf43b0aed63eadbd58fc4f.r2.dev/images/favicon-32.png";
