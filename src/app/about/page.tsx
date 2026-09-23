@@ -2,13 +2,15 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import PageHero from "@/components/layout/PageHero";
 import { siteData } from "@/data/siteContent";
+import { pageSeo } from "@/lib/seo";
 import Image from "next/image";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "國際健康養生會簡介",
-  description: "了解國際健康養生會的緣起、宗旨與理念。",
-};
+export const metadata: Metadata = pageSeo(
+  "/about",
+  "國際健康養生會簡介",
+  "了解國際健康養生會的緣起、宗旨與理念。 年與香港大學合作推動科研功法，貫徹預防勝於治療。",
+);
 
 const ABOUT_HERO = "https://pub-5442f85cdccf43b0aed63eadbd58fc4f.r2.dev/images/hero-about.jpg";
 
