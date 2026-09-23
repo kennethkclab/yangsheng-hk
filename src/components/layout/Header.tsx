@@ -36,16 +36,17 @@ export default function Header() {
   };
 
   useEffect(() => {
+    document.documentElement.lang = isEn ? "en" : "zh-HK";
     document.body.style.overflow = open ? "hidden" : "";
     return () => {
       document.body.style.overflow = "";
     };
-  }, [open]);
+  }, [open, isEn]);
 
   const switcher = (
-    <div className="inline-flex overflow-hidden rounded-md border border-stone-300 bg-white text-xs font-semibold">
-      <Link href={zhHref} className={`px-2.5 py-1.5 ${!isEn ? "bg-brand-700 text-white" : "text-stone-600 hover:bg-stone-100"}`}>中文</Link>
-      <Link href={enHref} className={`px-2.5 py-1.5 ${isEn ? "bg-brand-700 text-white" : "text-stone-600 hover:bg-stone-100"}`}>EN</Link>
+    <div className="inline-flex overflow-hidden rounded-md border border-stone-300 bg-white text-xs font-semibold" role="group" aria-label={isEn ? "Language" : "語言"}>
+      <Link href={zhHref} aria-current={!isEn ? "page" : undefined} className={`px-2.5 py-1.5 ${!isEn ? "bg-brand-700 text-white" : "text-stone-600 hover:bg-stone-100"}`}>中文</Link>
+      <Link href={enHref} aria-current={isEn ? "page" : undefined} className={`px-2.5 py-1.5 ${isEn ? "bg-brand-700 text-white" : "text-stone-600 hover:bg-stone-100"}`}>EN</Link>
     </div>
   );
 
@@ -54,10 +55,10 @@ export default function Header() {
       <header className="sticky top-0 z-50 border-b border-stone-200 bg-white">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-2.5">
           <Link href={homeHref} className="flex min-w-0 items-center gap-3" onClick={() => setOpen(false)}>
-            <Image src={siteData.images.logo} alt={siteData.brand.name} width={280} height={72} className="h-11 w-auto md:h-14" priority />
+            <Image src={siteData.images.logo} alt={siteData.brand.name} width={280} height={72} className="h-11 w-auto md:h-14" priority quality={90} />
           </Link>
 
-          <nav className="hidden items-center gap-3 text-[18px] leading-none text-stone-700 xl:flex">
+          <nav className="hidden items-center gap-3 text-[18px] leading-none text-stone-700 xl:flex" aria-label={isEn ? "Main" : "主要"}>
             {items.map((item) => {
               const active = isActive(item.href, item.children);
               const tabClass = active
@@ -65,9 +66,9 @@ export default function Header() {
                 : "text-stone-700 hover:text-brand-800";
               return item.children ? (
                 <div key={item.label} className="group relative">
-                  <Link href={item.href} className={`inline-flex items-center gap-1 whitespace-nowrap px-1 py-2 ${tabClass}`}>
+                  <Link href={item.href} aria-current={active ? "page" : undefined} className={`inline-flex items-center gap-1 whitespace-nowrap px-1 py-2 ${tabClass}`}>
                     {item.label}
-                    <span className="text-[12px]">▾</span>
+                    <span className="text-[12px]" aria-hidden>▾</span>
                   </Link>
                   <div className="invisible absolute left-0 top-full z-50 min-w-48 rounded-xl border border-stone-200 bg-white py-2 text-[18px] opacity-0 shadow-lg transition group-hover:visible group-hover:opacity-100">
                     {item.children.map((child) => {
@@ -76,6 +77,7 @@ export default function Header() {
                         <Link
                           key={child.href}
                           href={child.href}
+                          aria-current={childActive ? "page" : undefined}
                           className={`block px-4 py-2 ${childActive ? "bg-brand-50 font-semibold text-brand-800" : "text-stone-700 hover:bg-brand-50 hover:text-brand-800"}`}
                         >
                           {child.label}
@@ -85,7 +87,7 @@ export default function Header() {
                   </div>
                 </div>
               ) : (
-                <Link key={item.href} href={item.href} className={`whitespace-nowrap px-1 py-2 ${tabClass}`}>
+                <Link key={item.href} href={item.href} aria-current={active ? "page" : undefined} className={`whitespace-nowrap px-1 py-2 ${tabClass}`}>
                   {item.label}
                 </Link>
               );
@@ -94,8 +96,8 @@ export default function Header() {
 
           <div className="flex shrink-0 items-center gap-2">
             {switcher}
-            <button type="button" className="inline-flex h-10 w-10 items-center justify-center rounded-md text-stone-700 hover:bg-stone-100 xl:hidden" onClick={() => setOpen(true)} aria-label={copy.openMenu}>
-              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <button type="button" className="inline-flex h-10 w-10 items-center justify-center rounded-md text-stone-700 hover:bg-stone-100 xl:hidden" onClick={() => setOpen(true)} aria-label={copy.openMenu} aria-expanded={open} aria-controls="mobile-nav">
+              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
               </svg>
             </button>
@@ -103,24 +105,24 @@ export default function Header() {
         </div>
       </header>
 
-      <div className={`fixed inset-0 z-[60] bg-black/55 transition-opacity duration-300 xl:hidden ${open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`} onClick={() => setOpen(false)} />
+      <div className={`fixed inset-0 z-[60] bg-black/55 transition-opacity duration-300 xl:hidden ${open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`} onClick={() => setOpen(false)} aria-hidden={!open} />
 
-      <aside className={`fixed inset-y-0 left-0 z-[70] flex h-dvh w-[60vw] max-w-xs flex-col bg-white shadow-2xl transition-transform duration-300 ease-out xl:hidden ${open ? "translate-x-0" : "-translate-x-full"}`}>
+      <aside id="mobile-nav" className={`fixed inset-y-0 left-0 z-[70] flex h-dvh w-[60vw] max-w-xs flex-col bg-white shadow-2xl transition-transform duration-300 ease-out xl:hidden ${open ? "translate-x-0" : "-translate-x-full"}`} aria-hidden={!open}>
         <div className="flex items-center justify-end border-b border-stone-100 bg-white px-3 py-3">
           <button type="button" className="inline-flex h-9 w-9 items-center justify-center rounded-md text-stone-600 hover:bg-stone-100" onClick={() => setOpen(false)} aria-label={copy.closeMenu}>
-            <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden>
               <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
         </div>
-        <nav className="flex-1 overflow-y-auto bg-white px-3 py-4 space-y-1">
+        <nav className="flex-1 overflow-y-auto bg-white px-3 py-4 space-y-1" aria-label={isEn ? "Mobile" : "手機選單"}>
           {items.map((item) => {
             const active = isActive(item.href, item.children);
             return item.children ? (
               <div key={item.label}>
-                <button type="button" className={`flex w-full items-center justify-between rounded-md px-4 py-3 text-left text-base hover:bg-brand-50 ${active ? "font-semibold text-brand-800" : "text-stone-700"}`} onClick={() => setOpenGroup(openGroup === item.label ? null : item.label)}>
+                <button type="button" className={`flex w-full items-center justify-between rounded-md px-4 py-3 text-left text-base hover:bg-brand-50 ${active ? "font-semibold text-brand-800" : "text-stone-700"}`} onClick={() => setOpenGroup(openGroup === item.label ? null : item.label)} aria-expanded={openGroup === item.label}>
                   <span>{item.label}</span>
-                  <span className="text-xs">{openGroup === item.label ? "–" : "+"}</span>
+                  <span className="text-xs" aria-hidden>{openGroup === item.label ? "–" : "+"}</span>
                 </button>
                 {openGroup === item.label ? (
                   <div className="mb-2 ml-3 space-y-1 border-l border-stone-200 pl-3">
