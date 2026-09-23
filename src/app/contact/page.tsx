@@ -3,12 +3,14 @@ import Footer from "@/components/layout/Footer";
 import PageHero from "@/components/layout/PageHero";
 import ContactForm from "@/components/contact/ContactForm";
 import { siteData } from "@/data/siteContent";
+import { pageSeo } from "@/lib/seo";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "聯絡我們",
-  description: "聯絡國際健康養生會，查詢課程與活動資訊。",
-};
+export const metadata: Metadata = pageSeo(
+  "/contact",
+  "聯絡我們",
+  "聯絡國際健康養生會，查詢課程、活動或 WhatsApp 留言。地址：香港跑馬地雲地利道 20 號地下。",
+);
 
 const CONTACT_HERO = "https://pub-5442f85cdccf43b0aed63eadbd58fc4f.r2.dev/images/hero-research.jpg";
 
