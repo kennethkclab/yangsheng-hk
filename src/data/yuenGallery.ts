@@ -6,6 +6,13 @@ export const yuenGallery = {
   source: "https://yangshengdao.hk/%e8%a2%81%e9%ba%97%e8%90%8d%e6%95%99%e6%8e%88%e5%9c%96%e7%89%87%e9%9b%86/",
   items: [
     {
+      id: "14",
+      caption: "銅鑼灣禮頓山會堂 - 袁麗萍教授率領學生們練習科研功法",
+      captionEn: "Professor Yuen leading a class at Leighton Hill Community Hall, Causeway Bay",
+      desktop: `${R2}/images/yuen/desktop/14.jpg`,
+      mobile: `${R2}/images/yuen/mobile/14.jpg`,
+    },
+    {
       id: "13",
       caption: "袁麗萍教授出席香港大學「為生命喝采」講座。",
       captionEn: "Professor Yuen speaking at HKU Living a Legacy symposium",
