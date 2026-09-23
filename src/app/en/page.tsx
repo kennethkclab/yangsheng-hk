@@ -35,9 +35,11 @@ export default function EnglishHomePage() {
           <div className="absolute inset-0">
             <Image
               src={siteData.images.hero1}
-              alt="Association"
+              alt="International Association for Health and Yangsheng"
               fill
               priority
+              fetchPriority="high"
+              quality={90}
               className="object-cover object-[50%_18%] md:object-[50%_16%]"
               sizes="100vw"
             />
@@ -124,7 +126,7 @@ export default function EnglishHomePage() {
             <div className="grid grid-cols-2 gap-3 md:grid-cols-3">
               {previewPhotos.map((src) => (
                 <div key={src} className="relative aspect-[4/3] overflow-hidden rounded-md bg-stone-200">
-                  <Image src={src} alt="Activity photo" fill className="object-cover" sizes="(max-width: 768px) 50vw, 33vw" quality={90} unoptimized />
+                  <Image src={src} alt="Activity photo" fill className="object-cover" sizes="(max-width: 768px) 50vw, 33vw" quality={90} />
                 </div>
               ))}
             </div>
@@ -135,7 +137,7 @@ export default function EnglishHomePage() {
           <div className="mx-auto max-w-6xl px-4 text-center">
             <h2 className="mb-3 text-2xl font-bold md:text-3xl">{copy.contactTitle}</h2>
             <p className="mb-1 text-brand-100">{copy.phone}: {siteData.contact.phoneDisplay}</p>
-            <p className="mb-8 text-brand-100">{siteData.contact.addressEn}</p>
+            <p className="mb-8 text-brand-100">{copy.address}</p>
             <a href={siteData.contact.whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-block rounded-md bg-white px-8 py-3.5 font-semibold text-brand-800 hover:bg-brand-50">{copy.whatsappNow}</a>
           </div>
         </section>
