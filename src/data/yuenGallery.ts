@@ -10,7 +10,7 @@ export const yuenGallery = {
       caption: "銅鑼灣禮頓山會堂 - 袁麗萍教授率領學生們練習科研功法",
       captionEn: "Professor Yuen leading a class at Leighton Hill Community Hall, Causeway Bay",
       desktop: `${R2}/images/yuen/desktop/14.jpg`,
-      mobile: `${R2}/images/yuen/mobile/14.jpg`,
+      mobile: `${R2}/images/yuen/mobile/14-m.jpg`,
     },
     {
       id: "13",
