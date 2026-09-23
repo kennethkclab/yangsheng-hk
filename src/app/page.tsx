@@ -27,9 +27,11 @@ export default function HomePage() {
           <div className="absolute inset-0">
             <Image
               src={siteData.images.hero1}
-              alt="養生會"
+              alt="國際健康養生會"
               fill
               priority
+              fetchPriority="high"
+              quality={90}
               className="object-cover object-[50%_18%] md:object-[50%_16%]"
               sizes="100vw"
             />
@@ -112,7 +114,7 @@ export default function HomePage() {
             <div className="grid grid-cols-2 gap-3 md:grid-cols-3">
               {previewPhotos.map((src) => (
                 <div key={src} className="relative aspect-[4/3] overflow-hidden rounded-md bg-stone-200">
-                  <Image src={src} alt="活動相片" fill className="object-cover" sizes="(max-width: 768px) 50vw, 33vw" quality={90} unoptimized />
+                  <Image src={src} alt="活動相片" fill className="object-cover" sizes="(max-width: 768px) 50vw, 33vw" quality={90} />
                 </div>
               ))}
             </div>
