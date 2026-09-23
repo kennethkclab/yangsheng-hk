@@ -3,12 +3,14 @@ import Footer from "@/components/layout/Footer";
 import PageHero from "@/components/layout/PageHero";
 import FacebookPost from "@/components/media/FacebookPost";
 import { media } from "@/data/media";
+import { pageSeo } from "@/lib/seo";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "最新資訊",
-  description: "國際健康養生會最新活動與課程資訊。",
-};
+export const metadata: Metadata = pageSeo(
+  "/news",
+  "最新資訊",
+  "國際健康養生會最新活動、課程招生與 Facebook 公告。",
+);
 
 const NEWS_HERO = "https://pub-5442f85cdccf43b0aed63eadbd58fc4f.r2.dev/images/hero-news.jpg";
 
