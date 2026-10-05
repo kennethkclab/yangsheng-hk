@@ -2,6 +2,12 @@
 
 import { useState } from "react";
 
+const posters = (id: string) => [
+  `https://i.ytimg.com/vi/${id}/maxresdefault.jpg`,
+  `https://i.ytimg.com/vi/${id}/sddefault.jpg`,
+  `https://i.ytimg.com/vi/${id}/hqdefault.jpg`,
+];
+
 export default function LiteYouTube({
   id,
   title,
@@ -12,8 +18,9 @@ export default function LiteYouTube({
   aspect?: "video" | "short";
 }) {
   const [play, setPlay] = useState(false);
+  const [posterIndex, setPosterIndex] = useState(0);
   const ratio = aspect === "short" ? "aspect-[9/16]" : "aspect-video";
-  const poster = `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
+  const sources = posters(id);
 
   if (play) {
     return (
@@ -37,7 +44,22 @@ export default function LiteYouTube({
       aria-label={`Play ${title}`}
     >
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={poster} alt="" className="absolute inset-0 h-full w-full object-cover" loading="lazy" />
+      <img
+        src={sources[posterIndex]}
+        alt=""
+        className="absolute inset-0 h-full w-full object-cover"
+        loading="lazy"
+        decoding="async"
+        onLoad={(event) => {
+          const image = event.currentTarget;
+          if (image.naturalWidth > 0 && image.naturalWidth < 200 && posterIndex < sources.length - 1) {
+            setPosterIndex((index) => index + 1);
+          }
+        }}
+        onError={() => {
+          if (posterIndex < sources.length - 1) setPosterIndex((index) => index + 1);
+        }}
+      />
       <span className="pointer-events-none absolute left-1/2 top-1/2 flex h-12 w-[68px] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-[14px] bg-[#FF0000] shadow-md">
         <svg viewBox="0 0 24 24" width="22" height="22" className="ml-0.5" aria-hidden>
           <path fill="#fff" d="M8 5.5v13l11-6.5L8 5.5z" />
