@@ -43,13 +43,14 @@ export default function AboutPage() {
               </div>
             ))}
           </div>
-
+        </section>
+        <section className="mx-auto max-w-6xl px-4 pb-16">
           <h3 className="mb-6 text-xl font-semibold text-stone-900">我們的宗旨</h3>
-          <div className="grid gap-5 sm:grid-cols-3">
+          <div className="grid gap-5 lg:grid-cols-3">
             {siteData.about.missionList.map((item, i) => (
               <div key={i} className="rounded-md border border-stone-200 bg-white p-6 shadow-sm">
                 <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-md bg-brand-100 font-bold text-brand-800">{i + 1}</div>
-                <p className="whitespace-pre-line leading-relaxed text-stone-700">{item}</p>
+                <p className={i === 1 ? "whitespace-pre-line leading-relaxed text-stone-700 lg:whitespace-nowrap" : "whitespace-pre-line leading-relaxed text-stone-700"}>{item}</p>
               </div>
             ))}
           </div>
