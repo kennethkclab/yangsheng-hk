@@ -41,7 +41,7 @@ export const activityHighlights = [
 ];
 
 export const featuredShorts = [
-  { id: "dyB7GrbeGfU", title: "養生短片 1", titleEn: "Yangsheng Short 1" },
+  { id: "ypGdtcX-2Y0", title: "科研課程：150個名額數小時爆滿？", titleEn: "Research course: 150 places filled in hours?" },
   { id: "FsI8jlPcZTk", title: "養生短片 2", titleEn: "Yangsheng Short 2" },
   { id: "vv-DIXjXi80", title: "養生短片 3", titleEn: "Yangsheng Short 3" },
 ] as const;
