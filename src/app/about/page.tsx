@@ -36,10 +36,10 @@ export default function AboutPage() {
           <p className="mb-10 text-lg leading-relaxed text-stone-600">{siteData.about.originText}</p>
 
           <h3 className="mb-6 text-xl font-semibold text-stone-900">《資本平台》CEO x Entrepreneur of the Year 2025</h3>
-          <div className="mb-12 grid gap-4 md:grid-cols-2">
+          <div className="mb-12 grid items-stretch gap-4 md:grid-cols-2">
             {awardPhotos.map((photo) => (
-              <div key={photo.src} className="overflow-hidden rounded-md border border-stone-200 bg-stone-100">
-                <Image src={photo.src} alt={photo.alt} width={1600} height={1067} className="h-auto w-full object-contain" />
+              <div key={photo.src} className="relative aspect-[4/3] overflow-hidden rounded-md border border-stone-200 bg-stone-100">
+                <Image src={photo.src} alt={photo.alt} fill className="object-cover object-center" sizes="(max-width: 768px) 100vw, 448px" />
               </div>
             ))}
           </div>
