@@ -26,7 +26,6 @@ export default function LiteYouTube({
   const [posterIndex, setPosterIndex] = useState(0);
   const ratio = aspect === "short" ? "aspect-[9/16]" : "aspect-video";
   const sources = posters(id);
-  const fit = id === "mfk2BhJGTSU" ? "object-contain" : "object-cover";
 
   if (play) {
     return (
@@ -53,7 +52,7 @@ export default function LiteYouTube({
       <img
         src={sources[posterIndex]}
         alt=""
-        className={`absolute inset-0 h-full w-full ${fit}`}
+        className="absolute inset-0 h-full w-full object-cover"
         loading="lazy"
         decoding="async"
         onLoad={(event) => {
