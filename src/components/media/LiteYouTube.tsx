@@ -2,11 +2,16 @@
 
 import { useState } from "react";
 
-const posters = (id: string) => [
-  `https://i.ytimg.com/vi/${id}/maxresdefault.jpg`,
-  `https://i.ytimg.com/vi/${id}/sddefault.jpg`,
-  `https://i.ytimg.com/vi/${id}/hqdefault.jpg`,
-];
+function posters(id: string) {
+  if (id === "mfk2BhJGTSU") {
+    return [`https://i.ytimg.com/vi/${id}/hqdefault.jpg`];
+  }
+  return [
+    `https://i.ytimg.com/vi/${id}/maxresdefault.jpg`,
+    `https://i.ytimg.com/vi/${id}/hqdefault.jpg`,
+    `https://i.ytimg.com/vi/${id}/sddefault.jpg`,
+  ];
+}
 
 export default function LiteYouTube({
   id,
@@ -21,6 +26,7 @@ export default function LiteYouTube({
   const [posterIndex, setPosterIndex] = useState(0);
   const ratio = aspect === "short" ? "aspect-[9/16]" : "aspect-video";
   const sources = posters(id);
+  const fit = id === "mfk2BhJGTSU" ? "object-contain" : "object-cover";
 
   if (play) {
     return (
@@ -47,7 +53,7 @@ export default function LiteYouTube({
       <img
         src={sources[posterIndex]}
         alt=""
-        className="absolute inset-0 h-full w-full object-cover"
+        className={`absolute inset-0 h-full w-full ${fit}`}
         loading="lazy"
         decoding="async"
         onLoad={(event) => {
