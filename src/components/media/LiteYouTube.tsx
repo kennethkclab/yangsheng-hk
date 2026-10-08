@@ -26,13 +26,14 @@ export default function LiteYouTube({
   const [posterIndex, setPosterIndex] = useState(0);
   const ratio = aspect === "short" ? "aspect-[9/16]" : "aspect-video";
   const sources = posters(id);
+  const plainCover = id === "mfk2BhJGTSU";
 
-  if (play) {
+  if (play || plainCover) {
     return (
       <div className={`relative ${ratio} overflow-hidden bg-stone-900`}>
         <iframe
           className="absolute inset-0 h-full w-full"
-          src={`https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&playsinline=1`}
+          src={`https://www.youtube-nocookie.com/embed/${id}?rel=0&playsinline=1${play ? "&autoplay=1" : ""}`}
           title={title}
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
