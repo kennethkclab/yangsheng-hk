@@ -40,18 +40,7 @@ export default function ResearchPage() {
       <main className="min-h-screen bg-stone-50">
         <PageHero title="科研成果" subtitle="袁麗萍教授與香港大學的科研功法臨床研究" image={RESEARCH_HERO} overlay="soft" imagePosition="center bottom" />
         <section className="mx-auto max-w-3xl px-4 pb-14 pt-6 md:pt-8">
-          <div className="mb-8 overflow-hidden rounded-md border border-stone-200 bg-stone-900 shadow-sm">
-            <LiteYouTube id="G2qwd1fulZA" title="五行平衡功" />
-          </div>
-          <div className="relative mb-10 aspect-[16/8] overflow-hidden rounded-md">
-            <Image src={`${media.r2}/images/photo01.jpg`} alt="科研與課程" fill className="object-cover" />
-          </div>
-          <article className="space-y-6 text-[16px] leading-8 text-stone-700 md:text-[18px]">
-            {paragraphs.map((p) => (
-              <p key={p.slice(0, 16)}>{p}</p>
-            ))}
-          </article>
-          <section className="mt-12 border-t border-stone-200 pt-10">
+          <section className="mb-10">
             <h2 className="mb-5 text-xl font-semibold text-stone-900">科研報告</h2>
             <ul className="space-y-3">
               {reports.map((report) => (
@@ -68,6 +57,17 @@ export default function ResearchPage() {
               ))}
             </ul>
           </section>
+          <div className="mb-8 overflow-hidden rounded-md border border-stone-200 bg-stone-900 shadow-sm">
+            <LiteYouTube id="G2qwd1fulZA" title="五行平衡功" />
+          </div>
+          <div className="relative mb-10 aspect-[16/8] overflow-hidden rounded-md">
+            <Image src={`${media.r2}/images/photo01.jpg`} alt="科研與課程" fill className="object-cover" />
+          </div>
+          <article className="space-y-6 text-[16px] leading-8 text-stone-700 md:text-[18px]">
+            {paragraphs.map((p) => (
+              <p key={p.slice(0, 16)}>{p}</p>
+            ))}
+          </article>
         </section>
       </main>
       <Footer />
