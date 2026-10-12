@@ -14,6 +14,7 @@ export const metadata: Metadata = pageSeo(
 );
 
 const RESEARCH_HERO = "https://pub-5442f85cdccf43b0aed63eadbd58fc4f.r2.dev/images/hero-research-v2.jpg";
+const REPORTS = "https://pub-5442f85cdccf43b0aed63eadbd58fc4f.r2.dev/reports";
 
 const paragraphs = [
   "袁麗萍教授自幼在深山成長，深諧科研養生之道。她曾多次與香港大學合作，研究「科研功法對慢性疲勞綜合症及癌症的療效」。作為國際健康養生會主席、港大行為健康教研中心臨床顧問、註冊中醫師及中華傳統醫學研究所所長，袁教授在醫療界享有崇高的聲譽，曾榮獲聯合國特殊醫療貢獻獎和多項國際獎項。",
@@ -22,6 +23,14 @@ const paragraphs = [
   "隨著研究成功，袁教授與香港大學再度攜手，邀請防癌會合作，向首次確診癌症的患者及其家屬提供科研功法治療，探索科研功法對改善癌症患者及其家庭生活質量的影響。袁教授強調：「慢性病和癌症並非絕症，生活質量提升能減少家庭負擔。健康投資是都市人的當務之急，預防勝於治療。」",
   "袁教授於2009年12月正式成立國際健康養生會，旨在提供一個熱心公益的慈善平台，讓參與者能定期練習科研功法，進行精神交流，促進健康理念的普及。近年，她多次受邀到世界各地講學，推廣中國傳統醫學，如美國的史密斯女子大學、美國紐約大學醫學院等。",
   "「五行平衡功」這套十式科研功法療法，能提升身體對氧氣的吸收，促進五臟健康平衡，結合健康的生活習慣和飲食，對多種病症皆有療效，無論年齡與健康狀況均適合學習。一般而言，練習三周便可見效。",
+];
+
+const reports = [
+  { title: "氣功運動透過白細胞介素-6海馬途徑增強老年人的認知功能", file: "01-cognitive-il6.pdf" },
+  { title: "五行平衡功的實驗「失眠與抑鬱症」", file: "02-sleep-depression.pdf" },
+  { title: "氣功運動抗疲勞的隨機對照試驗人體的症狀、功能和端粒酶活性患有慢性疲勞或慢性疲勞症候群", file: "03-fatigue-telomerase.pdf" },
+  { title: "從身體到心靈與精神：針對喪失親人的慢性疲勞綜合症類疾病的氣功運動", file: "04-bereavement-cfs.pdf" },
+  { title: "2018-2020：針對社區老年慢性疼痛患者的艾灸加按摩介入", file: "05-moxibustion-pain.pdf" },
 ];
 
 export default function ResearchPage() {
@@ -42,6 +51,23 @@ export default function ResearchPage() {
               <p key={p.slice(0, 16)}>{p}</p>
             ))}
           </article>
+          <section className="mt-12 border-t border-stone-200 pt-10">
+            <h2 className="mb-5 text-xl font-semibold text-stone-900">科研報告</h2>
+            <ul className="space-y-3">
+              {reports.map((report) => (
+                <li key={report.file}>
+                  <a
+                    href={`${REPORTS}/${report.file}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block rounded-md border border-stone-200 bg-white px-5 py-4 text-[16px] leading-7 text-brand-800 hover:border-brand-300 hover:bg-brand-50 md:text-[18px]"
+                  >
+                    {report.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </section>
         </section>
       </main>
       <Footer />
