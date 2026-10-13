@@ -33,7 +33,7 @@ export default function EnglishResearchPage() {
     <>
       <Header />
       <main className="min-h-screen bg-stone-50">
-        <PageHero title="Research outcomes" subtitle="Clinical studies by Professor Yuen Lai Ping with the University of Hong Kong" image={RESEARCH_HERO} overlay="soft" imagePosition="center bottom" />
+        <PageHero title="Research outcomes" subtitle="Research reports by Professor Yuen Lai Ping with the University of Hong Kong" image={RESEARCH_HERO} overlay="soft" imagePosition="center bottom" />
         <section className="mx-auto max-w-3xl px-4 pb-14 pt-6 md:pt-8">
           <section className="mb-10">
             <h2 className="mb-5 text-xl font-semibold text-stone-900">Research reports</h2>
