@@ -10,7 +10,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = pageSeo(
   "/research",
   "科研成果",
-  "袁麗萍教授與香港大學的科研功法臨床研究，探討五行平衡功對慢性疲勞與生活質量的影響。",
+  "袁麗萍教授與香港大學的科研報告，探討五行平衡功對慢性疲勞與生活質量的影響。",
 );
 
 const RESEARCH_HERO = "https://pub-5442f85cdccf43b0aed63eadbd58fc4f.r2.dev/images/hero-research-v2.jpg";
@@ -38,7 +38,7 @@ export default function ResearchPage() {
     <>
       <Header />
       <main className="min-h-screen bg-stone-50">
-        <PageHero title="科研成果" subtitle="袁麗萍教授與香港大學的科研功法臨床研究" image={RESEARCH_HERO} overlay="soft" imagePosition="center bottom" />
+        <PageHero title="科研成果" subtitle="袁麗萍教授與香港大學的科研報告" image={RESEARCH_HERO} overlay="soft" imagePosition="center bottom" />
         <section className="mx-auto max-w-3xl px-4 pb-14 pt-6 md:pt-8">
           <section className="mb-10">
             <h2 className="mb-5 text-xl font-semibold text-stone-900">科研報告</h2>
